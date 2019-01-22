@@ -28,13 +28,10 @@
 		BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid; BORDER-BOTTOM: #ddd 1px solid; PADDING-BOTTOM: 8px; PADDING-TOP: 8px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px
 	}
 	#alerts TH {
-		BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid; BORDER-BOTTOM: #ddd 1px solid; PADDING-BOTTOM: 8px; PADDING-TOP: 8px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px
+		BORDER-TOP: #aa3939 1px solid; BORDER-RIGHT: lightgrey 12px solid; BORDER-BOTTOM: #aa3939 1px solid; PADDING-BOTTOM: 8px; PADDING-TOP: 8px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; WIDTH: 20px; COLOR: black;
 	}
 	#alerts TD:hover {
-		BACKGROUND-COLOR: #ddd
-	}
-	#alerts TH {
-		WIDTH: 20px; COLOR: white; TEXT-ALIGN: left; BACKGROUND-COLOR: #aa3939
+		BACKGROUND-COLOR: darkgrey; color: white;
 	}
 	UL.nav {
 		LIST-STYLE-TYPE: none; OVERFLOW: hidden; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 1px; TOP: 0px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: #970808
@@ -53,6 +50,9 @@
 	}
 	A.alertlink:visited {
 		TEXT-DECORATION: none; COLOR: black
+	}
+	A.alertlink:hover {
+		TEXT-DECORATION: none; COLOR: white;
 	}
 	A.general:link {
 		TEXT-DECORATION: underline; COLOR: #970808
@@ -121,7 +121,7 @@
 		WIDTH: auto; COLOR: black; PADDING-BOTTOM: 10px; TEXT-ALIGN: center; PADDING-TOP: 10px; PADDING-LEFT: 5px; MARGIN: 10px; PADDING-RIGHT: 5px; BACKGROUND-COLOR: lightgrey
 	}
 	.content {
-		WIDTH: 809px; MARGIN: auto; border-width: 1px; border-style: dashed; border-color: #ff0000;
+		WIDTH: 809px; MARGIN: auto; border-width: 1px; border-style: none; border-color: #ff0000;
 	}</style>
 </header>
 <body>
@@ -138,9 +138,9 @@
 	<center><table id="alerts"><tbody><tr><th>Today</th>
 	<td><a class="alertlink" href="/Directorates/CCG/ALTC/EmergCare/Emergency%20Department/Pages/Alerts.aspx/#1">New ED intranet page launched!</a></td></tr></tbody></table></center>
 	<h2>Welcome</h2>
-	<div class="tbc">This intranet page is a work in progress.<br/><br/>If there is any resource that you use, both hosted internally on the trust intranet or externally, but is not listed below - please let me know so that it can be updated. Similarly, any broken links (i.e., links to a resource which has since moved or been deleted) please also contact me.<br/><br/>UHND specific guidance highlights with a <span style="background-color:#970808; color: white;">red</span> background, DMH a <span style="background-color: green; color: white;">green</span> background.<br><br><a class="general" href="mailto:david.mccaffer1@nhs.net">E-mail me</a> - david.mccaffer1@nhs.net</div>
+	<p style="text-align: center;">If there is any resource that you use, both hosted internally on the trust intranet or externally, but is not listed below - please let me know so that it can be updated. Similarly, any broken links (i.e., links to a resource which has since moved or been deleted) please also contact me.<br/><br/><span style="background-COLOR: lightgrey; padding: 0px 10px 0px 10px;">UHND specific guidance highlights with a <span style="background-color:#970808; color: white; padding: 0px 5px 0px 5px;">red</span> background, DMH a <span style="background-color: green; color: white; padding: 0px 5px 0px 5px;">green</span> background.</span><br><br><a class="general" href="mailto:david.mccaffer1@nhs.net">E-mail me</a> - david.mccaffer1@nhs.net</p>
 	<h2 id="Common">Commonly used resources</h2>
-	<p><a class="EDbutton" href="https://www.nice.org.uk/guidance/cg176/resources/imaging-algorithm-498950893">CT Head Algorithm</a><a class="EDbutton" href="/Directorates/CCG/CSS/Pharmacy/Drug%20Protocols/Emergency%20treatment%20of%20poisoning/Acetylcysteine%20Loading%20Dose%20DRUG-GEN-0016.pdf">Paracetamol Overdose</a><a class="EDbutton" href="/Directorates/CCG/CSS/Pharmacy/Drug%20Protocols/Forms/DefaultView.aspx?RootFolder=/Directorates/CCG/CSS/Pharmacy/Drug%20Protocols/Nutrition%20and%20Blood%20%28BNF%20Section%209%29&amp;FolderCTID=0x012000CDF2CDDB98EC8245A348A76BDCEB49B9">Electrolyte Replacement</a><a class="EDbuttonU" href="/Directorates/CCG/ALTC/EmergCare/Shared%20Documents/Renal%20colic%20Pathway%20(ED%20UHND).docx">Renal colic</a><a class="EDbutton" href="/news/Documents/Non-Urgent%20Chest%20Pain%20Algorithm%20-%20Approved%20AEC%20QCG%2011%20July%202018.pdf">Chest Pain Algorithm</a><a class="EDbutton" href="/sites/policiesandprocedures/Published%20Documents/Diabetic%20Ketoacidosis%20DKA.pdf#Page=5">DKA</a><a class="EDbutton" href="https://www.brit-thoracic.org.uk/document-library/clinical-information/asthma/btssign-asthma-guideline-2016/#Page=169">Asthma</a></p>
+	<p style="ALIGN: center;"><a class="EDbutton" href="https://www.nice.org.uk/guidance/cg176/resources/imaging-algorithm-498950893">CT Head Algorithm</a><a class="EDbutton" href="/Directorates/CCG/CSS/Pharmacy/Drug%20Protocols/Emergency%20treatment%20of%20poisoning/Acetylcysteine%20Loading%20Dose%20DRUG-GEN-0016.pdf">Paracetamol Overdose</a><a class="EDbutton" href="/Directorates/CCG/CSS/Pharmacy/Drug%20Protocols/Forms/DefaultView.aspx?RootFolder=/Directorates/CCG/CSS/Pharmacy/Drug%20Protocols/Nutrition%20and%20Blood%20%28BNF%20Section%209%29&amp;FolderCTID=0x012000CDF2CDDB98EC8245A348A76BDCEB49B9">Electrolyte Replacement</a><a class="EDbuttonU" href="/Directorates/CCG/ALTC/EmergCare/Shared%20Documents/Renal%20colic%20Pathway%20(ED%20UHND).docx">Renal colic</a><a class="EDbutton" href="/news/Documents/Non-Urgent%20Chest%20Pain%20Algorithm%20-%20Approved%20AEC%20QCG%2011%20July%202018.pdf">Chest Pain Algorithm</a><a class="EDbutton" href="/sites/policiesandprocedures/Published%20Documents/Diabetic%20Ketoacidosis%20DKA.pdf#Page=5">DKA</a><a class="EDbutton" href="https://www.brit-thoracic.org.uk/document-library/clinical-information/asthma/btssign-asthma-guideline-2016/#Page=169">Asthma</a><a class="EDbutton" href="https://www.resus.org.uk/resuscitation-guidelines/peri-arrest-arrhythmias/#tachycardia">Tachyarrhythmia</a></p>
 	<h3 id="#trauma">ED Specific documents</h3>
 	<div class="EDrow"><div class="EDcolumn"><div class="EDcard"><h4>Head Injuries</h4>
 	<a class="EDsystem" href="https://www.nice.org.uk/guidance/cg176/resources/imaging-algorithm-498950893#Page=1">CT Head - Adult</a><a class="EDsystem" href="https://www.nice.org.uk/guidance/cg176/resources/imaging-algorithm-498950893#Page=2">CT Head - Children</a><a class="EDsystemU" href="/Directorates/CCG/ALTC/EmergCare/Shared%20Documents/Induction%20Folder%20for%20New%20ED%20Doctors/SSW%20admisions%20policy.docx">UHND SSW Admissions policy</a> <a class="EDsystemD" href="/Directorates/CCG/ALTC/EmergCare/Shared%20Documents/Head%20Injury%20Guidelines/Head%20injury%20guidelines%20for%20DMH%20ED%20v1.doc">Head injury guidelines for DMH ED v1</a><a class="EDsystemD" href="/Directorates/CCG/ALTC/EmergCare/Shared%20Documents/Head%20Injury%20Guidelines/Head%20Injury%20Admission%20Checklist%20DMH%20ED.docx">Head Injury Admission Checklist DMH ED</a><a class="EDsystem" href="#">Head injury advice leaflet</a><a class="EDsystem" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/736938/assessing-fitness-to-drive-a-guide-for-medical-professionals.pdf">Assessing fitness to drive</a></div></div>

@@ -532,14 +532,14 @@ div.SNAPd {
 </style>
 <script>
 function myFunction12() {
-  var input, filter, ul, i, h4ed, EDh32, EDbuttons, EDbanner;
+  var input, filter, ul, i, h4ed, EDh32, EDbuttons, EDbanner, ul22;
   input = document.getElementById("mySearch12");
   filter = input.value.toUpperCase();
-  ul = document.getElementsByClassName("EDsystem");
   h4ed = document.getElementsByTagName("h4");
   EDh32 = document.getElementsByClassName("EDh3");
   EDbuttons = document.getElementsByClassName("EDbuttons");
   EDbanner = document.getElementsByClassName("EDbanner");
+  ul = document.querySelectorAll("div.EDcard > a");
   for (i = 0; i < ul.length; i++) {
     if (ul[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
       ul[i].style.display = "";
@@ -571,6 +571,7 @@ EDbuttons[1].style.display = "none";
 EDbanner[0].style.display = "none";
  }
 }
+
 </script>
 	<script>
 		/*! JS Bat 2013 - v1.2 - Eric Grange - www.delphitools.info */

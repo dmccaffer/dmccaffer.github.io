@@ -6,19 +6,19 @@ var get2month = get2date.getMonth() + 1;
 var get2time = get2date.getHours();
 var EDbanner1 = document.getElementsByClassName("EDbanner");
 if (get2date2=="1" && get2month=="4" && get2time<12) {
-document.getElementById("stylesheetplace").innerHTML= "<link rel='stylesheet' href='http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/TEst/aprilfools.css'>";
+document.getElementById("stylesheetplace").innerHTML= "<link rel='stylesheet' href='aprilfools.css'>";
 } else if (get2date2=="17" && get2month=="3") {
-document.getElementById("stylesheetplace").innerHTML= "<link rel='stylesheet' href='http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/TEst/stp.css'>";
+document.getElementById("stylesheetplace").innerHTML= "<link rel='stylesheet' href='stp.css'>";
 } else if (get2date2=="31" && get2month=="10") {
-   document.getElementById("stylesheetplace").innerHTML= "<link rel='stylesheet' href='http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/halloween.css'><script type='text/javascript' async src='http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/jsbat.js'></script>";
+   document.getElementById("stylesheetplace").innerHTML= "<link rel='stylesheet' href='halloween.css'>";
 } else if (get2date2=="5" && get2month=="11") {
-   document.getElementById("stylesheetplace").innerHTML= "<link rel='stylesheet' href='http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/EDCSS.css'><link rel='stylesheet' href='http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/fireworks.css'>";
+   document.getElementById("stylesheetplace").innerHTML= "<link rel='stylesheet' href='EDCSS.css'><link rel='stylesheet' href='fireworks.css'>";
 } else if (get2date2<"32" && get2month=="12") {
-   document.getElementById("stylesheetplace").innerHTML= "<link rel='stylesheet' href='http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/EDCSS.css'><link rel='stylesheet' href='http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/snowfall.css'>";
+   document.getElementById("stylesheetplace").innerHTML= "<link rel='stylesheet' href='EDCSS.css'><link rel='stylesheet' href='snowfall.css'>";
 } else if (get2date2=="1" && get2month=="1") {
-   document.getElementById("stylesheetplace").innerHTML= "<link rel='stylesheet' href='http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/EDCSS.css'><link rel='stylesheet' href='http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/snowfall.css'><link rel='stylesheet' href='http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/fireworks.css'>";
+   document.getElementById("stylesheetplace").innerHTML= "<link rel='stylesheet' href='EDCSS.css'><link rel='stylesheet' href='snowfall.css'><link rel='stylesheet' href='fireworks.css'>";
 } else {
-document.getElementById("stylesheetplace").innerHTML= "<link rel='stylesheet' href='http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/EDCSS.css'>";
+document.getElementById("stylesheetplace").innerHTML= "<link rel='stylesheet' href='EDCSS.css'>";
 }
 }
 variablecss();

@@ -1,0 +1,530 @@
+BODY {
+	FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.EDh1 H1 {
+	MARGIN: 0PX 0 1px;
+	PADDING: 40px 0;
+	FONT-SIZE: 40px;
+	WIDTH: 100%;
+	COLOR: white;
+	TEXT-ALIGN: center;
+	BACKGROUND-COLOR: #eb0202;
+}
+div.EDsticky {
+		  position: sticky;
+  top: 0;
+}
+H2 {
+	MARGIN: 10px 0 10px 5px;
+	PADDING: 0px 0px 0 20px;
+	FONT-SIZE: 20px;
+	BORDER-BOTTOM: #eb0202 1px solid;
+	COLOR: black;
+	BORDER-LEFT: #eb0202 12px solid;
+}
+H3.EDh3 {
+	BOX-SIZING: border-box;
+	FONT-SIZE: 16px;
+	WIDTH: 100%;
+	COLOR: #ffffff;
+	PADDING: 0px 0px 0px 20px;
+	BACKGROUND-image: linear-gradient(to right, rgba(235,2,2,1), rgba(235,2,2,0));
+}
+H4 {
+	FONT-SIZE: 18px;
+	WIDTH: 100%;
+	COLOR: white;
+	TEXT-ALIGN: center;
+	MARGIN: 0px;
+	BACKGROUND-COLOR: #690000;
+	PADDING: 0px;
+}
+H4.EDstay {
+	FONT-SIZE: 18px;
+	WIDTH: 100%;
+	COLOR: white;
+	TEXT-ALIGN: center;
+	MARGIN: 0px;
+	BACKGROUND-COLOR: #690000;
+	PADDING: 0px;
+}
+H4.Hcovid {
+background-color: #93cd78;
+color: black;
+}
+H5 {
+	FONT-SIZE: 16px;
+	WIDTH: 100%;
+	COLOR: white;
+	TEXT-ALIGN: left;
+	MARGIN: 0px;
+	BACKGROUND-COLOR: #3e0000;
+	PADDING: 0px;
+}
+UL.nav {
+	LIST-STYLE-TYPE: none;
+	OVERFLOW: hidden;
+	PADDING: 0px;
+	MARGIN: 0px 0px 1px;
+	TOP: 0px;
+	BACKGROUND-COLOR: #970808;
+}
+LI.nav {
+	BORDER-RIGHT: #bbb 1px solid;
+	FLOAT: left
+}
+.nav A, .EDdropbtn {
+	TEXT-DECORATION: none;
+	COLOR: #ffffff;
+	PADDING: 8px 12px;
+	TEXT-ALIGN: center;
+	DISPLAY: inline-block;
+}
+.nav A:hover, EDdropdown:hover .EDdropbtn {
+	BACKGROUND-COLOR: #690000;
+}
+li.EDdropdown {
+  display: inline-block;
+}
+.EDdropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #970808;
+  min-width: 160px;
+  z-index: 1;
+}
+.EDdropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: #bbb 1px solid;
+}
+.EDdropdown-content a:hover {
+  background-color: #690000;
+}
+.EDdropdown:hover .EDdropdown-content {
+  display: block;
+}
+A.alertlink:link {
+	TEXT-DECORATION: none;
+	COLOR: black;
+	PADDING: 8px;
+	DISPLAY: block;
+	font-size: 12px;
+}
+A.alertlink:visited {
+	COLOR: black;
+}
+A.alertlink:hover {
+	TEXT-DECORATION: none;
+	COLOR: white;
+	BACKGROUND-COLOR: darkgrey;
+}
+A.general:link {
+	TEXT-DECORATION: underline;
+	COLOR: #970808;
+}
+A.general:visited {
+	COLOR: #970808;
+}
+A.EDbutton:link, A.EDbuttonH:link {
+	FONT-SIZE: 16px;
+	TEXT-DECORATION: none;
+	BORDER: #aa3939 1px solid;
+	WIDTH: 20%; COLOR: black;
+	PADDING: 16px 5px;
+	TEXT-ALIGN: center;
+	MARGIN: 5px;
+	DISPLAY: inline-block;
+	BACKGROUND-COLOR: lightgrey;
+	transition-duration: 0.4S;
+}
+A.EDbutton:visited, A.EDbuttonH:visited {
+	BORDER: #aa3939 1px solid;
+	COLOR: black;
+	BACKGROUND-COLOR: lightgrey;
+}
+A.EDbutton:hover {
+	COLOR: white;
+	BACKGROUND-COLOR: darkgrey;
+}
+A.EDbuttonH:hover {
+	COLOR: white;
+	BACKGROUND-COLOR: darkgrey;
+}
+A.EDbuttonU:hover {
+	COLOR: white;
+	BACKGROUND-COLOR: #970808;
+}
+
+.EDsystemLinks a:link {
+	FONT-SIZE: 12px;
+	TEXT-DECORATION: none;
+	COLOR: black;
+	PADDING: 3px 3px 3px 5px;
+	TEXT-ALIGN: left;
+	MARGIN-TOP: 0px;
+	DISPLAY: block;
+	BACKGROUND-COLOR: lightgrey;
+}
+.EDsystemLinks a:visited {
+	COLOR: black;
+	BACKGROUND-COLOR: lightgrey;
+}
+.EDsystemLinks a:hover {
+	COLOR: white;
+	BACKGROUND-COLOR: darkgrey;
+}
+
+
+A.EDsystem:link, A.EDsystemH:link {
+	FONT-SIZE: 12px;
+	TEXT-DECORATION: none;
+	COLOR: black;
+	PADDING: 3px 3px 3px 5px;
+	TEXT-ALIGN: left;
+	MARGIN-TOP: 0px;
+	DISPLAY: block;
+	BACKGROUND-COLOR: lightgrey;
+}
+
+A.EDsystem:visited, A.EDsystemH:visited {
+	COLOR: black;
+	BACKGROUND-COLOR: lightgrey;
+}
+A.EDsystem:hover {
+	COLOR: white;
+	BACKGROUND-COLOR: darkgrey;
+}
+A.EDsystemU:hover {
+	COLOR: white;
+	BACKGROUND-COLOR: #970808;
+}
+A.EDsystemD:hover {
+	COLOR: white;
+	BACKGROUND-COLOR: green;
+}
+A.EDdead:link {
+	TEXT-DECORATION: line-through;
+}
+A.EDdead:hover {
+	COLOR: red;
+	cursor: not-allowed;
+}
+A.EDsystemH:hover {
+	COLOR: white;
+	BACKGROUND-COLOR: darkgrey;
+}
+.EDinfo {
+  display: none;
+  position: absolute;
+  background-color: darkgrey;
+  width: 300px;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-align: left;
+  border: #eb0202 2px solid;
+  z-index: 1;
+}
+A.EDsystemH:hover + .EDinfo {
+  display: block;
+}
+.EDinfo2 {
+  display: none;
+  position: absolute;
+  right: 32%;
+  background-color: lightgrey;
+  width: 150px;
+}
+.EDinfo2 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: #aa3939 1px solid;
+}
+.EDbuttonH a:hover {
+  background-color: darkgrey;
+  color: white;
+}
+.EDbuttonH:hover + .EDinfo2 {
+  display: block;
+}
+.TESTEST {
+  display: inline;
+}
+.TESTEST:hover EDinfo2 {
+ display: block;
+}
+.EDcolumn {
+	WIDTH: 30%;
+	VERTICAL-ALIGN: top;
+	PADDING: 0px 10px;
+	DISPLAY: inline-block;
+}
+.EDrow {
+	MARGIN: 0px -5px;
+}
+.EDcard {
+	PADDING: 5px 0px 5px 0px;
+	TEXT-ALIGN: center;
+}
+.EDcard:target {
+	border: 3px dashed #eb0202;
+}
+.EDpaed:target {
+	border: 3px dashed #eb0202;
+}
+.tbc {
+	WIDTH: auto;
+	COLOR: black;
+	PADDING: 10px 5px;
+	TEXT-ALIGN: center;
+	MARGIN: 10px;
+	BACKGROUND-COLOR: lightgrey;
+}
+.tbc2 {
+	WIDTH: auto;
+	COLOR: black;
+	PADDING: 0px 0px 10px 0px;
+	TEXT-ALIGN: left;
+	MARGIN: 10px;
+	BACKGROUND-COLOR: lightgrey;
+}
+.EDcontent {
+	WIDTH: 809px;
+	MARGIN: auto;
+	BACKGROUND-COLOR: white;
+}
+.newsitem {
+	PADDING: 10px;
+}
+.newsd {
+	FLOAT: right;
+	BACKGROUND-COLOR: #3e0000;
+}
+
+div.EDfixed {
+  position: fixed;
+  padding: 0px;
+  color: red;
+  background-color: white;
+  bottom: 2px;
+  right: 18px;
+  min-width: 150px;
+  border: 3px solid red;
+  z-index: 50;
+}
+div.EDfixed2 {
+  position: fixed;
+  padding: 0px;
+  text-align: center;
+  color: black;
+  background-color: white;
+  top: 300px;
+  right: 100px;
+  min-width: 300px;
+  border: 3px solid red;
+  z-index: 50;
+}
+.EDfixed img {
+	width: 170px;
+}
+
+UL.EDbut {
+	LIST-STYLE-TYPE: none;
+	OVERFLOW: hidden;
+	PADDING: 0px;
+	MARGIN: 0px 0px 1px;
+	TOP: 0px;
+	BACKGROUND-COLOR: #970808;
+}
+LI.EDbut {
+	BORDER-RIGHT: #bbb 1px solid;
+	FLOAT: left
+}
+.EDbut A, .EDbutH {
+	TEXT-DECORATION: none;
+	COLOR: #ffffff;
+	PADDING: 8px 12px;
+	TEXT-ALIGN: center;
+	DISPLAY: inline-block;
+}
+.EDbut A:hover, EDbutH:hover .EDbutH {
+	BACKGROUND-COLOR: #690000;
+}
+li.EDbutH {
+  display: inline-block;
+}
+.EDbutH-content {
+  display: none;
+  position: absolute;
+  background-color: #970808;
+  min-width: 160px;
+  z-index: 1;
+}
+.EDbutH-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: #bbb 1px solid;
+}
+.EDbutH-content a:hover {
+  background-color: #690000;
+}
+.EDbutH:hover .EDbutH-content {
+  display: block;
+}
+
+div.covid {
+border: 5px solid #93cd78;
+background-color: black;
+color: white;
+margin: 10px 0px;
+padding: 2px 0px 3px 00px;
+text-align: center;
+}
+.covidt {
+color: #93cd78;
+font-family: arial;
+font-size: 40px;
+font-weight: 900;
+width: 100%;
+border-bottom: 1px solid #93cd78;
+}
+
+A.EDsystemC:link {
+	FONT-SIZE: 12px;
+	TEXT-DECORATION: none;
+	COLOR: white;
+	PADDING: 3px 3px 3px 5px;
+	TEXT-ALIGN: left;
+	MARGIN-TOP: 0px;
+	DISPLAY: block;
+	BACKGROUND-COLOR: black;
+	BORDER-WIDTH: 0px 1px 1px 1px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #93cd78;
+}
+A.EDsystemC:visited {
+	COLOR: white;
+	BACKGROUND-COLOR: black;
+	BORDER-COLOR: #93cd78;
+}
+A.EDsystemC:hover {
+	COLOR: black;
+	BACKGROUND-COLOR: #93cd78;
+}
+#mySearch12 {
+  width: 250px;
+  border: 0;
+  outline: 0;
+border-bottom: 1px solid red;
+}
+div.EDbanner {
+	text-align: center;
+	font-size: 20px;
+	height: 120px;
+	overflow: auto;
+	padding: 20px 40px 0px 40px;
+	border: 3px dashed #0073E6;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	width: 80%;
+/*	line-height: 120px; */
+	display: none;
+	top: 10px;
+}
+.EDbannerlogo {
+	float: left;
+	max-height: 100px;
+}
+.EDbanner a {
+	text-decoration: none;
+	color: black;
+}
+.EDbanner p {
+  line-height: 1.5;
+  vertical-align: middle;
+  font-size: 15px;
+}
+div.SNAPd {
+	display: none;
+}
+.EDmodalDialog {
+				opacity: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding-top: 30px;
+        background: rgba(0,0,0,0.6);
+        z-index: 100;
+        -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+	      transition: opacity 400ms ease-in;
+        pointer-events: none;
+				text-align: left !important;
+    }
+
+    .EDmodalDialog:target {
+        opacity: 1 !important;
+        pointer-events: auto;
+    }
+
+    .EDmodalDialog > div {
+  position: relative;
+  background-color: #ffffff;
+  margin: auto;
+  padding: 0px 20px 20px 20px;
+  border: 1px solid #888;
+  width: 75%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8),0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+    .EDclose {
+        background: #606061!important;
+        color: #FFFFFF!important;
+        line-height: 25px!important;
+        position: absolute!important;
+        right: -12px!important;
+        text-align: center!important;
+        top: -10px!important;
+        width: 24px!important;
+        text-decoration: none!important;
+        font-weight: bold!important;
+        -webkit-border-radius: 12px!important;
+        -moz-border-radius: 12px!important;
+        border-radius: 12px!important;
+        -moz-box-shadow: 1px 1px 3px #000!important;
+        -webkit-box-shadow: 1px 1px 3px #000!important;
+        box-shadow: 1px 1px 3px #000!important;
+    }
+
+    .EDclose:hover { background: #eb0202; }
+.EDcontainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 100%;
+}
+.odcalc {
+display:none;
+border-style:dashed;
+margin-top:5px;
+padding: 5px;
+width: 50%;
+margin: auto;
+}
+.EDactions {
+border-left: 2px solid red; 
+padding: 5px;
+}

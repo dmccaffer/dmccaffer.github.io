@@ -1,593 +1,59 @@
 <html>
 <head>
 <Title>Emergency Department</title>
-<style>
-BODY {
-	FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, sans-serif;
-	background-color: #000000!important;
-}
-body::after {
-	background-color: #000000;
-}
-.EDh1 h1 {
-	MARGIN: 0PX 0 1px;
-	PADDING: 40px 0;
-	FONT-SIZE: 40px;
-	WIDTH: 100%;
-	COLOR: #7E3517;
-	TEXT-ALIGN: center;
-	opacity: 1;
-	text-shadow: 1px 1px white;
-}
-div.EDh1 {
-	background: black url("https://i.imgur.com/uZAoG4q.jpg") no-repeat center;
-  background-size: cover;
-  opacity: 0.5;
-}
-div.EDcontent {
 
-}
-div.ControlZone-control {
-		background-color: black;
-}
-H2 {
-	MARGIN: 10px 0 10px 5px;
-	PADDING: 0px 0px 0 20px;
-	FONT-SIZE: 20px;
-	BORDER-BOTTOM: #eb0202 1px solid;
-	COLOR: #7E3517;
-	BORDER-LEFT: #7E3517 12px solid;
-}
-H3.EDh3 {
-	BOX-SIZING: border-box;
-	FONT-SIZE: 16px;
-	WIDTH: 100%;
-	COLOR: #ffffff;
-	PADDING: 0px 0px 0px 20px;
-	BACKGROUND-image: linear-gradient(to right, rgba(126,53,23,1), rgba(126,53,23,0));
-}
-H4 {
-	FONT-SIZE: 18px;
-	WIDTH: 100%;
-	COLOR: white;
-	TEXT-ALIGN: center;
-	MARGIN: 0px;
-	BACKGROUND-COLOR: #690000;
-	PADDING: 0px;
-}
-H4.Hcovid {
-background-color: #93cd78;
-color: black;
-}
-H5 {
-	FONT-SIZE: 16px;
-	WIDTH: 100%;
-	COLOR: white;
-	TEXT-ALIGN: left;
-	MARGIN: 0px;
-	BACKGROUND-COLOR: #3e0000;
-	PADDING: 0px;
-}
-UL.nav {
-	LIST-STYLE-TYPE: none;
-	OVERFLOW: hidden;
-	PADDING: 0px;
-	MARGIN: 0px 0px 1px;
-	TOP: 0px;
-	BACKGROUND-COLOR: #7E3517;
-}
-LI.nav {
-	BORDER-RIGHT: black 1px solid;
-	FLOAT: left
-}
-.nav A, .EDdropbtn {
-	TEXT-DECORATION: none;
-	COLOR: #ffffff;
-	PADDING: 8px 12px;
-	TEXT-ALIGN: center;
-	DISPLAY: inline-block;
-}
-.nav A:hover, EDdropdown:hover .EDdropbtn {
-	BACKGROUND-COLOR: #690000;
-}
-li.EDdropdown {
-  display: inline-block;
-}
-.EDdropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #7E3517;
-  min-width: 160px;
-  z-index: 1;
-}
-.EDdropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  border-bottom: #bbb 1px solid;
-}
-.EDdropdown-content a:hover {
-  background-color: #690000;
-}
-.EDdropdown:hover .EDdropdown-content {
-  display: block;
-}
-A.alertlink:link {
-	TEXT-DECORATION: none;
-	COLOR: black;
-	PADDING: 8px;
-	DISPLAY: block;
-	font-size: 12px;
-}
-A.alertlink:visited {
-	COLOR: black;
-}
-A.alertlink:hover {
-	TEXT-DECORATION: none;
-	COLOR: white;
-	BACKGROUND-COLOR: darkgrey;
-}
-A.general:link {
-	TEXT-DECORATION: underline;
-	COLOR: #970808;
-}
-A.general:visited {
-	COLOR: #970808;
-}
-A.EDbutton:link, A.EDbuttonH:link {
-	FONT-SIZE: 16px;
-	TEXT-DECORATION: none;
-	BORDER: #aa3939 1px solid;
-	WIDTH: 20%; COLOR: black;
-	PADDING: 16px 5px;
-	TEXT-ALIGN: center;
-	MARGIN: 5px;
-	DISPLAY: inline-block;
-	BACKGROUND-COLOR: orange;
-	transition-duration: 0.4S;
-}
-A.EDbutton:visited, A.EDbuttonH:visited {
-	BORDER: #aa3939 1px solid;
-	COLOR: black;
-	BACKGROUND-COLOR: orange;
-}
-A.EDbutton:hover {
-	COLOR: white;
-	BACKGROUND-COLOR: darkred;
-}
-A.EDbuttonH:hover {
-	COLOR: white;
-	BACKGROUND-COLOR: darkgrey;
-}
-A.EDbuttonU:hover {
-	COLOR: white;
-	BACKGROUND-COLOR: #970808;
-}
-
-.EDsystemLinks a:link {
-	FONT-SIZE: 12px;
-	TEXT-DECORATION: none;
-	COLOR: black;
-	PADDING: 3px 3px 3px 5px;
-	TEXT-ALIGN: left;
-	MARGIN-TOP: 0px;
-	DISPLAY: block;
-	BACKGROUND-COLOR: orange;
-}
-.EDsystemLinks a:visited {
-	COLOR: black;
-	BACKGROUND-COLOR: orange;
-}
-.EDsystemLinks a:hover {
-	COLOR: white;
-	BACKGROUND-COLOR: darkred;
-}
-
-
-A.EDsystem:link, A.EDsystemH:link {
-	FONT-SIZE: 12px;
-	TEXT-DECORATION: none;
-	COLOR: black;
-	PADDING: 3px 3px 3px 5px;
-	TEXT-ALIGN: left;
-	MARGIN-TOP: 0px;
-	DISPLAY: block;
-	BACKGROUND-COLOR: orange;
-}
-
-A.EDsystem:visited, A.EDsystemH:visited {
-	COLOR: black;
-	BACKGROUND-COLOR: lightgrey;
-}
-A.EDsystem:hover {
-	COLOR: white;
-	BACKGROUND-COLOR: darkgrey;
-}
-A.EDsystemU:hover {
-	COLOR: white;
-	BACKGROUND-COLOR: #970808;
-}
-A.EDsystemD:hover {
-	COLOR: white;
-	BACKGROUND-COLOR: green;
-}
-A.EDdead:link {
-	TEXT-DECORATION: line-through;
-}
-A.EDdead:hover {
-	COLOR: red;
-	cursor: not-allowed;
-}
-A.EDsystemH:hover {
-	COLOR: white;
-	BACKGROUND-COLOR: darkgrey;
-}
-.EDinfo {
-  display: none;
-  position: absolute;
-  background-color: darkgrey;
-  width: 300px;
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-align: left;
-  border: #eb0202 2px solid;
-  z-index: 1;
-}
-A.EDsystemH:hover + .EDinfo {
-  display: block;
-}
-.EDinfo2 {
-  display: none;
-  position: absolute;
-  right: 32%;
-  background-color: lightgrey;
-  width: 150px;
-}
-.EDinfo2 a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  border-bottom: #aa3939 1px solid;
-}
-.EDbuttonH a:hover {
-  background-color: darkgrey;
-  color: white;
-}
-.EDbuttonH:hover + .EDinfo2 {
-  display: block;
-}
-.TESTEST {
-  display: inline;
-}
-.TESTEST:hover EDinfo2 {
- display: block;
-}
-.EDcolumn {
-	WIDTH: 30%;
-	VERTICAL-ALIGN: top;
-	PADDING: 0px 10px;
-	DISPLAY: inline-block;
-}
-.EDrow {
-	MARGIN: 0px -5px;
-}
-.EDcard {
-	PADDING: 5px 0px 5px 0px;
-	TEXT-ALIGN: center;
-}
-.EDcard:target {
-	border: 3px dashed #eb0202;
-}
-.tbc {
-	WIDTH: auto;
-	COLOR: black;
-	PADDING: 10px 5px;
-	TEXT-ALIGN: center;
-	MARGIN: 10px;
-	BACKGROUND-COLOR: lightgrey;
-}
-.tbc2 {
-	WIDTH: auto;
-	COLOR: black;
-	PADDING: 0px 0px 10px 0px;
-	TEXT-ALIGN: left;
-	MARGIN: 10px;
-	BACKGROUND-COLOR: lightgrey;
-}
-.EDcontent {
-	WIDTH: 809px;
-	MARGIN: auto;
-	BACKGROUND-COLOR: white;
-}
-.newsitem {
-	PADDING: 10px;
-}
-.newsd {
-	FLOAT: right;
-	BACKGROUND-COLOR: #3e0000;
-}
-.content {
-	BORDER: 0px solid #ff0000;
-	WIDTH: 809px;
-	MARGIN: auto;
-}
-div.EDfixed {
-  position: fixed;
-  padding: 3px;
-  background-color: white;
-  color: black;
-  bottom: 0;
-  right: 18px;
-  min-width: 300px;
-  border: 3px solid #eb0202;
-}
-
-UL.EDbut {
-	LIST-STYLE-TYPE: none;
-	OVERFLOW: hidden;
-	PADDING: 0px;
-	MARGIN: 0px 0px 1px;
-	TOP: 0px;
-	BACKGROUND-COLOR: #970808;
-}
-LI.EDbut {
-	BORDER-RIGHT: #bbb 1px solid;
-	FLOAT: left
-}
-.EDbut A, .EDbutH {
-	TEXT-DECORATION: none;
-	COLOR: #ffffff;
-	PADDING: 8px 12px;
-	TEXT-ALIGN: center;
-	DISPLAY: inline-block;
-}
-.EDbut A:hover, EDbutH:hover .EDbutH {
-	BACKGROUND-COLOR: #690000;
-}
-li.EDbutH {
-  display: inline-block;
-}
-.EDbutH-content {
-  display: none;
-  position: absolute;
-  background-color: #970808;
-  min-width: 160px;
-  z-index: 1;
-}
-.EDbutH-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  border-bottom: #bbb 1px solid;
-}
-.EDbutH-content a:hover {
-  background-color: #690000;
-}
-.EDbutH:hover .EDbutH-content {
-  display: block;
-}
-
-div.covid {
-border: 5px solid #93cd78;
-background-color: black;
-color: white;
-margin: 10px 0px;
-padding: 2px 0px 3px 00px;
-text-align: center;
-}
-.covidt {
-color: #93cd78;
-font-family: arial;
-font-size: 40px;
-font-weight: 900;
-width: 100%;
-border-bottom: 1px solid #93cd78;
-}
-
-A.EDsystemC:link {
-	FONT-SIZE: 12px;
-	TEXT-DECORATION: none;
-	COLOR: white;
-	PADDING: 3px 3px 3px 5px;
-	TEXT-ALIGN: left;
-	MARGIN-TOP: 0px;
-	DISPLAY: block;
-	BACKGROUND-COLOR: black;
-	BORDER-WIDTH: 0px 1px 1px 1px;
-	BORDER-STYLE: solid;
-	BORDER-COLOR: #93cd78;
-}
-A.EDsystemC:visited {
-	COLOR: white;
-	BACKGROUND-COLOR: black;
-	BORDER-COLOR: #93cd78;
-}
-A.EDsystemC:hover {
-	COLOR: black;
-	BACKGROUND-COLOR: #93cd78;
-}
-#mySearch12 {
-  width: 250px;
-  border: 0;
-  outline: 0;
-	background-color: #000000;
-	color: darkred;
-border-bottom: 1px solid red;
-}
-div.EDbanner {
-	text-align: center;
-	height: 120px;
-	overflow: auto;
-	padding: 20px 40px 0px 40px;
-	border: 3px dashed #0073E6;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 10px;
-	margin-bottom: 0px;
-	width: 80%;
-	line-height: 120px;
-	display: none;
-	position: sticky;
-	top: 10px;
-	background-color: white;
-}
-.EDbannerlogo {
-	float: left;
-	max-height: 100px;
-}
-.EDbanner a {
-	text-decoration: none;
-	color: black;
-}
-.EDbanner p {
-  line-height: 1.5;
-  vertical-align: middle;
-  font-size: 15px;
-}
-div.SNAPd {
-	display: none;
-}
-.EDmodalDialog {
-				opacity: 0;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        padding-top: 200px;
-        background: rgba(0,0,0,0.6);
-        z-index: 100;
-        -webkit-transition: opacity 400ms ease-in;
-        -moz-transition: opacity 400ms ease-in;
-	      transition: opacity 400ms ease-in;
-        pointer-events: none;
-				text-align: left !important;
-    }
-
-    .EDmodalDialog:target {
-        opacity: 1 !important;
-        pointer-events: auto;
-    }
-
-    .EDmodalDialog > div {
-  position: relative;
-  background-color: #ffffff;
-  margin: auto;
-  padding: 0px 20px 20px 20px;
-  border: 1px solid #888;
-  width: 75%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8),0 6px 20px 0 rgba(0,0,0,0.19);
-    }
-
-    .EDclose {
-        background: #606061;
-        color: #FFFFFF;
-        line-height: 25px;
-        position: absolute;
-        right: -12px;
-        text-align: center;
-        top: -10px;
-        width: 24px;
-        text-decoration: none;
-        font-weight: bold;
-        -webkit-border-radius: 12px;
-        -moz-border-radius: 12px;
-        border-radius: 12px;
-        -moz-box-shadow: 1px 1px 3px #000;
-        -webkit-box-shadow: 1px 1px 3px #000;
-        box-shadow: 1px 1px 3px #000;
-    }
-
-    .EDclose:hover { background: #eb0202; }
-
-		.spNav_e14ce814 .ms-Nav {
-			background-color: #000000;
-			border: 0px!important;
-		}
-.ms-Nav .compositeLink-93 a:link {
-	background-color: #000000;
-	color: #ffffff;
-}
-.ms-Nav .compositeLink-93 a:visited {
-	color: #ffffff;
-}
-.ms-Nav .compositeLink-93 a:hover {
-	background-color: darkgrey;
-}
-.compositeLink-93 {
-	background-color: #000000;
-	color: #ffffff;
-}
-.root_c66f1a69 {
-	background-color: #000000!important;
-}
-
-</style>
-<script>
-function myFunction12() {
-  var input, filter, ul, i, h4ed, EDh32, EDbuttons, EDbanner, ul22;
-  input = document.getElementById("mySearch12");
-  filter = input.value.toUpperCase();
-  h4ed = document.getElementsByTagName("h4");
-  EDh32 = document.getElementsByClassName("EDh3");
-  EDbuttons = document.getElementsByClassName("EDbuttons");
-  EDbanner = document.getElementsByClassName("EDbanner");
-  ul = document.querySelectorAll("div.EDcard > a");
-  for (i = 0; i < ul.length; i++) {
-    if (ul[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-      ul[i].style.display = "";
-    } else {
-      ul[i].style.display = "none";
-    }
-  }
- for (i = 0; i < h4ed.length; i++) {
-   if (filter == "") {
-h4ed[i].style.display = "block";
-     } else {
-h4ed[i].style.display = "none";
-     }
-  }
- for (i = 0; i < EDh32.length; i++) {
-   if (filter == "") {
-EDh32[i].style.display = "block";
-     } else {
-EDh32[i].style.display = "none";
- }
- }
-   if (filter == "") {
-EDbuttons[0].style.display = "block";
-EDbuttons[1].style.display = "block";
-EDbanner[0].style.display = "none";
-    } else {
-EDbuttons[0].style.display = "none";
-EDbuttons[1].style.display = "none";
-EDbanner[0].style.display = "none";
- }
-}
-
-</script>
-	<script type="text/javascript" async src="https://github.com/dmccaffer/dmccaffer.github.io/blob/master/jsbat.js"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W84L5L98BJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-W84L5L98BJ');
-</script>
 </head>
 <body>
 <div id="stylesheetplace"></div>
-<div class="EDh1"><h1>EMERGENCY DEPARTMENT</h1></div>
-<ul class="nav">
+<script src="http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/variablecss.js"></script>
+<noscript><link rel="stylesheet" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/EDCSS.css"></noscript><script src="http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/search.js"></script>
+<div class="EDh1">
+<ul class="lightrope" style="display: none;">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+<h1>EMERGENCY DEPARTMENT</h1></div>
+<div class="EDsticky"><ul class="nav">
    <li class="nav">
       <a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/">Home</a></li>
    <li class="nav EDdropdown">
@@ -598,97 +64,166 @@ EDbanner[0].style.display = "none";
    <li class="nav EDdropdown">
       <a class="EDdropbtn" href="#">Useful Numbers</a> 
       <div class="EDdropdown-content">
-         <a href="/sites/altc-EmergCare/Emergency%20Department/SitePages/Contacts.aspx">UHND</a><a href="/sites/altc-EmergCare/Emergency%20Department/SitePages/Contacts-(DMH).aspx">DMH</a></div>
+         <a href="/sites/altc-EmergCare/Emergency%20Department/SitePages/Contacts.aspx">UHND</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Quick%20Guide%20Referrals%20PDF.pdf">UHND Quick Referrals</a><a href="/sites/altc-EmergCare/Emergency%20Department/SitePages/Contacts-(DMH).aspx">DMH</a></div>
    </li>
-<li class="nav">
-<a href="http://svr-anesrs/CDDReports/report/Reports/Daily%20Log/Current%20Status%20Report">ED status</a></li>
+<li class="nav"><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Teaching%20resources/">ED Teaching Resources</a></li>
+   <li class="nav EDdropdown">
+      <a class="EDdropbtn" href="https://app4.synbiotix.com/CountyDurham/Login.aspx">ED Portering App</a> 
+      <div class="EDdropdown-content">
+         <a href="#">Username: XXXX</a><a href="#">Password: XXXX</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Ed%20Portering%20App%20User%20Guide.pdf">User guide</a></div>
+   </li>
    <li class="nav" style="float: right; background-color: #3e0000; display: inline-block; padding: 8px 12px;">
       <input type="text" id="mySearch12" onkeyup="myFunction12()" placeholder="Instant search..." title="Type in a subject"></li>
-</ul>
-<div class="EDbanner"><a href="#EDbanner2"><p><strong>D-DIMER changes!</strong><br>Age adjusted D-DIMER is now in use within CDDFT.<br>Click for more details.</p></a></div><div id="EDbanner2" class="EDmodalDialog"  style="opacity: 0;"><div>
+</ul></div>
+<div class="EDbanner">EMPTY (You should not be seeing this...)</div><div id="EDbanner2" class="EDmodalDialog"  style="opacity: 0;"><div>
     <a href="#EDclose" title="EDClose" class="EDclose">X</a>
-    <h2>Age-adjusted D-DIMER</h2>
-    <p>From 18th October, 2021, age-adjusted D-DIMER will be in use within CDDFT.</p><p>In order to use age-adjusted D-dimer, the assay itself is changing, as are the normal values.  It is pretty simple and is as below:</p><strong>Old assay:</strong> 
-<ul><li>Normal range <230 for all patients</li></ul>
-<strong>New assay: </strong><ul><li>Normal range <500 up to the age of 50</li><li>From age 51, normal range = age x 10</li></ul><p>Therefore, for age 51, the normal cut off is 510.  For age 85, it is 850 – and so on.</p><p>The lab will be applying the age-adjustment in their reporting – so the normal value reported will be age adjusted, and the result will only appear in red as abnormal if above the age adjusted value.</p>
+    <h2>EMPTY - you should not be reading this.
 </div>
 </div>
 <div class="EDbuttons">
    <h2 id="Common">Commonly used resources</h2>
    <center>
-      <a class="EDbutton" href="https://www.nice.org.uk/guidance/cg176/resources/imaging-algorithm-498950893">CT Head Algorithm</a><a class="EDbutton" href="#SNAP">Paracetamol / NAC</a><a class="EDbutton" href="#Elec">Electrolyte Correction</a><a class="EDbutton EDbuttonU" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Renal%20colic%20v2.docx">Renal colic</a><a class="EDbutton" href="http://intranet/sites/altc-Cardiology/Cardiology%20Guidelines/Low%20Risk%20NSTEMI%20Pathway.pptx">Chest Pain Algorithm</a><a class="EDbutton" href="/sites/hub-pp/Published%20Documents/Diabetic%20Ketoacidosis%20DKA.pdf#Page=5">DKA</a><a class="EDbutton" href="/sites/altc-EmergCare/Emergency%20Department/MSK/Forms/AllItems.aspx">VFC Documents</a><a class="EDbutton" href="#sepsis">Sepsis Tool</a></center> 
+      <a class="EDbutton" href="https://www.nice.org.uk/guidance/ng232/resources/imaging-algorithm-pdf-13061125549">CT Head Algorithm</a><a class="EDbutton" href="#SNAP">Paracetamol / NAC</a><a class="EDbutton" href="#Elec">Electrolyte Correction</a><a class="EDbutton" href="#EDpaeds">Paeds guidelines</a><a class="EDbutton" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/LowRiskCardiacChestPainPathway.pdf">Chest pain pathway</a><a class="EDbutton" href="http://svr-spapp/sites/hub-pp/Published%20Documents/Management%20of%20Diabetic%20Ketoacidosis%20(DKA)%20-%20Adults.pdf">DKA</a><a class="EDbutton" href="/sites/altc-EmergCare/Emergency%20Department/MSK/Forms/AllItems.aspx">VFC Documents</a><a class="EDbutton" href="#sepsis">Sepsis Tool</a></center> 
    <br/>
    <h2 id="ALS">Cardiac Arrest Algorithms</h2>
    <center>
       <a class="EDbutton" href="https://www.resus.org.uk/sites/default/files/2021-04/Adult%20Advanced%20Life%20Support%20Algorithm%202021.pdf">Adult</a><a class="EDbutton" href="https://www.resus.org.uk/sites/default/files/2021-04/Paediatric%20ALS%20Algorithm%202021.pdf">Paediatric</a><a class="EDbutton" href="https://www.resus.org.uk/sites/default/files/2021-05/Newborn%20Life%20Support%20Algorithm%202021.pdf">Neonatal</a><a class="EDbutton" href="https://www.resus.org.uk/sites/default/files/2020-05/G2015_Traumatic_Cardiac_Arrest_Treatment.pdf">Traumatic</a></center>
 </div>
+
 <div class="EDsystemLinks">
+<h3 class="EDh3">EPR</h3>
+<div class="EDrow">
+<div class="EDcolumn"><div class="EDcard"><h4>EPR Cheat Sheat</h4><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/EPR/EPR%20for%20beginners.pdf">EPR for beginners / cheat sheet - the how to survive using EPR on day one reference guide by Kate George</a></div><div class="EDcard"><h4>Time-critical medications</h4><a href="http://intranet/sites/hub-news/Shared%20Documents/Prescribing%20time-critical%20Parkinson%E2%80%99s%20medications%20-%20step%20by%20step%20guide%202023.pdf">Prescribing time-critical medications, e.g., Parkinsons</a></div><div class="EDcard"><h4>Soda accounts</h4><a class="EDsystemH"><a class="EDsystemH" href="http://intranet/sites/ws-EPR/SitePages/Request-a-Login.aspx">Request a login</a><div class="EDinfo">Monday - Friday, 08:30 - 17:30: <b>Contact IT</b><br>Out of hours: <b>Contact AI Team 
+ - 55260</b></div></div></div>
+<div class="EDcolumn">
+<div class="EDcard"><h4>Useful docs</h4><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Faltc%2DEmergCare%2FEmergency%20Department%2FShared%20Documents%2FEPR">ED EPR resource folder</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/EPR/Firstnet%20-%20Remove%20DTA%20v2.docx">Remove / Undo DTA</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/EPR/EPR%20ordering%20references.docx">EPR ordering references</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/EPR/Print%20Labels%20or%20Wristbands.docx">How to print wristbands and labels</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/EPR/ED%20Breaches%20Report.docx">ED Breaches Reports</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/EPR/ED%20favourite%20printers.docx">Set your favourite printers</a><a href="http://svr-spapp/sites/ws-EPR/Briefings/Training%20Materials/QRG%20-%20DNACPR.pdf">DNACPR</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/EPR/Community%20Hospital%20to%20ED%20Transfer%20and%20back%20to%20Community%20QRG.docx">Transfer from community hospital</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/QRG%20-%20community%20Represcibe%20Medication.pdf">Represcribing community hospital medications</a></div></div>
+<div class="EDcolumn"><div class="EDcard"><h4>Blood Transfusion</h4><a href="http://svr-spapp/sites/ws-EPR/Briefings/Training%20Materials/EPR%20User%20Guide%20for%20Blood%20Transfusion.pdf">EPR User Gudie for Blood Transfusion</a><a href="http://svr-spapp/sites/ws-EPR/Briefings/Training%20Materials/BT%20Prescribing%20+Ordering%20Summary%20Quick%20Sheet.doc">Blood transfusion prescribing and ordering (quick sheet)</a><a href="http://svr-spapp/sites/ws-EPR/Briefings/Training%20Materials/BT%20Administration%20Quick%20sheet.doc">Blood transfusion administration (quick sheet)</a><a href="http://svr-spapp/sites/ws-EPR/Briefings/Training%20Materials/RhD%20%20Anti-D%20Powerplan%20Quick%20sheet.doc">Blood transfusion RhD Anti-D powerplan (quick sheet)</a></div></div></div>
 <h3 class="EDh3">ED Specific documents</h3>
 <div class="EDrow">
    <div class="EDcolumn">
       <div class="EDcard">
          <h4>Procedures</h4> 
-         <a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Fascia%20Iliaca%20Block%20Guideline.docx">Fascia Iliaca block guide</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Fractured%20NOF%20and%20FIB%20pathway%20-%20COVID.pdf">NOF and Fascia Iliaca Block Pathway</a><a href="/sites/nd-ClinGov/PatSafety/intranet/Shared%20Documents/REGIONAL%20ANAESTHESIA%20OUTSIDE%20THEATRE.pdf">FIB LocSIPP</a><a class="EDsystem EDsystemH" href="#">Sedation Checklist</a>
-         <div class="EDinfo">Sedation checklist now printable from Symphony.</div> 
-         <a class="EDsystem EDsystemH" href="https://www.rcoa.ac.uk/sites/default/files/documents/2020-05/12-SedationExplainedweb.pdf">Sedation patient advice leaflet (RCOA)</a>
-        <div class="EDinfo">Local sedation advice leaflet lost during SharePoint upgrade.</div><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Guideline_management_severe_local_anaesthetic_toxicity_v2_2010_final.pdf">Local anaesthetic toxicity</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Insertion%20and%20Management%20of%20an%20EZ-IO%20Intraosseous%20Device%20V1%200.docx">Insertion of EZ-IO</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Insertion%20and%20Management%20of%20an%20EZ-IO%20Intraosseous%20Device%20V1%200.docx">EZ-IO insertion leaflet</a></div>
+         <a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/Fascia%20Iliaca%20Block%20Guideline.pdf">Fascia Iliaca block guide</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Fractured%20NOF%20and%20FIB%20pathway%20-%20COVID.pdf">NOF and Fascia Iliaca Block Pathway</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Guideline_management_severe_local_anaesthetic_toxicity_v2_2010_final.pdf">Local anaesthetic toxicity (intralipid)</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Insertion%20and%20Management%20of%20an%20EZ-IO%20Intraosseous%20Device%20V1%200.docx">Insertion of EZ-IO</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Insertion%20and%20Management%20of%20an%20EZ-IO%20Intraosseous%20Device%20V1%200.docx">EZ-IO insertion leaflet</a><h4>Sedation</h4><a href="#sedat">Procedural sedation checklist</a><div id="sedat" class="EDmodalDialog"  style="opacity: 0;"><div>
+    <a href="#EDclose" title="EDClose" class="EDclose">X</a>
+    <h2>Procedural sedation checklist</h2>
+    <p>Procedural sedation can now be documented within EPR rather than a paper copy. <br> This can be found within "Assessments / Fluid Balance" on the left hand menu column when you have a patient record open - see screenshots below.
+</p>
+<div class="EDrow"><div class="EDcolumn"><div class="EDcard"><img src="http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/sedation1.png" style="max-width: 200px;"></div></div><div class="EDcolumn"><div class="EDcard"><img src="http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/sedation2.png" style="max-width: 200px;"></div></div><div class="EDcolumn"><div class="EDcard"><img src="http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/sedation3.png" style="max-width: 200px;"></div></div></div>
+</div>
+</div>
+         <a class="EDsystem" href="https://www.rcoa.ac.uk/sites/default/files/documents/2019-10/12-SedationExplainedweb.pdf">Sedation patient advice leaflet (RCOA)</a><a href="https://rcem.ac.uk/wp-content/uploads/2021/10/Pharmacological_Agents_for_Procedural_Sedation_and_Analgesia_October_2020_Revised_230421.pdf">RCEM Sedation and analgesia agents</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20&%20Guidelines/ADULT/KETAMINE%20-%20ICU%20only%20ADULT.pdf">Ketamine</a><a href="https://rcem.ac.uk/wp-content/uploads/2023/10/Acute_Behavioural_Disturbance_in_Emergency_Departments_Oct2023_V2.pdf">RCEM Acute Behavioural Disturbance guidelines</a></div>
       <div class="EDcard">
          <h4>Handover</h4> 
-         <a class="EDsystem EDsystemU" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/ED%20Handover%20Sheet%20(single%20sided).docx">ED Handover Document (Single)</a><a class="EDsystem EDsystemU" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/ED%20Handover%20Sheet%20(double%20sided).docx">ED Handover Document (Double)</a></div>
+         <a class="EDsystem EDsystemU" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/ED%20Handover%20Sheet%20(double%20sided).docx">ED Handover Document (Double)</a><a class="EDsystem EDsystemU" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/ED%20Handover%20Sheet%20(double%20sided).pdf">ED Handover Document (Double, PDF)</a></div>
       <div class="EDcard" id="sepsis">
          <h4>Sepsis / AKI</h4> 
-         <a href="http://intranet/sites/nd-nursing/CAPT/Shared%20Documents/Sepsis/SEPSIS%202016%20tool%20adults%2020160921.pdf">Adult sepsis tool</a><a href="http://intranet/sites/nd-nursing/CAPT/Shared%20Documents/Sepsis/LP204341%20Maternity%20Sepsis%20Tool%20(A4%20D-S).pdf">Maternity sepsis tool</a><a href="http://intranet/sites/nd-nursing/CAPT/Shared%20Documents/Sepsis/LP145905%20Sepsis%206%20-%20Paediatric%20Sepsis%20Screening%20and%20Action%20Tool%20Sheet%20(3).pdf">Paediatric sepsis tool</a><a href="/sites/hub-news/Shared%20Documents/AKI.pdf">AKI tool</a></div>   </div>
-   <div class="EDcolumn">
-      <div class="EDcard" id="SNAP">
-         <h4>Paracetamol Overdose</h4> 
- <a class="EDsystem EDsystemH" href="https://www.toxbase.org/poisons-index-a-z/p-products/paracetamol------------/">Paracetamol - toxbase</a><div class="EDinfo">Username: XXXX<br/>Password: XXXX</div><a href="https://www.toxbase.org/Chemical-incidents/Management-Pages/Acetylcysteine-Doses---Adults/">Paracetamol - Acetylcysteine dose (21 hour Adult)</a><a href="https://www.rcem.ac.uk/docs/Clinical%20Standards%20and%20Guidance/LRI%20ED%20paracet%20docu-90%20for%20RCEM.pdf">RCEM Paracetamol algorithm</a><h4>SNAP Documents</h4><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/SNAP/SNAP%20prescription.pdf">Acetylcysteine prescription (SNAP)</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/SNAP/Acute%20Overdose%200-8%20hours%20SNAP%20Protocol%20ICP%20-%20edit.pdf">Presenting 0-8 hours management (SNAP)</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/SNAP/Acute%20Overdose%208-24%20hours%20SNAP%20Protocol%20ICP%20-%20edit.pdf">Presenting 8-24 hours management (SNAP)</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/SNAP/Acute%20Overdose%2024+%20hours%20SNAP%20Protocol%20ICP%20-%20edit.pdf">Presenting more than 24 hours management (SNAP)</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/SNAP/Staggered%20Overdose%20SNAP%20Protocol%20ICP%20-%20edit.pdf">Staggered overdose management (SNAP)</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/SNAP/Therapeutic%20Excess%20SNAP%20Protocol%20ICP%20-%20edit.pdf">Therapeutic excess management (SNAP)</a><a href="https://www.toxbase.org/Chemical-incidents/Management-Pages/SNAP/">Paracetamol - Acetylcysteine dose (Toxbase)</a></div> <div class="EDcard"><h4>Other Overdose</h4><a class="EDsystem EDsystemH" href="https://www.toxbase.org">Toxbase</a>
-         <div class="EDinfo">Username: XXXX<br/>Password: XXXX</div><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20&%20Guidelines/Adult/NALOXONE%20Guideline.pdf">Opioid - naloxone</a><a href="https://bnf.nice.org.uk/drug/flumazenil.html">Benzodiazepines - flumazenil</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20&%20Guidelines/Adult/DANTROLENE%20SODIUM%20Injection.pdf">Malignant Hyperthermia - Dantrolene</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Guideline_management_severe_local_anaesthetic_toxicity_v2_2010_final.pdf">Local anaesthetic</a></div>
-   </div>
-   <div class="EDcolumn">
-      <div class="EDcard">
-         <h4>Misc.</h4> 
-         <a href="/sites/hub-pp/Published%20Documents/Referrer%20Decides.pdf">Referrer Decides Policy</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Emergency%20Department%20internal%20divert%20process%20Final%20(3)%20Agreed%20at%20CGB.docx">Internal Divert Policy</a><a href="http://intranet/sites/hub-pp/Published%20Documents/Forms/AllItems.aspx?RootFolder=%2fsites%2fhub%2dpp%2fPublished%20Documents%2fVenous%20Thromboembolism%20%28VTE%29%20risk%20assessment%20and%20prophylaxis%20in%20adult%20patients%20admitted%20to%20hospital&FolderCTID=0x01200055B1AC74FBEF0542A4948F55BE62E12E">VTE prophylaxis assessment</a><a href="/sites/hub-pp/Published%20Documents/Accidental%20Hypothermia%20in%20Adults%20presenting%20to%20the%20Emergency%20Department.pdf">Hypothermic patient</a><a href="/sites/hub-pp/Published%20Documents/Blood%20Borne%20Virus%20Policy.pdf#Page=15">Needlestick Injuries</a><a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/CREST%20assessment%20pathway%20-%20com.doc">CREST referral pathway</a><a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/New%20CREST%20Referral%20Criteria.docx">CREST referral criteria</a><a href="http://intranet/sites/hub-pp/Published%20Documents/Venous%20Thromboembolism%20(VTE)%20diagnosis%20and%20treatment%20(adult%20in-patients)/Section%206%20-%20DVT%20Ambulatory%20Care%20Pathway.dotx">DVT Ambulatory Care Pathway</a><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/759133/Greenbook_chapter_30_Tetanus_.pdf#Page=11">Tetanus guidelines</a><a href="/sites/altc-EmergCare/Emergency%20Department/Referral%20forms/Template%202010%202011%20Durham%20Constabulary.doc">Police statement template</a><a href="/sites/altc-EmergCare/Emergency%20Department/Referral%20forms/5z15.%20Providing%20a%20witness%20statement%20for%20the%20Police%20(Feb%202012).pdf">Providing a statement advice</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Crisis%20single%20point%20of%20access%20poster.pdf">Crisis single point of access</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Mortuary%20ID%20form%202020%20Version%205.doc">Mortuary ID form</a><a href="http://intranet/sites/hub-news/Shared%20Documents/Ambulance%20Transfers%20-%20Inter%20Facility.pdf">Inter-facility ambulance transfers</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/CDDFT%20Rapid%20Access%20Services%20Feb%202021%20v2.0.docx.pdf">CDDFT Rapid Access Services</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Referrer%20Decides%20Audit%20Proforma_Draft%20v1.2.docx">Referrer Decides Audit Proforma</a><a href="http://svr-spapp/sites/sd-Anaes/AcutePS/Shared%20Documents/abbey%20pain%20scale.pdf">Abbey Pain Scale</a><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/911923/PHE_guidelines_on_rabies_post-exposure_treatment_August_2020.pdf">Rabies post-exposure treatment</a><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/916120/Rabies_vaccine_letter_for_AE_consultants_and_pharmacists_Sep2020.pdf">Rabies - changes to supply of vaccine.</a></div>
-   </div>
-</div>
-<div class="EDrow">
-   <div class="EDcolumn">
-      <div class="EDcard">
+         <a href="http://intranet/sites/nd-nursing/CAPT/Shared%20Documents/Sepsis/SEPSIS%202016%20tool%20adults%2020160921.pdf">Adult sepsis tool</a><a href="http://intranet/sites/nd-nursing/CAPT/Shared%20Documents/Sepsis/LP204341%20Maternity%20Sepsis%20Tool%20(A4%20D-S).pdf">Maternity sepsis tool</a><a href="http://intranet/sites/hub-news/Shared%20Documents/Paediatric%20Sepsis%206%20Sheet.pdf">Paediatric sepsis 6</a><a href="/sites/hub-news/Shared%20Documents/AKI.pdf">AKI tool</a></div>
+<div class="EDcard">
          <h4>Resus</h4> 
-         <a href="/sites/altc-EmergCare/Emergency%20Department/COVID/SOP%20for%20Resus%20prealert%20patient.pdf.pdf">Resus Pre-Alert SOP</a><a href="https://www.youtube.com/watch?v=NXLrIWSf2Y0">ALS / Resus simulation (YouTube)</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Labels%20TAKE%201.docx">Resus staff labels</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/ITU%20Drugs%20for%20AandE%20UHND.pdf">ITU drugs for A&amp;E (UHND)</a></div>
+         <a href="/sites/altc-EmergCare/Emergency%20Department/COVID/SOP%20for%20Resus%20prealert%20patient.pdf.pdf">Resus Pre-Alert SOP</a><a href="https://www.youtube.com/watch?v=NXLrIWSf2Y0">ALS / Resus simulation (YouTube)</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Labels%20TAKE%201.docx">Resus staff labels</a><a class="EDsystemU" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/ITU%20Drugs%20for%20AandE%20UHND.pdf">ITU drugs for A&amp;E (UHND)</a></div>
       <div class="EDcard">
          <h4>PPE Guidance</h4> 
          <a href="https://www.gov.uk/government/publications/covid-19-personal-protective-equipment-use-for-aerosol-generating-procedures">PPE for Aerosol Generating Procedures</a><a href="https://www.gov.uk/government/publications/covid-19-personal-protective-equipment-use-for-non-aerosol-generating-procedures">PPE for Non-Aerosol Generating Procedures</a></div>
-   </div>
+<div class="EDcard"><h4>Transfusion / Haemorrhage</h4><a href="#transfusion">Transfusion section</a></div>
+   
+<div class="EDcard"><h4>Aortic dissection</h4><a href="https://rcem.ac.uk/wp-content/uploads/2024/01/Diagnosis_of_Thoracic_Aortic_Dissection_RCEM_RCR_v2.pdf">RCEM diagnosis of thoracic aortic dissection</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/UHNDAorticDissectionPathway.pdf">Aortic dissection pathway (UHND)</a></div>
+</div>
    <div class="EDcolumn">
-      <div class="EDcard">
-         <h4>Useful Covid Resources</h4> 
-         <a href="http://intranet/sites/ws-Coronavirus/Standard%20Operating%20Procedures/Inpatient%20Management/Nursing%2003%20COVID%20protocol.pdf">Covid-19 Protocol</a><a href="https://bestpractice.bmj.com/topics/en-gb/3000168">BMJ Best Practice</a><a href="/sites/altc-EmergCare/Emergency%20Department/COVID/Major%20Trauma%20Networks%20response%20to%20Covid%2019%20-%2025%20March%202020.pdf">Major Trauma Networks Response</a><a href="https://www.rcem.ac.uk/RCEM/Quality_Policy/Safety/Covid-19/RCEM/ForProfessionals/Safety/Coronavirus_Covid-19.aspx">RCEM Guidance</a><a href="https://www.england.nhs.uk/coronavirus/">NHS England Guidance</a><a href="https://www.mdcalc.com//covid-19">MDCalc COVID resources</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/discharge-from_AE_45805066.pdf">Discharge from ED with Covid-19 Leaflet</a></div>
-   </div>
-   <div class="EDcolumn">
-      <div class="EDcard">
+      <div class="EDcard" id="SNAP">
+         <h4>Paracetamol Overdose</h4> 
+ <a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/SitePages/paracetamol-overdose-triage-tool.aspx">Paracetamol overdose triage tool</a><a class="EDsystem EDsystemH" href="https://www.toxbase.org/poisons-index-a-z/p-products/paracetamol/">Paracetamol overdose - toxbase</a><div class="EDinfo">Username: <b>XXXX</b><br>Password: <b>XXXX</b></div><a href="https://www.toxbase.org/management/snap/">Paracetamol - Acetylcysteine dose (SNAP)</a><a href="https://www.toxbase.org/antidotes-and-antivenoms/acetylcysteine-antidote/">Paracetamol - Acetylcysteine dose (21 hour Adult)</a></div> <div class="EDcard"><h4>Other Overdose</h4><a class="EDsystem EDsystemH" href="https://www.toxbase.org">Toxbase</a>
+         <div class="EDinfo">Username: <b>XXXX</b><br>Password: <b>XXXX</b></div><a href="https://www.toxbase.org/information/treatment/ecg/ecg-treatment-thresholds-for-qrs-and-qt-duration/">QTc nomogram</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20&%20Guidelines/Adult/NALOXONE%20Guideline.pdf">Opioid - naloxone</a><a href="https://bnf.nice.org.uk/drug/flumazenil.html">Benzodiazepines - flumazenil</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20&%20Guidelines/Adult/DANTROLENE%20SODIUM%20Injection.pdf">Malignant Hyperthermia - Dantrolene</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Guideline_management_severe_local_anaesthetic_toxicity_v2_2010_final.pdf">Local anaesthetic</a><a href="https://www.toxbase.org/information/toxic_doses/ssri---toxic-doses/">SSRI Toxic doses</a></div><div class="EDcard"><h4>Anaphylaxis</h4><a href="https://www.resus.org.uk/sites/default/files/2021-04/Anaphylaxis%20algorithm%202021.pdf">Anaphylaxis algorithm</a><a href="https://www.resus.org.uk/sites/default/files/2021-04/Refractory%20anaphylaxis%20algorithm%202021.pdf">Treatment refractory anaphylaxis algorithm</a></div>
+<div class="EDcard"><h4>Patient leaflets</h4><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Other%20patient%20information%20leaflets.docx">Other leaflets (if you can't find what you're looking for)</a></div>
+<div class="EDcard">
          <h4>Radiology</h4> 
-         <a href="http://intranet/Shared%20Documents/Medica%20Nighthawk%20Guide%20for%20Referrers%20-%202020.pdf">Medica Nighthawk Protocol Scans</a><a href="/sites/altc-EmergCare/Emergency%20Department/Pages/Radiology.aspx">Covid-19 radiology updates</a></div>
-   <div class="EDcard"><h4>Dermatology</h4><a href="http://intranet/sites/md-MedEd/D%20%20Specilalty%20Training/Useful%20Information/PROTOCOL%20FOR%20SJS%20TEN%20PATIENTS%20V3.docx">SJS TENS patients protocol</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/SOP%202020%20oncall.ward%20referral%20provision%20for%20inpatients%20with%20skin%20problems.docx">Skin problems / rashes: referrals and advice</a></div></div>
+         <a href="#radio">Reporting radiographer updates / contact</a><div id="radio" class="EDmodalDialog"  style="opacity: 0;"><div>
+    <a href="#EDclose" title="EDClose" class="EDclose">X</a>
+    <h2>Reporting radiographers update</h2>
+    <p>Due to capacity issues at the UHND site the reporting radiographer team is spreading out across the Trust.</p><p>Unfortunately this means we may not have a permanent presence on either site. </p><p>For urgent queries or for hot reports I would advise that any practitoner contact either the radiology secreraties on extension 32949, or contact us directly via a new shared email inbox at:<br> <a href="mailto:cddft.reportingradiographers@nhs.net">cddft.reportingradiographers@nhs.net</a></p><p>Our reporting stations and arrangements are:</p><p><strong>UHND</strong>:<br>We will have a base at UHND in a new office near reception, the extension is unchanged (32491) - I will be there regularly until I leave the Trust in December.</p><p><strong>DMH</strong>:<br>We also have a base at DMH in CT waiting room, extension 44594.</p><p><strong>BAH</strong>:<br>Bishop Auckland Hospital also has a reporting station in the old CT suite, extension 55374.</p>
+</div>
+</div><a href="http://intranet/sites/css-radiology/CT/Medica/Medica%20Out%20of%20Hours%20Guidelines%20-%20Oct'21.pdf">Medica Nighthawk Protocol Scans</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/EPR/NON%20ELECTRONIC%20IMAGING%20REQUEST%20FORM%20COUNTY%20DURHAM%20AND%20DARLINGTON%20NHS%20FOUNDATION%20TRUST.docx">Paper imaging requests form</a></div>
+   <div class="EDcard"><h4>Dermatology</h4><a href="http://intranet/sites/hub-pp/Published%20Documents/TWGUIDSUR0001%20PROTOCOL%20FOR%20SJS%20TEN%20PATIENTS.pdf">SJS TENS patients protocol</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/SOP%202020%20oncall.ward%20referral%20provision%20for%20inpatients%20with%20skin%20problems.docx">Skin problems / rashes: referrals and advice</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/In%20patient%20dermatology%20referral%20form%201.docx">Dermatology referral form</a></div>
+<div class="EDcard"><h4>Police / Coroner / Medical Examiner</h4>
+<a href="http://intranet/sites/fco-AtH/SitePages/Police-Requests.aspx">Police requests for statements / notes</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Police%20Statement%20Blank%202022.docx">Police statement template</a><a href="/sites/altc-EmergCare/Emergency%20Department/Referral%20forms/5z15.%20Providing%20a%20witness%20statement%20for%20the%20Police%20(Feb%202012).pdf">Providing a statement advice</a><a href="#medicalexam">Medical examiner service</a><div id="medicalexam" class="EDmodalDialog"  style="opacity: 0;"><div>
+    <a href="#EDclose" title="EDClose" class="EDclose">X</a>
+    <h2>Medical examiner service</h2>
+    <p>All deaths (that do not obviously require a coroner's referal, e.g., suicide) should be referred to the medical examiner using the form linked below. The medical examiner will then contact you to advise if a coroner's referral is required or if a certificate could be issued.
+</p>
+<div class="ED row"><div class="EDcolumn"><div class="EDcard.stay"><h4 class="EDstay">Link</h4><a href="http://intranet/sites/ws-MedicalExaminerService/SitePages/Home.aspx">Medical examiner service site</a><a href="http://intranet/sites/ws-MedicalExaminerService/Shared%20Documents/Summary%20of%20Death%20Form%20[v1.6].docx">Summary of death certification form</a><a href="mailto:cddft.medicalexaminerservice@nhs.net">cddft.medicalexaminerservice@nhs.net</a></div></div></div>
+</div></div>
+</div>
+<div class="EDcard"><h4>PICC Line Care</h4><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Toilet%20Tips%20Line%20Care.docx">PICC Line care tips</a><a href="https://www.youtube.com/watch?v=xvqxlGB0cRY">PICC Line - taking bloods (YouTube)</a></div>
+</div>
+   <div class="EDcolumn">
+      <div class="EDcard">
+         <h4>Misc.</h4> 
+         <a href="http://svr-spapp/sites/hub-pp/Published Documents/Transfer from Emergency Department Policy.pdf">Transfer from Emergency Department Policy</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/Trust%20Wide%20OPEL%20Action%20card%20August%2024.pdf">Trust wide OPEL action card (August 24)</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Emergency%20Department%20internal%20divert%20process%20Final%20(3)%20Agreed%20at%20CGB.docx">Internal Divert Policy</a><a href="http://intranet/sites/hub-pp/Published%20Documents/Forms/AllItems.aspx?RootFolder=%2fsites%2fhub%2dpp%2fPublished%20Documents%2fVenous%20Thromboembolism%20%28VTE%29%20risk%20assessment%20and%20prophylaxis%20in%20adult%20patients%20admitted%20to%20hospital&FolderCTID=0x01200055B1AC74FBEF0542A4948F55BE62E12E">VTE prophylaxis assessment</a><a href="/sites/hub-pp/Published%20Documents/Accidental%20Hypothermia%20in%20Adults%20presenting%20to%20the%20Emergency%20Department.pdf">Hypothermic patient</a><a href="http://intranet/sites/hub-pp/Published%20Documents/Venous%20Thromboembolism%20(VTE)%20diagnosis%20and%20treatment%20(adult%20in-patients)/Section%206%20-%20DVT%20Ambulatory%20Care%20Pathway.dotx">DVT Ambulatory Care Pathway</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Crisis%20single%20point%20of%20access%20poster.pdf">Crisis single point of access</a><a href="https://www.cddft.nhs.uk/media/758205/mortuary%20id%20form%202021.pdf">Mortuary ID form</a><a href="http://intranet/sites/hub-news/Shared%20Documents/IFT%20NEAS%20A4%20Poster%20Sep%2023.pdf">Inter-facility ambulance transfers</a><a href="https://www.neas.nhs.uk/our-services/booking-urgent-transport.aspx">NEAS Booking urgent transport</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/CDDFT%20Rapid%20Access%20Services%20Feb%202021%20v2.0.docx.pdf">CDDFT Rapid Access Services</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Referrer%20Decides%20Audit%20Proforma_Draft%20v1.2.docx">Referrer Decides Audit Proforma</a><a href="http://svr-spapp/sites/sd-Anaes/AcutePS/Shared%20Documents/abbey%20pain%20scale.pdf">Abbey Pain Scale</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/GUIDIMS0139%20-%20Guideline%20for%20Patients%20Representing%20with%20Minor%20Injuries.pdf">Guideline for patients representing with minor injuries</a>
+
+<a href="#lidpla">Lidocaine 5% Plasters</a><div id="lidpla" class="EDmodalDialog"  style="opacity: 0;"><div>
+    <a href="#EDclose" title="EDClose" class="EDclose">X</a>
+    <h2>Prescribing Lidocaine 5% Plasters</h2>
+    <p>The Trust Clinical Standards and Therapeutics Committee and the County Durham and Tees Valley Area Prescribing Committee have agreed the following prescribing position for the use of lidocaine 5% plasters.
+
+<ul><li>Lidocaine 5% plasters are <strong>only licensed for the treatment of neuropathic pain</strong> associated with previous herpes zoster infection (post-herpetic neuralgia) in adults and are approved for this indication within CDDFT.</li><li>Lidocaine 5% plasters are approved locally for use in the following clinical situations. Prescribers should be aware that use in these situations is an off-label indication:
+<ul><li>As a RED (hospital only) drug for treatment of multiple rib fractures on the advice of pain specialists. Pain team guidance is detailed within the Trust Policy for ‘Pain management and rehabilitation following multiple rib fractures’.</li><li>As a GREEN + (specialist initiation) drug for use in palliative care. Prescribers in primary care can also initiate prescribing in palliative care patients, following advice from the palliative care team.</li></ul>
+</li></ul></p>
+<p>From <strong>Monday 5 December, 2022</strong>, Lidocaine 5% plasters will not be stocked in any ward or department.</p><p>Lidocaine plasters will be ONLY dispensed by pharmacy on a named patient basis for patients with:
+<ol>
+<li><strong>Post-herpetic neuralgia </strong> - Patients may be referred to their GP for continued prescribing after the initial supply has been made from CDDFT and relevant communication with GP has been made. </li>
+<li><strong>Multiple rib fractures on the advice of pain specialist in line with the Trust Policy</strong> - Pharmacy will supply an initial FIVE day course for an individual patient following recommendation for a trial of treatment. Patients should be reviewed after this initial period and if treatment is demonstrated to be effective this should be documented and further individual patient supply can be requested from pharmacy. GPs will not prescribe for this indication after discharge.</li>
+<li><strong>Palliative care on advice of palliative care team </strong> - Patients may be referred to their GP for continued prescribing after the initial supply has been made from CDDFT and relevant communication with GP has been made. </li></p><p>If you have any queries please contact a member of the pharmacy team.
+</p>
+<div class="EDrow"><div class="EDcolumn"><div class="EDcard.stay"><h4 class="EDstay">Links</h4><a href="http://intranet/sites/hub-pp/Published%20Documents/Procedure%20for%20Pain%20Management%20and%20Rehabilitation%20following%20multiple%20Rib%20Fractures.pdf">Pain management and rehabilitation following multiple rib fractures</a></div></div></div>
+</div>
+</div>
+<a href="http://intranet/sites/hub-pp/Published%20Documents/Missing%20Persons%20Policy.pdf">Missing Persons Policy</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Agenda%20Silver%20Command%20Forum%2008.03.24.doc.docx">Rapid decompression trigger tool</a><a class="EDsystemU" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/SDEC%20OOH%20referrals%20final%20Nov%202023.docx">SDEC OOH referral form (UHND)</a><a href="https://www.parkinsonscalculator.com/index.html">Parkinson's drug calculator</a><a href="https://rcem.ac.uk/wp-content/uploads/2024/02/RCEM_Cannabinoid_Hyperemesis_Syndrome_v5.0.pdf">Cannabunoid hyperemesis syndrome</a><a href="#Bodycam">Body Cameras in the ED</a><div id="Bodycam" class="EDmodalDialog"  style="opacity: 0;"><div>
+    <a href="#EDclose" title="EDClose" class="EDclose">X</a>
+    <h2>Body Cameras in the ED</h2>
+    <p>We are trialing the use of a body camera within the ED</p>
+<p>The trial will start 24/12/24,  we are getting posters laminated to have in both waiting areas to inform our patients that Body Cameras may be in use.<br>
+ The streamer will wear the Body Camera</p>
+ <p>It is an 8 week trial </p>
+<p>If you feel the need to turn the camera on then it is best practice to inform the person that you are now putting the Camera on to record. <br>
+There is a copy of instructions with this email on how to turn camera on and record. <br>
+But basically turn on camera with on/off button, flick to record and red light will flash once recording.</p>
+<p>If you have used the camera then please email Louise Carson on <a href="mailto:louise.carson@nhs.net">louise.carson@nhs.net</a> and she will come and take the Camera and down load any recordings. We will have another camera given to us whilst this is been down loaded. </p>
+ <p>Please keep an eye on the battery life which is displayed on the screen . Louise will call in and swap Camera before battery runs out. She advises the Battery life is a long time and has never had a problem with going flat .</P>
+<p>As this is a Trial any comments and feedback will be much appreciated .
+</p>
+<div class="EDrow"><div class="EDcolumn"><div class="EDcard.stay"><h4 class="EDstay">Links</h4><a href="#">Poster</a></div></div></div>
+</div>
+</div></div>
+
+<div class="EDcard"><h4>Infectious Diseases</h4><a href="http://intranet/sites/hub-pp/Published%20Documents/Taking%20Blood%20Cultures.pdf">Blood cultures policy</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/A3_CDDFT_Appropriate%20Indications%20for%20Taking%20Blood%20Cultures_JAN24.pdf">Blood cultures indications</a><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/911923/PHE_guidelines_on_rabies_post-exposure_treatment_August_2020.pdf">Rabies post-exposure treatment</a><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/916120/Rabies_vaccine_letter_for_AE_consultants_and_pharmacists_Sep2020.pdf">Rabies - changes to supply of vaccine.</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/Mpox%20001%20Update.pdf">MPOX</a><a href="http://intranet/sites/hrod-SHW/Useful%20Documents%20%20Guidance/Blood%20Borne%20Virus%20Policy.pdf">Needlestick Injuries / BBV exposure</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/Needle%20stick.docx">Needlestick / BBV flowchart</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/Guidance_on_management_of_potential_exposure_to_blood__2_.pdf">Needlestick / BBV PHE</a><a href="https://www.bhiva.org/file/6183b6aa93a4e/PEP-guidelines.pdf">BASHH HIV PEP guidelines</a><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/759133/Greenbook_chapter_30_Tetanus_.pdf#Page=10">Tetanus guidelines</a><a href="https://www.gov.uk/government/publications/mers-cov-public-health-investigation-and-management-of-possible-cases/algorithm-for-the-investigation-and-management-of-possible-cases-of-mers-cov-accessible-text-version">Algorithm for the investigation and management of possible cases of MERS-CoV</a><a href="https://www.travelhealthpro.org.uk/">Travel Health Pro</a><a href="https://www.gov.uk/">Gov.uk - useful resource to search for infectious diseases guidance</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/PHE_Notifiable_diseases_poster_HPT.pdf">PHE Notifiable diseases poster</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/RegisteredMedicalPractitionerForm%20Notifiable%20Diseases.docx">Notifiable diseases form</a>
+
+   </div>
 </div>
 <h3 class="EDh3">Trauma / Orthopaedics</h3>
 <div class="EDrow">
    <div class="EDcolumn">
       <div class="EDcard">
          <h4>Head Injuries</h4> 
-         <a href="https://www.nice.org.uk/guidance/cg176/resources/imaging-algorithm-498950893#Page=1">CT Head - Adult</a><a href="https://www.nice.org.uk/guidance/cg176/resources/imaging-algorithm-498950893#Page=2">CT Head - Children</a><a class="EDsystem EDsystemU" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/GUID.IMS.0076%20%20Head%20injury%20pathway%20(in-patient%20care)%20with%20positive%20CT%20he...pdf">Head Injuries Admissions (UHND)</a><a class="EDsystem EDsystemD" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Head%20injury%20guidelines%20for%20DMH%20ED%20v1.doc">Head injury guidelines (DMH)</a><a class="EDsystem EDsystemD" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Head%20Injury%20Admission%20Checklist%20DMH%20ED.docx">Head Injury Admission Checklist (DMH)</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/HeadInjuryAdult.pdf">Head injury advice leaflet (Adult)</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/HeadInjuryChildren.pdf">Head injury advice leaflet (Children)</a><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/783444/assessing-fitness-to-drive-a-guide-for-medical-professionals.pdf#Page=38">Assessing fitness to drive</a><a href="/sites/altc-EmergCare/Emergency%20Department/Pages/referapatient.aspx">Neurosurgical referral</a></div>
+         <a href="https://www.nice.org.uk/guidance/ng232/resources/imaging-algorithm-pdf-13061125549#Page=1">CT Head - Adult</a><a href="https://www.nice.org.uk/guidance/ng232/resources/imaging-algorithm-pdf-13061125549#Page=2">CT Head - Children</a><a class="EDsystem EDsystemU" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/GUID-UEC-0004%20Head%20injury%20management%20ED%20UHND.pptx">Head Injuries Admissions / Management (UHND)</a><a class="EDsystem EDsystemD" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Head%20injury%20guidelines%20for%20DMH%20ED%20v1.doc">Head injury guidelines (DMH)</a><a class="EDsystem EDsystemD" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Head%20Injury%20Admission%20Checklist%20DMH%20ED.docx">Head Injury Admission Checklist (DMH)</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/HeadInjuryAdult.pdf">Head injury advice leaflet (Adult)</a><a href="https://www.what0-18.nhs.uk/application/files/4215/9109/6761/NHS_Head_Injury_advice_sheet.pdf">Head injury advice leaflet (Children)</a><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/783444/assessing-fitness-to-drive-a-guide-for-medical-professionals.pdf#Page=38">Assessing fitness to drive (DVLA)</a><a href="/sites/altc-EmergCare/Emergency%20Department/Pages/referapatient.aspx">Neurosurgical referral</a></div>
+<div class="EDcard"><h4>Silver Trauma Survey</h4></a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Silver%20Trauma%20Survey%20final%20version%20(002).docx">SIlver trauma survey</a></div>
    </div>
    <div class="EDcolumn">
       <div class="EDcard">
          <h4>C-spine Injuries</h4> 
-         <a href="https://www.nice.org.uk/guidance/cg176/resources/imaging-algorithm-498950893#Page=3">CT C-spine - Adult</a><a href="https://www.nice.org.uk/guidance/cg176/resources/imaging-algorithm-498950893#Page=4">CT C- spine - Children</a><a href="https://www.mdcalc.com/canadian-c-spine-rule">Canadian C-spine rule</a><a href="https://www.rcem.ac.uk/docs/College%20Guidelines/5z17.%20Cervical%20Spine%20Management%20of%20alert%2c%20adult%20patients%20with%20potential%20cervical%20spine%20injury%20in%20the%20ED.pdf">RCEM C-spine Practical guide</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Neck%20Injuries.docx">Soft tissue neck advice leaflet</a></div>
+         <a href="https://www.nice.org.uk/guidance/ng232/resources/imaging-algorithm-pdf-13061125549#Page=3">CT C-spine - Adult</a><a href="https://www.nice.org.uk/guidance/ng232/resources/imaging-algorithm-pdf-13061125549#Page=4">CT C- spine - Children</a><a href="https://www.mdcalc.com/canadian-c-spine-rule">Canadian C-spine rule</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Neck%20Injuries.docx">Soft tissue neck advice leaflet</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Miami_J_collar_Fitting.pdf">Miami-J collar fitting guide</a></div>
       <div class="EDcard">
+<h4>Cauda equina</h4><a href="https://girft-interactivepathways.org.uk/spinal-suspected-cauda-equina-syndrome-2a/">National suspected cauda equina pathway</a></div><div class="EDcard">
+         <h4>RVI Spinal</h4> 
+         <a class="EDsystem EDsystemU" href="https://www.newcastle-hospitals.nhs.uk/services/orthopaedics/spinal-surgery/">Spinal surgery RVI website</a><a class="EDsystem EDsystemU" href="https://www.newcastle-hospitals.nhs.uk/content/uploads/2020/11/Referral-pathways-for-fragility-fractures-final.docx">Referral pathways for fragility fractures</a><a class="EDsystem EDsystemU" href="https://www.newcastle-hospitals.nhs.uk/content/uploads/2020/11/Spinal-fractures-patient-info-sheet-Newcastle.docx">Patient information leaflets for spinal fragility fractures</a><a class="EDsystem EDsystemU" href="https://www.referapatient.org/">Emergency Spinal Surgery Referral</a></div>
+<div class="EDcard">
          <h4>JCUH Spinal</h4> 
          <a class="EDsystem EDsystemD" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/SPINAL%20REFERRAL%20%20PATHWAY%20DMH-%20final%20version.pdf">Spinal referral pathway</a><a class="EDsystem EDsystemD" href="https://www.referapatient.org/">Emergency Spinal Surgery Referral</a></div>
+  
+
    </div>
    <div class="EDcolumn">
       <div class="EDcard">
          <h4>Major Trauma</h4> 
-         <a href="https://traumanorth.org.uk/guidelines-protocols">Adult Trauma Guidelines</a><a href="https://traumanorth.org.uk/professionals/guidelines-and-protocols/?g=1#downloads">Paediatric Trauma Guidelines</a><a href="https://traumanorth.org.uk/files/pdf/NTN-NEAS-60-min-bypass-V3-May-2016.pdf">Major Trauma Bypass Protocol</a><a href="https://traumanorth.org.uk/files/pdf/TU-MT-Secondary-Transfer-May-2016.pdf">Trauma Secondary Transfer</a><a href="https://traumanorth.org.uk/files/pdf/NTN-Abdo-v2.0.pdf">Abdominal trauma</a><a href="https://traumanorth.org.uk/files/pdf/ED-thoracotomy-checklist.pdf">Thoracotomy checklist</a><a href="https://traumanorth.org.uk/files/pdf/NTN-Thoracotomy-v2.0.pdf">Thoracotomy instructions</a><a href="https://traumanorth.org.uk/files/pdf/NTN-Emergency-Anaesthesia-v2.0.pdf">Emergency anaesthesia</a><a href="https://traumanorth.org.uk/files/pdf/NTN-Cardiothoracic-Summary-2.0.pdf">Cardiothoracic referrals</a><a href="https://traumanorth.org.uk/files/pdf/BOAST-Open-Fractures.pdf">Open fractures</a><a href="https://traumanorth.org.uk/files/pdf/Management-of-Pelvic-Fractures-BOAST-3.pdf">Pelvic fractures</a><a href="https://traumanorth.org.uk/files/pdf/NTN-Trauma-CT-Scanning-Protocol.pdf#Page=3">Trauma CT - Who to whole body CT scan</a><a href="/sites/sd-Anaes/AnaesDMH/CLINICAL%20GOV%20RISK%20%20AUDIT/22%20JUNE%202012%20Meeting/Trauma%20Team%20activation%20criteria.pdf">Trauma Team Activation</a><a href="/sites/hub-pp/Published%20Documents/Major%20Haemorrhage%20Policy.pdf#Page=9">Major Haemorrhage Policy</a><a href="https://www.resus.org.uk/EasySiteWeb/GatewayLink.aspx?alId=6464">Traumatic arrest algorithm</a></div>
+         <a href="https://traumanorth.org.uk/guidelines-protocols">Adult Trauma Guidelines</a><a href="https://traumanorth.org.uk/professionals/guidelines-and-protocols/?g=1#downloads">Paediatric Trauma Guidelines</a><a href="https://traumanorth.org.uk/files/pdf/NTN-NEAS-60-min-bypass-V3-May-2016.pdf">Major Trauma Bypass Protocol</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/Trauma%20Unit%20Secondary%20Transfer%20Pathway.pdf">Trauma Secondary Transfer</a><a href="https://traumanorth.org.uk/files/pdf/NTN-Abdo-v2.0.pdf">Abdominal trauma</a><a href="https://traumanorth.org.uk/files/pdf/ED-thoracotomy-checklist.pdf">Thoracotomy checklist</a><a href="https://traumanorth.org.uk/files/pdf/NTN-Thoracotomy-v2.0.pdf">Thoracotomy instructions</a><a href="https://traumanorth.org.uk/files/pdf/NTN-Emergency-Anaesthesia-v2.0.pdf">Emergency anaesthesia</a><a href="https://traumanorth.org.uk/files/pdf/NTN-Cardiothoracic-Summary-2.0.pdf">Cardiothoracic referrals</a><a href="https://traumanorth.org.uk/files/pdf/BOAST-Open-Fractures.pdf">Open fractures</a><a href="https://traumanorth.org.uk/files/pdf/Management-of-Pelvic-Fractures-BOAST-3.pdf">Pelvic fractures</a><a href="https://traumanorth.org.uk/files/pdf/NTN-Trauma-CT-Scanning-Protocol.pdf#Page=3">Trauma CT - Who to whole body CT scan</a><a href="/sites/sd-Anaes/AnaesDMH/CLINICAL%20GOV%20RISK%20%20AUDIT/22%20JUNE%202012%20Meeting/Trauma%20Team%20activation%20criteria.pdf">Trauma Team Activation</a><a href="/sites/hub-pp/Published%20Documents/Major%20Haemorrhage%20Policy.pdf#Page=9">Major Haemorrhage Policy</a><a href="https://www.resus.org.uk/sites/default/files/2020-05/G2015_Traumatic_Cardiac_Arrest_Treatment.pdf">Traumatic arrest algorithm</a></div>
    </div>
 </div>
 <div class="EDrow" id="VFC">
@@ -698,48 +233,86 @@ EDbanner[0].style.display = "none";
          <a href="/sites/altc-EmergCare/Emergency%20Department/MSK/VFC%20Specific%20Fracture%20Management%201.1.pdf">VFC Specific Fracture Management</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/Forms/AllItems.aspx">All VFC documents</a></div>
       <div class="EDcard">
          <h4>General ortho</h4> 
-         <a class="EDsystem EDsystemU" href="http://intranet/sites/sd-traumaortho/Documents/Departmental%20Info/A%20to%20Z%202020%20v3.pdf">Orthopaedic A-Z</a><a class="EDsystem EDdead" href="/sites/sd-traumaortho/Lists/Announcements/Attachments/1/hot%20knee%20pathway%20sept07.doc">Hot joint pathway</a><a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Orthopaedic%20referral%20pathways.docx">Orthopaedic referral pathways</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/GUIDIMS0006%201.0.1%20Back%20Pain%20Pathway.pdf">Non-Traumatic back pain pathway</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Patients%20in%20Plaster%20Casts.docx">Patients in plaster cast advice leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Painkillers.docx">Painkillers advice leaflet</a></div>
+         <a class="EDsystem EDsystemU" href="http://intranet/sites/sd-traumaortho/Documents/Departmental%20Info/A%20to%20Z%202020%20v3.pdf">Orthopaedic A-Z</a><a class="EDsystem EDdead" href="/sites/sd-traumaortho/Lists/Announcements/Attachments/1/hot%20knee%20pathway%20sept07.doc">Hot joint pathway</a><a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Orthopaedic%20referral%20pathways.docx">Orthopaedic referral pathways</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/GUIDIMS0006%201.0.1%20Back%20Pain%20Pathway.pdf">Non-Traumatic back pain pathway</a></div>
    </div>
    <div class="EDcolumn">
       <div class="EDcard">
          <h4>Upper Limb</h4> 
-         <a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/MSK/VFC%20and%20Plastics%20Trauma%20Referrals%20UHND.pdf">Hand Trauma Protocols (UHND)</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/Scaphoid%20Injuries.pdf">Scaphoid injuries flowchart</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/UHND%20Plastic%20Surgery%20Referral%20Process.pdf#Page=4">Plastics referral process</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/5th%20Metacarpal%20Fracture%20Advice%20Leaflet.pdf">5th Metacarpal Fracture Advice Leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/Paediatric%20Clavicle%20Fracture%20Advice%20Leaflet.pdf">Paediatric Clavicle Fracture Advice Leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/Radial%20Head%20Neck%20Fracture%20Advice%20Leaflet.pdf">Radial head or neck fracture advice leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/Torus%20Buckle%20Fracture%20Advice%20Leaflet.pdf">Buckle Fracture Advice Leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Mallet%20Finger.docx">Mallet finger advice leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Shoulder%20Injury.docx">Shoulder injury advice leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Possible%20Scaphoid%20injuries.docx">Possible scaphoid advice leaflet</a></div>
+         <a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/MSK/VFC%20and%20Plastics%20Trauma%20Referrals%20UHND.pdf">Hand Trauma Protocols (UHND)</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/UHND%20Plastic%20Surgery%20Referral%20Process%20v4.1.doc">Plastic surgery referral process</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/5th%20Metacarpal%20Fracture%20Advice%20Leaflet.pdf">5th Metacarpal Fracture Advice Leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/Paediatric%20Clavicle%20Fracture%20Advice%20Leaflet.pdf">Paediatric Clavicle Fracture Advice Leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/Radial%20Head%20Neck%20Fracture%20Advice%20Leaflet.pdf">Radial head or neck fracture advice leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/Torus%20Buckle%20Fracture%20Advice%20Leaflet.pdf">Buckle Fracture Advice Leaflet</a><a href="https://www.nhs.uk/conditions/mallet-finger/">Mallet finger advice leaflet</a><a href="https://www.tims.nhs.uk/self-care/shoulder/">Shoulder injury advice leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Possible%20Scaphoid%20injuries.docx">Possible scaphoid advice leaflet</a></div>
    </div>
    <div class="EDcolumn">
       <div class="EDcard">
          <h4>Lower limb</h4> 
-         <a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Pathway%20for%20investigating%20hip%20injuries.docx">Hip injury investigation pathway</a><a href="https://traumanorth.org.uk/files/pdf/NTN-Open-Lower-Limb-Pathway-NEAS.pdf">Open Fracture Bypass Protocol</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/Knee%20Injury%20Pathway.pdf">Knee Injury Pathway</a><a href="https://traumanorth.org.uk/files/pdf/Compartment-Syndrome-BOAST-10.pdf">Compartment syndrome - diagnosis and management</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/5th%20Metatarsal%20Fracture%20Advice%20Leaflet.pdf">5th Metatarsal fracture advice leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/Undisplaced%20Ankle%20Fracture%20Advice%20Leaflet.pdf">Undisplaced Ankle Fracture Advice Leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/Moon%20(Walker)%20Boot%20Advice%20Leaflet.pdf">Moon Boot Advice Leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Hip%20Injury%20Advice%20Card.docx">Hip injury advice leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Ankle%20sprain.docx">Ankle sprain advice leaflet</a></div>
+         <a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Pathway%20for%20investigating%20hip%20injuries.docx">Hip injury investigation pathway</a><a href="https://traumanorth.org.uk/files/pdf/NTN-Open-Lower-Limb-Pathway-NEAS.pdf">Open Fracture Bypass Protocol</a>
+
+<a href="#kneeinj">Knee injury pathway</a><div id="kneeinj" class="EDmodalDialog"  style="opacity: 0;"><div>
+    <a href="#EDclose" title="EDClose" class="EDclose">X</a>
+    <h2>Knee clinic / knee injury pathway</h2>
+<p>A note from Vicki Blanchard, Physio Practitioner ED</p>
+
+    <p>Unfortunately, we have had to make the decision to impose a <strong>maximum age limit for referral into the knee clinic to 55yrs old</strong>.  The Knee clinic has become increasingly busy over the last year or so which has resulted in a rise in waiting times. There have been times when the wait has been 5 weeks which means the whole point of the 'Acute knee clinic' has been lost.  </p>
+<p>As a reminder, the clinic was set up to try and capture 'Significant' soft tissue knee injuries (e.g., multiple ligament injuries) and expedite their referral to appropriate surgeons. (Please see flowchart for referral). This decision has been made on the back of an incident where a patient's treatment was delayed due to the wait time, thus potentially leading to a suboptimal outcome.  Following discussion with the surgeons, it is very rare for a patient over 55 to require urgent surgery (unless a tibial plateau # or quads rupture which should be referred direct to Ortho anyway). If you do have a patient above this age that you feel has a significant injury and warrants referral I'd be happy to discuss them with you. You can email me (Vicky) with the info.</p>
+<p>Those patients with knee injuries who don't meet the criteria but that you feel would benefit from further assessment can be signposted to Physiotherapy either via self-referral or via GP.
+</p>
+<p><strong>Patella dislocations / ACL injuries:</strong><br>Current guidance is to not apply splints in these cases. </p>
+<div class="EDrow"><div class="EDcolumn"><div class="EDcard.stay"><h4 class="EDstay">Knee injury clinic referral flowchart</h4><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/Knee%20Injury%20Pathway.pdf">Knee Injury Pathway</a><a href="mailto:vblanchard@nhs.net">vblanchard@nhs.net</a></div></div></div>
+</div>
+</div><a href="https://traumanorth.org.uk/files/pdf/Compartment-Syndrome-BOAST-10.pdf">Compartment syndrome - diagnosis and management</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Thomas-splint-fitting-instructions.pdf">Thomas Splint instructions</a><a href="https://www.youtube.com/watch?v=PZ4mDLVnyBY">Thomas Splint instructions video (YouTube)</a><a href="#STclinic">Soft tissue virtual clinic</a><div id="STclinic" class="EDmodalDialog"  style="opacity: 0;"><div>
+    <a href="#EDclose" title="EDClose" class="EDclose">X</a>
+    <h2>Soft tissue virtual physio clinic</h2>
+    <p><strong>There is a new clinic starting on the 26th July 2021 for significant soft tissue injuries seen in A&E and UCC. </strong></p><p>Below is the referral criteria which will hopefully be put up in the department - please could you check this prior to booking any one into the clinic to ensure they are appropriate</p><p>This is a Virtual Physio led clinic, all patients will have an initial telephone call so please do not inform the patient they will be “seen by physio”.  They must also be able to communicate on a phone – no interpreters please</p><p>Knee clinic will run as normal at UHND, so continue to follow the flow chart for this service</p><p>The appointments are made via A&E at UHND and patients are put onto a CAMIS clinic.</p><p>At UHND the slip for follow up now has a VSTC option and we need an up to date telephone number. SBH would be the same as how they book onto VFC.</p><p>Out interest the trust Physiotherapy page may be of benefit for your patients.  It has patient information leaflets and QR codes on various soft tissue conditions.</p>
+<div class="EDcolumn"><div class="EDrow"><div class="EDcard"><h4 class="EDstay">Links</h4><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/VSTC%20leaflet%20for%20A%26E.pptx">Virtual soft tissue clinic referral criteria</a><a href="https://cddft.nhs.uk/our-services/division-of-clinical-support-services/physiotherapy/patient-advice-and-information/professional-resources.aspx">Trust physiotherapy page</a></div></div></div>
+</div>
+</div><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/5th%20Metatarsal%20Fracture%20Advice%20Leaflet.pdf">5th Metatarsal fracture advice leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/Undisplaced%20Ankle%20Fracture%20Advice%20Leaflet.pdf">Undisplaced Ankle Fracture Advice Leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/MSK/Moon%20(Walker)%20Boot%20Advice%20Leaflet.pdf">Moon Boot Advice Leaflet</a><a href="https://www.tims.nhs.uk/wp-content/uploads/2020/09/VA-Ankle-Sprains-exercise-sheet.pdf">Ankle sprain advice leaflet</a></div>
    </div>
 </div>
 <div class="EDrow">
    <div class="EDcolumn">
       <div class="EDcard">
          <h4>Burns</h4> 
-         <a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Burns%20Transfer%20Proforma.pdf">Burns Transfer Proforma</a><a href="https://traumanorth.org.uk/files/pdf/Appendix-6-BURNS.-NATIONAL-REFERRAL-GUIDANCE.pdf">National burns referral guidance</a><a href="https://www.csodn.nhs.uk/wp-content/uploads/2016/08/Northern-Burn-Care-Network-Referral-Pack-1.pdf">Burns Referral Flow Chart</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/14.%20Burns%20PILCG0358%20-COVID.DOCX">Burns advice leaflet</a></div>
+         <a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/Burns%20Adult%20Transfer%20Proforma.docx">Burns Transfer Proforma</a><a href="https://traumanorth.org.uk/files/pdf/Appendix-6-BURNS.-NATIONAL-REFERRAL-GUIDANCE.pdf">National burns referral guidance</a><a href="https://www.northern-burncare-network.nhs.uk/burn-services">Northern Burn Care Network</a><a href="https://bestpractice.bmj.com/patient-leaflets/en-gb/html/1183564235144/Burns%20%28minor%29">Burns advice leaflet</a><a class="EDsystem EDsystemD" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Burns%20Service%20Referral%20Poster-%20Darlington.pdf">Burns service referral - DMH</a></div>
    </div>
    <div class="EDcolumn">
       <div class="EDcard">
          <h4>Chest injury</h4> 
-         <a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Chest%20Wall%20Injury.docx">Chest wall injury advice leaflet</a><a href="https://traumanorth.org.uk/files/pdf/NTN-Cardiothoracic-Summary-2.0.pdf">Cardiothoracics referrals</a><a href="https://traumanorth.org.uk/files/pdf/NTN-Thoracotomy-v2.0.pdf">Thoracotomy instructions</a><a href="https://traumanorth.org.uk/files/pdf/ED-thoracotomy-checklist.pdf">Thoracotomy Checklist</a></div>
+         <a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/PILCG0360%20Chest%20Wall%20Injury%20-Approved%2001.02.2024.docx">Chest wall injury advice leaflet</a><a href="https://traumanorth.org.uk/files/pdf/NTN-Cardiothoracic-Summary-2.0.pdf">Cardiothoracics referrals</a><a href="https://traumanorth.org.uk/files/pdf/NTN-Thoracotomy-v2.0.pdf">Thoracotomy instructions</a><a href="https://traumanorth.org.uk/files/pdf/ED-thoracotomy-checklist.pdf">Thoracotomy Checklist</a><a href="http://intranet/sites/hub-pp/Published%20Documents/Procedure%20for%20Pain%20Management%20and%20Rehabilitation%20following%20multiple%20Rib%20Fractures.pdf">Pain management and rehabilitation following multiple rib fractures</a></div>
    </div>
    <div class="EDcolumn">
       <div class="EDcard">
          <h4>Facial injury</h4> 
-         <a href="#ENT">Nasal trauma - see ENT section</a></div>
+         <a href="#ENT">Nasal trauma - see ENT section</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/UHND%20Plastic%20Surgery%20Referral%20Process%20v4.1.doc">Plastic surgery referral process</a></div>
    </div>
    <h3 class="EDh3">Cardiology</h3>
    <div class="EDrow">
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Chest Pain</h4> 
-            <a href="#STEMI">STEMI pathway</a><div id="STEMI" class="EDmodalDialog"  style="opacity: 0;"><div>
+            <a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/2022%20STEMI%20pathway%20(002)%20v.2.pptx">STEMI pathway</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/ALTEPLASE%20Thrombolytic%20Treatment%20of%20Acute%20STEMI.pdf">Alteplase STEMI thrombolysis</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/LowRiskCardiacChestPainPathway.pdf">Low risk cardiac chest pain (2023)</a><a href="http://intranet/sites/altc-Cardiology/Cardiology%20Guidelines/Suspected%20%20NSTEMI%20protocol%202022.pptx">Suspected NSTEMI protocol</a>
+<a href="#duala">NSTEMI / STEMI Dual Antiplatelets</a><div id="duala" class="EDmodalDialog"  style="opacity: 0;"><div>
     <a href="#EDclose" title="EDClose" class="EDclose">X</a>
-    <h2>STEMI pathway</h2>
-    <p>Please take in to account that the STEMI pathway is in need of an update. Ultimately, all STEMI patients need immediate discussion with JCUH CCU (CCU coordinator if uncomplicated, cardiology SPR if complicated) once the ECG has been e-mailed to the JCUH CCU department.</p><p><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/STEMI%20Patients%20Self%20Presenting%20at%20AE%20%20Transfer%20Pathway%202014.doc">STEMI pathway (2014)</a>
-</p>
+    <h2>Dual antiplatelet use in NSTEMI / STEMI</h2>
+<p>Message from Matt Jackson, cardiologist</p>
+    <p>Just a quick update following on from the change to the NSTEMI pathway.</p>
+<p>It is now the Tees-wide agreement that NSTEMIs do NOT get loaded with a second antiplatelet prior to angiography.  For once, CDDFT blazed the trail and Middlesbrough have been forced out of procrastination (which is nice).</p>
+<p>For ED/AMU purposes, this is as discussed in the ED governance meeting recently and translates to:<ul><li>Suspected NSTEMI – Aspirin / Fondaparinux ONLY</li><li>Suspected NSTEMI on anticoagulation – Aspirin ONLY.  Continue regular anticoagulation</li></ul></p>
+<p><strong>After a bit of additional discussion, this advice now also applies to STEMIs.</strong> </p>
+<p>The ATLANTIC trial showed no benefit in preloading with Ticagrelor in the ambulance on the way from the patient’s house to the cath lab compared to loading post procedure.  There is no evidence that giving Ticagrelor in an ED cubicle THEN getting in the ambulance is any more effective!</p>
+<p>So the STEMI advice is: <ul><li>Aspirin</li><li>Analgesia</li><li>Ambulance ASAP</li><li>NO SECOND ANTIPLATELET OR FONDA</li><li>Heparin IV 5000IU if you have it easily to hand and it is not going to delay transfer.  Not essential.</li></ul></p>
+<p>JCUH is our ‘go to’ tertiary centre and have agreed this.  I can check what the current Freeman policy is but (from experience) they load patients at the CCU door on the way into the cath lab so I would not see this as a deal breaker to a blanket policy of NOT loading in out ED.</p>
+<p>For clarity, the ‘no DAPT’ rule is only in the acute setting after numerous studies showing pre-loading before angiography makes no difference to outcomes.  In the post-MI period, DAPT has a definite long-term benefit with the standard of care remains 12 months followed by lifelong single antiplatelet (with an increasing use of Prasugrel now evidence suggests it might be a little bit better than Ticagrelor as well as cheaper). </p>
 </div>
-</div><a href="http://intranet/sites/altc-Cardiology/Cardiology%20Guidelines/Low%20Risk%20NSTEMI%20Pathway.pptx">Suspected NSTEMI pathway (Without high risk features)</a><a href="http://intranet/sites/altc-Cardiology/Cardiology%20Guidelines/Suspected%20NSTEMI%20Pathway.pptx">Suspected NSTEMI protocol</a><a class="EDsystem EDsystemH" href="https://medusa.wales.nhs.uk/docs/Example_calculation_glyceryl_trinitrate_adult_v3.pdf">GTN Infusion</a>
-            <div class="EDinfo">Use Medusa IVGuide for more in depth instructions.</div>
+</div><a class="EDsystem EDsystemH" href="https://www.medusaimg.nhs.uk/docs/Glyceryl_trinitrate_example%20calculation%20(adult)%20v5a.pdf">GTN Infusion</a>
+            <div class="EDinfo">Use Medusa IVGuide for more in depth instructions.</div><a href="#cardioref">Cardiology referral / follow up</a><div id="cardioref" class="EDmodalDialog"  style="opacity: 0;"><div>
+    <a href="#EDclose" title="EDClose" class="EDclose">X</a>
+    <h2>Cardiology follow up</h2>
+   <p><strong>Summary:</strong><br><ul><li>There is no access to a rapid access chest pain clinic from ED / AMU / SDEC.</li><li>Do <strong>not</strong> ask GP to refer to RACPC.</li><li>Discuss early with cardiology team / outreach nurses for queries</li><li>Send an e-mail with copy of notes to below e-mail address if discharging - cardiology service will triage and contact patient. <strong>Make clear in notes to GP that cardiology have been mailed for an opinion and they will review the case</strong></li></ul></p>
+<p><a href="mailto:cddft.cardiologyuhnd@nhs.net">cddft.cardiologyuhnd@nhs.net</a></p>
+<p>ED (and others) do not have access to a rapid access chest pain clinic (RACPC) - when this was available, there was reportedly a 0% hit rate for cardiac issues.</p><p>Most frequently, when a patient attends the Emergency Department or SDEC, it is due to prolonged episode of chest pain or with atypical features. In this instace, the predominant question being asked is "is this a heart attack?". Following the chest pain algorithm, will either result in admission for assessment or NSTEMI ruled out. In the latter instance, the advice to be given is: <strong>"Advice: You have not had a heart attack.  You only need to see your GP if you have ongoing concerns or symptoms.  Your GP will then decide if you should be referred for further tests."</strong></p>
+<p>In the instance that a patient attends with a suspected diagnosis of <strong>typical angina</strong>, or the patient is already under a cardiologist with some change in the existing problem and you want to let cardiology know about it (e.g., known coronary artery disease with a further presentation with chest pain / angina), then contacting the cardiologist of the day / cardiac outreach nurses <strong>in hours</strong>, or sending an e-mail with a copy of the notes to the above e-mail address is an appropriate course of action.</p>
+</div>
+</div>
+
+
          </div>
          <div class="EDcard">
             <h4>Cardiac Arrest</h4> 
@@ -748,23 +321,23 @@ EDbanner[0].style.display = "none";
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Arrhythmias</h4> 
-            <a href=https://www.resus.org.uk/sites/default/files/2021-04/Tachycardia%20Algorithm%202021.pdf">ALS Tachyarrhythmia</a><a href="https://www.resus.org.uk/sites/default/files/2021-04/Bradycardia%20Algorithm%202021.pdf">ALS Bradycardia</a><a href="http://intranet/sites/altc-Cardiology/Cardiology%20Guidelines/Ambulatory%20AF%20guideline.pdf">AF Pathway - Ambulatory</a><a href="http://intranet/sites/altc-Cardiology/Cardiology%20Guidelines/IP%20AF%20guideline.pdf">AF Pathway - Inpatient (Atrial Fibrilation)</a><a href="https://cks.nice.org.uk/atrial-fibrillation#%21scenariorecommendation:3">New onset AF (NICE)</a><a class="EDsystem EDsystemH" href="https://bnf.nice.org.uk/drug/amiodarone-hydrochloride.html#indicationsAndDoses">Amiodarone (BNF)</a>
+            <a href="https://www.resus.org.uk/sites/default/files/2021-04/Tachycardia%20Algorithm%202021.pdf">ALS Tachyarrhythmia</a><a href="https://www.resus.org.uk/sites/default/files/2021-04/Bradycardia%20Algorithm%202021.pdf">ALS Bradycardia</a><a href="http://intranet/sites/hub-pp/Published%20Documents/Acute%20Management%20of%20Atrial%20Fibrillation%20Guidance.pdf">Acute management of atrial fibrilation</a><a href="http://intranet/sites/altc-Cardiology/Cardiology%20Guidelines/Ambulatory%20AF%20guideline.pdf">AF Pathway - Ambulatory</a><a href="http://intranet/sites/altc-Cardiology/Cardiology%20Guidelines/IP%20AF%20guideline.pdf">AF Pathway - Inpatient (Atrial Fibrilation)</a><a href="https://cks.nice.org.uk/atrial-fibrillation#%21scenariorecommendation:3">New onset AF (NICE)</a><a href="http://intranet/sites/altc-Cardiology/Cardiology%20Guidelines/VT%20protocol.PPTX">VT protocol (Including Procainamide)</a><a class="EDsystem EDsystemH" href="https://bnf.nice.org.uk/drug/amiodarone-hydrochloride.html#indicationsAndDoses">Amiodarone (BNF)</a>
             <div class="EDinfo">Use Medusa IVGuide for more in depth instructions.</div> 
             <a class="EDsystem EDsystemH" href="https://bnf.nice.org.uk/drug/digoxin.html#indicationsAndDoses">Digoxin (BNF)</a>
             <div class="EDinfo">Use Medusa IVGuide for more in depth instructions.</div> 
             <a class="EDsystem EDsystemH" href="https://bnf.nice.org.uk/drug/flecainide-acetate.html#indicationsAndDoses">Flecainide (BNF)</a>
             <div class="EDinfo">Use Medusa IVGuide for more in depth instructions.</div> 
-            <a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/ISOPRENALINE%20Sulfate%20and%20Hydrochloride%20Salts.pdf">Isoprenaline (bradycardia)</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/MAGNESIUM%20SULPHATE%2050%25.pdf">Magnesium (VT / Torsade)</a></div>
+            <a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/ISOPRENALINE%20Sulfate%20and%20Hydrochloride%20Salts.pdf">Isoprenaline (bradycardia)</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20&%20Guidelines/ADULT/MAGNESIUM%20SULFATE%2050%25%20ADULT.pdf">Magnesium (VT / Torsade)</a></div>
       </div>
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Heart failure</h4> 
-            <a class="EDsystem EDsystemH" href="https://medusa.wales.nhs.uk/docs/Example_calculation_glyceryl_trinitrate_adult_v3.pdf">GTN Infusion</a>
+            <a class="EDsystem EDsystemH" href="https://www.medusaimg.nhs.uk/docs/Glyceryl_trinitrate_example%20calculation%20(adult)%20v5a.pdf">GTN Infusion</a>
             <div class="EDinfo">Use Medusa IVGuide for more in depth instructions.</div>
          </div>
          <div class="EDcard">
             <h4>Syncope</h4> 
-            <a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Syncope.docx">Syncope advice leaflet</a><a href="https://www.mdcalc.com/san-francisco-syncope-rule">San Fransisco Syncope Score</a><a href="https://www.mdcalc.com/egsys-evaluation-guidelines-syncope-study-score-syncope">EGSYS (Syncope Score)</a></div>
+            <a href="https://www.mdcalc.com/san-francisco-syncope-rule">San Fransisco Syncope Score</a><a href="https://www.mdcalc.com/egsys-evaluation-guidelines-syncope-study-score-syncope">EGSYS (Syncope Score)</a><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/783444/assessing-fitness-to-drive-a-guide-for-medical-professionals.pdf#Page=38">Assessing fitness to drive (DVLA)</a></div>
       </div>
    </div>
    <h3 class="EDh3">Respiratory</h3>
@@ -772,24 +345,26 @@ EDbanner[0].style.display = "none";
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Asthma</h4> 
-            <a href="https://www.sign.ac.uk/media/1383/qrg158.pdf#Page=17">BTS Acute Asthma</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/AMINOPHYLLINE%20Intravenous%20Adult%20Patients.pdf">Aminophylline loading</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/SALBUTAMOL%20Intravenous.pdf">IV Salbutamol</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Adult%20Asthma%20Discharge%20Pack%20V1.pdf">Asthma discharge pack (adult)</a></div>
+            <a href="https://www.sign.ac.uk/media/1383/qrg158.pdf#Page=17">BTS Acute Asthma</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20&%20Guidelines/ADULT/AMINOPHYLLINE%20Intravenous%20ADULT.pdf">Aminophylline loading</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20&%20Guidelines/ADULT/SALBUTAMOL%20Intravenous%20ADULT.pdf#search=salbutamol">IV Salbutamol</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Adult%20Asthma%20Discharge%20Pack%20V1.pdf">Asthma discharge pack (adult)</a></div>
 <div class="EDcard">
-<h4>Pulmonary Embolism</h4><a href="http://intranet/sites/hub-pp/Published%20Documents/Venous%20Thromboembolism%20(VTE)%20diagnosis%20and%20treatment%20(adult%20in-patients)/Section%207%20-%20PE%20Ambulatory%20Care%20Pathway.dotx">PE Ambulatory Care Pathway</a><a href="http://intranet/sites/hub-pp/Published%20Documents/Venous%20Thromboembolism%20(VTE)%20diagnosis%20and%20treatment%20(adult%20in-patients)/Appendix%207%20-%20Treatment%20of%20Suspected%20High%20Risk%20PE%20in%20Adults.pdf">Massive PE management / thrombolysis (Alteplase)</a><a href="http://intranet/sites/nd-ClinGov/VTE%20Group%20Meetings/Clexane%20(enoxaparin)%20doses%20and%20administration%20guide%20for%20DVT,%20PE,%20UA%20and%20NSTEMI/Clexane%20(enoxaparin)%20dose%20and%20admistration%20guide%20for%20DVT%20and%20PE.ppt">Enoxparin (Clexane) dose in PE / DVT</a><a href="http://intranet/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Management%20of%20DVT%20and%20Pulmonary%20Embolism%20during%20Pregnancy%20and%20in%20the%20Puerperium.pdf#Page=9">PE in pregnancy</a><a href="https://www.mdcalc.com/wells-criteria-pulmonary-embolism">WELLS score for PE</a><a href="https://www.mdcalc.com/perc-rule-pulmonary-embolism">PERC score for PE</a></div>
+<h4>Pulmonary Embolism</h4><a href="http://intranet/sites/hub-pp/Published%20Documents/Venous%20Thromboembolism%20(VTE)%20diagnosis%20and%20treatment%20(adult%20in-patients)/Section%207%20-%20PE%20Ambulatory%20Care%20Pathway.dotx">PE Ambulatory Care Pathway</a><a href="http://intranet/sites/hub-pp/Published%20Documents/Venous%20Thromboembolism%20(VTE)%20diagnosis%20and%20treatment%20(adult%20in-patients)/Appendix%207%20-%20Treatment%20of%20Suspected%20High%20Risk%20PE%20in%20Adults.pdf">Massive PE management / thrombolysis (Alteplase)</a><a href="http://intranet/sites/nd-ClinGov/VTE%20Group%20Meetings/Clexane%20(enoxaparin)%20doses%20and%20administration%20guide%20for%20DVT,%20PE,%20UA%20and%20NSTEMI/Clexane%20(enoxaparin)%20dose%20and%20admistration%20guide%20for%20DVT%20and%20PE.ppt">Enoxparin (Clexane) dose in PE / DVT</a><a href="http://intranet/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Management%20of%20DVT%20and%20Pulmonary%20Embolism%20during%20Pregnancy%20and%20in%20the%20Puerperium.pdf#Page=9">PE in pregnancy</a><a href="https://www.mdcalc.com/wells-criteria-pulmonary-embolism">WELLS score for PE</a><a href="https://www.mdcalc.com/perc-rule-pulmonary-embolism">PERC score for PE</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/NEW%20General%20Respiratory%20Referral%20Form%20Feb%2023.doc">Community Respiratory Service Referral</a></div>
       </div>
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>COPD</h4> 
-            <a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/AMINOPHYLLINE%20Intravenous%20Adult%20Patients.pdf">Aminophylline loading</a><a href="/sites/hub-pp/Published%20Documents/Non%20Invasive%20Ventilation%20Procedure.pdf#Page=16">NIV Pathway algorithm</a><a href="/sites/hub-pp/Published%20Documents/Non%20Invasive%20Ventilation%20Procedure.pdf#Page=17">NIV prescription form</a></div>
+            <a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20&%20Guidelines/ADULT/AMINOPHYLLINE%20Intravenous%20ADULT.pdf">Aminophylline loading</a><a href="http://intranet/sites/hub-pp/Published%20Documents/Non%20Invasive%20Ventilation%20(NIV)%20Procedure.pdf">NIV Pathway</a></div>
          <div class="EDcard">
             <h4>Covid-19</h4> 
-            <a href="/sites/altc-EmergCare/Emergency%20Department/COVID/COVID%20COORDINATOR%20AMU%20GUIDELINE%201.0.docx">Respiratory Cohort Guidance</a><a class="EDsystem EDdead" href="https://www.england.nhs.uk/coronavirus/wp-content/uploads/sites/52/2020/03/specialty-guide-NIV-respiratory-support-and-coronavirus-v3.pdf">NIV Respiratory Support</a><a href="https://www.nice.org.uk/guidance/ng191/resources/covid19-prescribing-briefing-corticosteroids-pdf-9071983117">Corticosteroids in Covid-19</a></div>
+            <a href="/sites/altc-EmergCare/Emergency%20Department/COVID/COVID%20COORDINATOR%20AMU%20GUIDELINE%201.0.docx">Respiratory Cohort Guidance</a><a class="EDsystem EDdead" href="https://www.england.nhs.uk/coronavirus/wp-content/uploads/sites/52/2020/03/specialty-guide-NIV-respiratory-support-and-coronavirus-v3.pdf">NIV Respiratory Support</a><a href="https://www.nice.org.uk/guidance/ng191/resources/covid19-prescribing-briefing-corticosteroids-pdf-9071983117">Corticosteroids in Covid-19</a><a href="http://intranet/sites/ws-Coronavirus/Standard%20Operating%20Procedures/Inpatient%20Management/Nursing%2003%20COVID%20protocol.pdf">Covid-19 Protocol</a><a href="https://bestpractice.bmj.com/topics/en-gb/3000168">BMJ Best Practice</a><a href="/sites/altc-EmergCare/Emergency%20Department/COVID/Major%20Trauma%20Networks%20response%20to%20Covid%2019%20-%2025%20March%202020.pdf">Major Trauma Networks Response</a><a href="https://www.england.nhs.uk/coronavirus/">NHS England Guidance</a><a href="https://www.mdcalc.com//covid-19">MDCalc COVID resources</a></div>
+
+<div class="EDcard"><h4>MERS</h4><a href="https://www.gov.uk/government/publications/mers-cov-public-health-investigation-and-management-of-possible-cases/algorithm-for-the-investigation-and-management-of-possible-cases-of-mers-cov-accessible-text-version">Algorithm for the investigation and management of possible cases of MERS-CoV</a></div>
       </div>
       <div class="EDcolumn">
-<div class="EDcard"><h4>Pneumothorax</h4><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/BTS%20Pleural%20Disease%20Guideline.pdf#Page=27">BTS Pneumothorax Guidelines 2010</a><a href="http://intranet/sites/nd-ClinGov/PatSafety/intranet/Shared%20Documents/INTERCOSTAL%20DRAIN-THORACOCENTESIS.pdf">Chest drain insertion LocSIPP (pneumothorax)</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Pneumothorax.docx">Pneumothorax advice leaflet</a>
+<div class="EDcard"><h4>Pneumothorax</h4><a href="https://www.brit-thoracic.org.uk/document-library/guidelines/pleural-disease/bts-guideline-for-pleural-disease-appendix-1-clinical-pathwaysdecision-trees/"> BTS Pneumothorax Flowchart (2023)</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/BTS%20Pleural%20Disease%20Guideline.pdf#Page=27">BTS Pneumothorax Guidelines 2010</a><a href="http://intranet/sites/ws-LocSSIP/Lists/Approved LocSSIPs/">LocSSIPP lists (pending access)</a><a href="https://bestpractice.bmj.com/patient-leaflets/en-gb/html/1493808091415/Pneumothorax">Pneumothorax advice leaflet</a>
 </div>
          <div class="EDcard">
             <h4>Everything else</h4> 
-            <a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/OXYGEN.pdf">Supplemental oxygen</a><a href="https://www.brit-thoracic.org.uk/quality-improvement/guidelines/">British Thoracic Society (BTS)</a></div>
+            <a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20&%20Guidelines/ADULT/OXYGEN%20Guideline.pdf">Supplemental oxygen</a><a href="https://www.brit-thoracic.org.uk/quality-improvement/guidelines/">British Thoracic Society (BTS)</a></div>
       </div>
    </div>
    <h3 class="EDh3">Gastrointestinal</h3>
@@ -798,23 +373,14 @@ EDbanner[0].style.display = "none";
          <div class="EDcard">
             <h4>Upper GI Bleed</h4> 
             <a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/GIB6%20Bundle%20v2.pdf">Upper GI Bleed Bundle (Regional)</a>
-
-<a href="#UGI">Upper GI bleed - Blatchford Score Calculator</a><div id="UGI" class="EDmodalDialog" style="opacity: 0;"><div>
-    <a href="#EDclose" title="EDClose" class="EDclose">X</a>
-    <h2>Upper GI bleed - Blatchford Score Calculator</h2>
-    <p><iframe src="https://qxmd.com/calculate/calculator_25/blatchford-score" style="border: 0; box-shadow: none; min-height: 520px; min-width: 310px; width: 100%; overflow: hidden;"></iframe></p>
-</div>
-</div>
-
-<a class="EDsystem EDsystemH EDdead" href="#">Endoscopy / Blatchford</a>
-            <div class="EDinfo">ALL 
-               <strong>outpatient</strong> endoscope requests are to be completed on iSoft.</div> 
-            <a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/OMEPRAZOLE%20Continuous%20Infusion.pdf">IV Omeprazole / Hong Kong</a></div>
+<a href="https://www.mdcalc.com/calc/518/glasgow-blatchford-bleeding-score-gbs">Blatchford score</a>
+<a href="http://intranet/sites/hub-pp/Published%20Documents/DOAC%20Andexanet%20Protocol%20for%20Reversal%20of%20Anti-Xa.pdf">Andexanet alfa protocol</a>
+            <a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20&%20Guidelines/ADULT/OMEPRAZOLE%20continuous%20infusion%20ADULT.pdf">IV Omeprazole / Hong Kong</a></div>
       </div>
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Alcohol withdrawal</h4> 
-            <a href="/sites/altc-EmergCare/Shared%20Documents/Alcohol%20withdrawal%20leaflet%20FINAL.docx">Coping with withdrawal</a><a href="http://intranet/sites/hub-pp/Published%20Documents/Management%20of%20Severe%20Acute%20Alcohol%20Withdrawal.pdf#Page=5">Management of Severe Acute Alcohol Withdrawal</a><a href="http://intranet/sites/hub-pp/Published%20Documents/Management%20of%20Severe%20Acute%20Alcohol%20Withdrawal.pdf#Page=7">Alcohol Withdrawal Assessment Scale</a><a href="/sites/css-Pharmacy/Clinical%20Effectiveness%20%20Therapeutics%20Committee/Agenda%20and%20Papers%206th%20September%202017/16%20a)%20Alcohol%20Management%20Booklet%20v2.pdf#Page=4">CIWA Score</a></div>
+            <a href="/sites/altc-EmergCare/Shared%20Documents/Alcohol%20withdrawal%20leaflet%20FINAL.docx">Coping with withdrawal</a><a href="http://intranet/sites/hub-pp/Published%20Documents/Severe%20Acute%20Alcohol%20Withdrawal.pdf">Management of Severe Acute Alcohol Withdrawal</a></div>
       </div>
       <div class="EDcolumn">
          <div class="EDcard">
@@ -827,7 +393,7 @@ EDbanner[0].style.display = "none";
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Diabetes</h4> 
-            <a href="/sites/hub-pp/Published%20Documents/Diabetic%20Ketoacidosis%20DKA.pdf#Page=5">DKA</a><a href="/sites/hub-pp/Published%20Documents/Management%20of%20Adult%20Hyperosmolar%20Hyperglycaemic%20State%20(HHS).pdf#Page=5">HHS</a><a href="/sites/sd-Anaes/Joint%20Dept%27s%20Documents/Diabetes/LP59546%20-%20Variable%20Rate%20Intravenous%20Insulin.pdf">Variable rate insulin infusion</a><a href="#dfoot">Diabetic foot clinic referral</a><div id="dfoot" class="EDmodalDialog"  style="opacity: 0;"><div>
+            <a href="http://svr-spapp/sites/hub-pp/Published%20Documents/Management%20of%20Diabetic%20Ketoacidosis%20(DKA)%20-%20Adults.pdf">DKA</a><a href="http://intranet/sites/hub-pp/Published%20Documents/Management%20of%20Hyperosomolar%20Hyperglycaemic%20State%20(HHS)%20policy.pdf">HHS</a><a href="/sites/sd-Anaes/Joint%20Dept%27s%20Documents/Diabetes/LP59546%20-%20Variable%20Rate%20Intravenous%20Insulin.pdf">Variable rate insulin infusion</a><a href="#dfoot">Diabetic foot clinic referral</a><div id="dfoot" class="EDmodalDialog"  style="opacity: 0;"><div>
     <a href="#EDclose" title="EDClose" class="EDclose">X</a>
     <h2>Diabetic foot clinic referral</h2>
     <p>If a patient needs follow up in diabetic foot clinic after discussion with ED SDM/speciality, please email: <ul><li><a href="mailto:cddft.diabetesadmin@nhs.net">cddft.diabetesadmin@nhs.net </a></li></ul>Please send the symphony notes and reason for referral.  Please document the same in the medical notes that a referral  has been sent. The Diabetic team will follow up the patient. </p><p><strong>NOTE:</strong> Please don’t ask primary care physician to do the referral in the discharge letter.
@@ -838,25 +404,38 @@ EDbanner[0].style.display = "none";
       <div class="EDcolumn">
          <div class="EDcard" id="Elec">
             <h4>Electrolytes</h4> 
-            <a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/HYPERKALEMIA%20Guideline%20(High).pdf">Hyperkalaemia</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/HYPOKALAEMIA%20Guideline%20(Low).pdf">Hypokalaemia</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/HYPERCALCAEMIA%20Guideline%20(High).pdf">Hypercalcaemia</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/HYPOCALCAEMIA%20Guideline%20(Low).pdf">Hypocalcaemia</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/HYPOMAGNESAEMIA%20Guideline.pdf">Hypomagnesaemia</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/HYPOPHOSPHATAEMIA%20Guideline.pdf">Hypophosphataemia</a><a href="http://endocrinenortheast.co.uk/wp-content/uploads/2013/09/Hyponatremia-algorithm_NEN.pdf">Hyponatraemia (Regional)</a></div>
-      </div><div class="EDcolumn"><div class="EDcard"><h4>Rheumatology</h4><a class="EDsystem EDsystemD" href="http://svr-spapp/sites/altc-Medicine/Shared%20Documents/Ward%202/Referrals%20Requests/GCA%20pathway.docx">Giant Cell Arteritis (GCA) Pathway (DMH)</a></div></div>
+            <a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/HYPERKALAEMIA%20(Acute)%20Guideline%20NOT%20to%20be%20used%20in%20DKA.pdf">Hyperkalaemia</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/HYPOKALAEMIA%20Guideline.pdf">Hypokalaemia</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/HYPERCALCAEMIA%20Guideline.pdf">Hypercalcaemia</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/HYPOCALCAEMIA%20Guideline.pdf">Hypocalcaemia</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/HYPOMAGNESAEMIA%20Guideline.pdf">Hypomagnesaemia</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/HYPOPHOSPHATAEMIA%20Guideline.pdf">Hypophosphataemia</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/Hyponatremia-algorithm_NEN.pdf">Hyponatraemia (Regional)</a></div>
+      </div><div class="EDcolumn"><div class="EDcard"><h4>Rheumatology</h4><a class="EDsystem" href="http://svr-spapp/sites/ws-AcuteMedicine/Pathways/GCA%20pathway%202.docx">Giant Cell Arteritis (GCA) Pathway</a><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/783444/assessing-fitness-to-drive-a-guide-for-medical-professionals.pdf#Page=38">Assessing fitness to drive (DVLA)</a></div><div class="EDcard"><h4>Sodium</h4><a href="https://www.mdcalc.com/calc/113/free-water-deficit-hypernatremia">Free water deficit in hypernatraemia calculator</a><a href="https://www.mdcalc.com/calc/480/sodium-correction-rate-hyponatremia-hypernatremia">Sodium Correction Rate in Hyponatremia and Hypernatremia</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20&%20Guidelines/ADULT/SODIUM%20BICARBONATE%20Diluting%208.4%25%20to%201.26%25%20solution%20-%20Short%20Term%20Protocol.pdf">Diluting sodium bicarbonate 1.26%</a></div></div>
    </div>
    <h3 class="EDh3">Neurology</h3>
    <div class="EDrow">
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Stroke</h4> 
-            <a href="https://www.rcem.ac.uk/docs/Initial%20Assessment%20Tools/12siii.%20Stroke%20%28QMC%20Nottingham%2c%20Jan%202013%29.pdf?Page=2">ROSIER</a><a href="https://www.rcem.ac.uk/docs/Initial%20Assessment%20Tools/12siii.%20Stroke%20%28QMC%20Nottingham%2c%20Jan%202013%29.pdf?Page=2">ABCD2</a><a href="/Shared%20Documents/TIA%20Referral%20Form%20Dec%202013.doc">TIA Referral form</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/Adult/ALTEPLASE%20Fibrinolytic%20treatment%20of%20acute%20ischaemic%20stroke.pdf">Thrombolysis policy (stroke, Alteplase)</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/LABETALOL%20(Stroke%20Unit%20Use%20Only).pdf">Labetolol infusion</a></div>
+            <a href="https://www.strokeguideline.org/chapter/acute-care/?_gl=1*lp1eo6*_up*MQ..*_ga*MTE4ODEyMjQ5Ny4xNzQwNTU4MDI2*_ga_EE3BZMVLRT*MTc0MDU1ODAyNS4xLjEuMTc0MDU1ODAzMy4wLjAuMA..#160">Acute stroke / TIA guidance</a><a href="https://www.mdcalc.com/calc/10027/recognition-stroke-emergency-room-rosier-scale">ROSIER</a><a href="https://www.mdcalc.com/calc/357/abcd2-score-tia">ABCD2</a><a href="/Shared%20Documents/TIA%20Referral%20Form%20Dec%202013.doc">TIA Referral form</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/Adult/ALTEPLASE%20Fibrinolytic%20treatment%20of%20acute%20ischaemic%20stroke.pdf">Thrombolysis policy (stroke, Alteplase)</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/LABETALOL%20(Stroke%20Unit%20Use%20Only).pdf">Labetolol infusion</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/TICH-3%20poster%20for%20ED%20v1.1%2024.03.2022.pdf">TICH Trial (Tranexamic acid for Intracarebral Haemorrhage)</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/ABC-ICH%20anticoag%20reversal%20V1.1%20(002).pdf">ABC-ICH anticoagulation reversal in haemorrhagic stroke</a><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/783444/assessing-fitness-to-drive-a-guide-for-medical-professionals.pdf#Page=38">Assessing fitness to drive (DVLA)</a></div>
       </div>
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Bell&#39;s Palsy</h4> 
-            <a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Bellspalsy.pdf">Bell&#39;s Palsy referral</a><a href="https://cks.nice.org.uk/topics/bells-palsy/management/management/">NICE Bell&#39;s Palsy</a></div>
+            <a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Bellspalsy.pdf">Bell&#39;s Palsy referral</a><a href="https://cks.nice.org.uk/topics/bells-palsy/management/management/">NICE Bell&#39;s Palsy</a><a href="#houseb">House-Brackmann Facial Paralysis Scale</a><div id="houseb" class="EDmodalDialog"  style="opacity: 0;"><div>
+    <a href="#EDclose" title="EDClose" class="EDclose">X</a>
+    <h2>House-Brackmann Facial Paralysis Scale</h2>
+    <p><ul><li><strong>Grade I</strong>: Normal</li>
+<li><strong>Grade II</strong>: Slight facial weakness or other mild dysfunction. Normal tone and symmetry at rest. Complete closure of the eye without effort. Slight asymmetry of the mouth when facial movements occur.</li>
+<li><strong>Grade III</strong>: Assigned to patients dealing with moderate dysfunction; these patients generally do not display any noticeable facial weakness with synkinesis, they maintain complete eye closure and good forehead movement with effort.</li>
+<li><strong>Grade IV</strong>: Assigned to patients dealing with severe dysfunction. Obvious facial weakness. Incomplete eye closure, no forehead movement, asymmetrical mouth movement, and synkinesis.</li>
+<li><strong>Grade V</strong>: Assigned to patients who have little to no ability to smile, frown or make other facial expressions. The closure of the eye is incomplete, and there is no forehead movement.</li>
+<li><strong>Grade VI</strong>: No facial motion.</li></ul>
+</p>
+</div>
+</div></div>
+<div class="EDcard"><h4>Headache</h4><a href="https://ntag.nhs.uk/wp-content/uploads/2024/07/Regional-Headache-Guideline-July-2024.pdf">Regional headache guideline</a></div>
+<div class="EDcard"><h4>Raised ICP</h4><a href="http://svr-spapp/sites/hub-pp/Published%20Documents/Critical%20Care%20Management%20of%20Patients%20with%20Raised%20Intracranial%20Pressure%20and%20Preparation%20for%20Urgent%20Transfer%20to%20a%20Tertiary%20Neurosurgical%20Unit.pdf">Raised ICP - management / transfer guidelines</a></div>
       </div>
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Seizures</h4> 
-            <a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/PHENYTOIN%20IV%20Loading%20Dose%20ADULTS.pdf">Status epilepticus management (phenytoin)</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/First%20Seizure.docx">First fit / seizure advice</a><a class="EDsystem EDsystemU" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/First%20Seizure%20form%20Final%20Jan%202021.docx">First fit / seizure pathway / referral form (UHND)</a><a class="EDsystem EDsystemD" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/First%20Fit%20Clinic%20Referral%20Form%20-%20DMH.doc">First fit / seizure referral form (DMH)</a></div>
+            <a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/Management%20of%20status%20epilepticus%20POSTERS%20EPILEPSY%20NORTH%202021.pdf">Management of status epilepticus (levetiracetam / keppra)</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/PHENYTOIN%20IV%20Loading%20Dose%20ADULTS.pdf">Status epilepticus management (phenytoin)</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/First%20Seizure.docx">First fit / seizure advice</a><a class="EDsystem EDsystemU" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/First%20Seizure%20form%20Final%20Jan%202021.docx">First fit / seizure pathway / referral form (UHND)</a><a class="EDsystem EDsystemD" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/Referral%20to%20South%20Tees%20First%20Seizure%20Clinic%20-%20final.docx">First fit / seizure referral form (DMH)</a><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/783444/assessing-fitness-to-drive-a-guide-for-medical-professionals.pdf#Page=38">Assessing fitness to drive (DVLA)</a></div>
       </div>
    </div>
    <h3 class="EDh3">Surgical Specialities</h3>
@@ -864,28 +443,37 @@ EDbanner[0].style.display = "none";
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>General Surgery</h4> 
-            <a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/Surgical%20pathways/Abdo%20pain%20%20Pathway%20FINAL%20v2.pdf">Abdominal pain pathway</a><a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/Surgical%20pathways/ABSCESS%20PATHWAY.pdf">Abscess pathway</a><a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/Surgical%20pathways/POSTER%20ABDOMINAL%20PAIN%20PATHWAY.pdf">Abdominal pathway poster</a><a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/Surgical%20pathways/POSTER%20UHND%20ED%20Referral%20into%20CDU%20SOP.pdf">ED referral in to CDU poster</a><a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/Surgical%20pathways/UHND%20ED%20Referral%20into%20CDU%20SOP.pdf">Abdo pathway SOP</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Abdominal%20Pain%20v2.docx">Abdo pain advice leaflet</a><a href="https://www.mdcalc.com/glasgow-imrie-criteria-severity-acute-pancreatitis">Glasgow Pancreatitis Score</a></div>
+            <a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/Surgical%20pathways/Abdo%20pain%20%20Pathway%20FINAL%20v2.pdf">Abdominal pain pathway</a><a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/Surgical%20pathways/ABSCESS%20PATHWAY.pdf">Abscess pathway</a><a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/Surgical%20pathways/POSTER%20ABDOMINAL%20PAIN%20PATHWAY.pdf">Abdominal pathway poster</a><a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/Surgical%20pathways/POSTER%20UHND%20ED%20Referral%20into%20CDU%20SOP.pdf">ED referral in to CDU poster</a><a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/Surgical%20pathways/UHND%20ED%20Referral%20into%20CDU%20SOP.pdf">Abdo pathway SOP</a><a href="https://www.mdcalc.com/glasgow-imrie-criteria-severity-acute-pancreatitis">Glasgow Pancreatitis Score</a><a href="https://www.mdcalc.com/oakland-score-safe-discharge-lower-gi-bleed">Oakland Score (lower GI bleed)</a></div>
          <div class="EDcard">
             <h4>Urology</h4> 
-            <a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Renal%20colic%20v2.docx">Renal Colic (UHND)</a><a class="EDsystem EDsystemD" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Renal%20colic%20DMH%20ED.docx">Renal Colic (DMH)</a><a class="EDsystem EDsystemD" href="/sites/altc-EmergCare/Emergency%20Department/Referral%20forms/Stone%20Clinic%20referral%20form%20DMH.doc">Renal Stone Clinic Referral (DMH)</a><a class="EDsystem EDsystemD" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/MALE%20URINARY%20RETENTION%20-%202019%20Template.doc">Male Urinary Retention Proforma (DMH)</a><a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/urinaryretentionform.pdf">Urinary Retention (UHND)</a><a class="EDsystem EDsystemD" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Urinary%20retention%20DMH.pdf">Urinary Retention (DMH)</a><a class="EDsystem EDsystemU" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/haematuria%20clinic.pdf">Macroscopic Haematuria Referral</a></div>
+<a href="#uhnduro">Urology clinic referral - stone / retention (UHND)</a><div id="uhnduro" class="EDmodalDialog"  style="opacity: 0;"><div>
+    <a href="#EDclose" title="EDClose" class="EDclose">X</a>
+    <h2>Urology clinic referrals for stones or retention</h2>
+    <p>Following a discussion with the urology secretaries at Sunderland, they have agreed that for both urinary retention and stone clinic referrals, we simply need to email our secretaries to ask them to please send a copy of the notes to the urology secretaries.  We no longer need to complete any referral forms.</p><p>For this to work it is important that the notes contain all of the relevant details, including:</p>
+<ul><li><strong>Urinary Retention</strong> – PR examination, mls drained when catheter inserted, Blood results including WCC, CRP, U&Es</li>
+<li><strong>Stone Clinic</strong> – CT findings, Blood results including WCC, CRP, U&Es<ul><li>Transfer CT KUB <strong>AND</strong> plain XR-KUB to Sunderland PACS</li><li>The plain XR KUB has been agreed with radiology and urology and allows urology to track progression of the stone if radiopaque</li> </ul></li></ul><p>Do <strong>NOT</strong> send the referral directly to urology, but to the ED secretaries to allow tracking of the referral.</p>
+<div class="EDrow"><div class="EDcolumn"><div class="EDcard.stay"><h4 class="EDstay">Links</h4><a class="stay" href="mailto:cddft.eduhndsecretaries@nhs.net">cddft.eduhndsecretaries@nhs.net</a></div></div></div>
+</div>
+</div>            
+<a class="EDsystem EDsystemD" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Renal%20colic%20DMH%20ED.docx">Renal Colic (DMH)</a><a class="EDsystem EDsystemD" href="/sites/altc-EmergCare/Emergency%20Department/Referral%20forms/Stone%20Clinic%20referral%20form%20DMH.doc">Renal Stone Clinic Referral (DMH)</a><a class="EDsystem EDsystemD" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/MALE%20URINARY%20RETENTION%20-%202019%20Template.doc">Male Urinary Retention Proforma (DMH)</a><a class="EDsystem EDsystemD" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Urinary%20retention%20DMH.pdf">Urinary Retention (DMH)</a><a class="EDsystem EDsystemU" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/haematuria%20clinic.pdf">Macroscopic Haematuria Referral</a></div><div class="EDcard"><h4>Plastic Surgery</h4><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/UHND%20Plastic%20Surgery%20Referral%20Process%20v4.1.doc">Plastic surgery referral process</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/UHND%20Plastic%20Surgery%20Referral%20Process%20Abridged%20v4.0%20Oct%202023.doc">Plastic surgery referral process (abridged)</a></div>
       </div>
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Gynae / Obs</h4> 
-            <a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Emergency%20Gynae-%20reminder%20of%20times%20for%20A%26E%20and%20urgent%20care.docx">Emergency Gynae Clinics</a><a href="http://intranet/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Management%20of%20DVT%20and%20Pulmonary%20Embolism%20during%20Pregnancy%20and%20in%20the%20Puerperium.pdf#Page=9">DVT / PE in pregnancy</a><a href="/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Management%20of%20Massive%20Pulmonary%20Embolism%20in%20Pregnant%20Women.pdf">Massive PE in pregnancy</a><a href="/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Nausea%20and%20Vomiting%20in%20pregnancy.pdf">Hyperemesis</a><a href="http://intranet/sites/nd-nursing/CAPT/Shared%20Documents/Sepsis/LP204341%20Maternity%20Sepsis%20Tool%20(A4%20D-S).pdf">Maternal sepsis tool</a><a href="/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Rhesus%20Negative%20Women.pdf#Page=14">Anti-D / rhesus negative women</a><a href="/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Chickenpox%20(Varicella%20Zoster%20Virus%20–%20VZV)%20in%20Pregnancy.pdf">Chickenpox in pregnancy</a><a href="http://intranet/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Parvovirus%20Guideline%20(regional).docx">Parvovirus infection in pregnancy</a><a href="/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Postpartum%20Haemorrhage%20–%20Massive%20Obstetric%20Haemorrhage.pdf#Page=20">Major Obstetric Haemorrhage</a><a href="http://intranet/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Hypertensive%20Diseases%20in%20Pregnancy.pdf">Hypertensive disorders in pregnancy</a></div>
+            <a href="https://www.resus.org.uk/sites/default/files/2021-08/Maternal%20Cardiac%20Arrest%20QRH%20OAA%20V1.1.pdf">Maternal cardiac arrest</a><a href="http://intranet/sites/hub-pp/Published%20Documents/Non-Obstetric%20Emergencies%20in%20Pregnant%20Patients.pdf">Non-Obstetric Emergency Care</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/UHND%20SDEC%20for%20gynaecology%20(UPDATE%2014th%20April%202023).docx">UHND Gynae SDEC</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/for%20A+E_from_62%20or%209.pub">Pregnant people pathway</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Emergency%20Gynae-%20reminder%20of%20times%20for%20A%26E%20and%20urgent%20care.docx">Emergency Gynae Clinics</a><a href="http://intranet/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Management%20of%20DVT%20and%20Pulmonary%20Embolism%20during%20Pregnancy%20and%20in%20the%20Puerperium.pdf#Page=9">DVT / PE in pregnancy</a><a href="/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Management%20of%20Massive%20Pulmonary%20Embolism%20in%20Pregnant%20Women.pdf">Massive PE in pregnancy</a><a href="http://intranet/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Nausea%20and%20Vomiting%20in%20pregnancy%20(Hyperemesis%20Gravidarum)%20v5.1.pdf">Hyperemesis</a><a href="http://intranet/sites/nd-nursing/CAPT/Shared%20Documents/Sepsis/LP204341%20Maternity%20Sepsis%20Tool%20(A4%20D-S).pdf">Maternal sepsis tool</a><a href="/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Rhesus%20Negative%20Women.pdf#Page=14">Anti-D / rhesus negative women</a><a href="/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Chickenpox%20(Varicella%20Zoster%20Virus%20–%20VZV)%20in%20Pregnancy.pdf">Chickenpox in pregnancy</a><a href="http://intranet/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Parvovirus%20Guideline%20(regional).docx">Parvovirus infection in pregnancy</a><a href="/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Postpartum%20Haemorrhage%20–%20Massive%20Obstetric%20Haemorrhage.pdf#Page=20">Major Obstetric Haemorrhage</a><a href="http://intranet/sites/fh-Obs%20and%20Gynae/Shared%20Documents/Maternity%20Guidelines/Hypertensive%20Diseases%20in%20Pregnancy.pdf">Hypertensive disorders in pregnancy</a><a href="http://intranet/sites/fh-Obs%20and%20Gynae/Gynaecology%20Leaflets/Bleeding%20in%20Early%20Pregnancy%20Information%20Leaflet.pdf">Bleeding in early pregnancy leaflet</a></div>
          <div class="EDcard">
             <h4>Ophthalmology</h4> 
-            <a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/SitePages/ophthalmology.aspx">Ophthalmology referrals / contacts</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/UCC%20Rapid%20Access%20Referral.pdf">Ophthalmology referral form</a></div>
+            <a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/Ophthalmology/S52%20SOPOPHTHAL006%20UCC%20Emergency%20and%20Urgent%20Ophthalmology%20Pathway.pdf">Ophthalmology (eyes) pathway</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/Ophthalmology/S51%20SOPOPHTHAL005%20UCC%20Emergency%20Management%20Summary%20Document%20Ophthalmolog....pdf">Emergency ophthalmology (eyes) management</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/SitePages/ophthalmology.aspx">Ophthalmology (eyes) referrals / contacts</a></div><div class="EDcard"><h4>Breast</h4><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/BREAST%20ABSCESS%20PATIENTS.docx">Breast abscess patients</a></div>
       </div>
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Vascular</h4> 
-            <a class="EDsystem EDsystemU" href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/ED%20Vascular%20Referral%20Pathway.pdf">Vascular referral pathway</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/ADULT/HEPARIN%20Sodium%20(Unfractionated).pdf">IV heparin (unfractionated)</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Unfractionated%20heparin%20infusion%20chart.docx">Unfractionated heparin infusion chart</a></div>
+            <a class="EDsystemU" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/ED%20Vascular%20Referral%20Pathway.pdf">Vascular referrals from UHND ED</a><a class="EDsystemU" href="http://intranet/sites/sd-GenSurgUrol/GenSurgUrolNorth/Vas/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fsd%2DGenSurgUrol%2FGenSurgUrolNorth%2FVas%2FShared%20Documents%2FUHND%20and%20BAGH">Vascular referral pathways (UHND)</a><a class="EDsystemD" href="http://intranet/sites/sd-GenSurgUrol/GenSurgUrolNorth/Vas/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fsd%2DGenSurgUrol%2FGenSurgUrolNorth%2FVas%2FShared%20Documents%2FDMH">Vascular referral pathways (DMH)</a> <a href="http://intranet/sites/sd-GenSurgUrol/GenSurgUrolNorth/Vas/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fsd%2DGenSurgUrol%2FGenSurgUrolNorth%2FVas%2FShared%20Documents%2FPatient%20Information%20Sheets">Vascular patient information leaflets</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20&%20Guidelines/ADULT/HEPARIN%20Sodium%20(Unfractionated).pdf">IV heparin (unfractionated)</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Unfractionated%20heparin%20infusion%20chart.docx">Unfractionated heparin infusion chart</a></div>
          <div class="EDcard" id="ENT">
             <h4>ENT</h4> 
-            <a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Nasal%20trauma%20management.pdf">Nasal trauma management</a><a class="EDsystem EDsystemU" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Nasal%20injury%20PILCG0363%20-%20COVID.DOCX">Nasal injuries leaflet (UHND)</a><a class="EDsystem EDsystemD" href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Nasal%20injury%20advice%20leaflet.pdf">Nasal injuries leaflet (DMH)</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Nosebleeds%20(Epistaxis).docx">Epistaxis Advice leaflet</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Epistaxis%20ambulant%20protocol.pptx">Epistaxis ambulant protocol</a><a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Packed%20Epistaxis%20Patient%20Info%20Sheet.docx">Packed epistaxis patient info leaflet</a>
+            <a href="/sites/altc-EmergCare/Emergency%20Department/All%20policies/Nasal%20trauma%20management.pdf">Nasal trauma management</a><a class="EDsystem EDsystemU" href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Nasal%20injury%20PILCG0363%20-%20COVID.DOCX">Nasal injuries leaflet (UHND)</a><a class="EDsystem EDsystemD" href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Nasal%20injury%20advice%20leaflet.pdf">Nasal injuries leaflet (DMH)</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Nosebleeds%20(Epistaxis).docx">Epistaxis Advice leaflet</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/All%20policies/Epistaxis%20ambulant%20protocol%202025.pdf">Epistaxis ambulant protocol</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Epistaxis%20ambulant%20patient%20info%20sheet%202025.pdf">Packed epistaxis patient info leaflet</a>
             <h4>Covid Resources</h4> 
-            <a href="/sites/altc-EmergCare/Emergency%20Department/COVID/COVID19%20ENT%20emergencies%20CDDFT.docx">ENT Emergencies</a><a href="/sites/altc-EmergCare/Emergency%20Department/COVID/Tonsillitis%20protocol%20(CDDFT).pptx">Tonsillits Protocol (CDDFT)</a><a href="/sites/altc-EmergCare/Emergency%20Department/COVID/Tonsillar%20examination%20guidance.pdf">Tonsillar Examination Guidance</a><a href="/sites/altc-EmergCare/Emergency%20Department/COVID/ENT_UK_COVID_19_tonsillitis_and_quinsy_guidelines.pdf">Tonsilitis and Quinsy Guidelines (UK)</a><a href="/sites/altc-EmergCare/Emergency%20Department/COVID/Epistaxis%20ambulant%20protocol%20for%20COVID.pptx">Epistaxis Ambulant Protocol</a></div>
+            <a href="/sites/altc-EmergCare/Emergency%20Department/COVID/COVID19%20ENT%20emergencies%20CDDFT.docx">ENT Emergencies</a><a href="/sites/altc-EmergCare/Emergency%20Department/COVID/Tonsillitis%20protocol%20(CDDFT).pptx">Tonsillits Protocol (CDDFT)</a><a href="/sites/altc-EmergCare/Emergency%20Department/COVID/Tonsillar%20examination%20guidance.pdf">Tonsillar Examination Guidance</a><a href="/sites/altc-EmergCare/Emergency%20Department/COVID/ENT_UK_COVID_19_tonsillitis_and_quinsy_guidelines.pdf">Tonsilitis and Quinsy Guidelines (UK)</a></div>
       </div>
    </div>
    <h3 class="EDh3">Haematology / Oncology / Palliative Care</h3>
@@ -893,28 +481,50 @@ EDbanner[0].style.display = "none";
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Oncology</h4> 
-            <a href="/sites/altc-oncology/SitePages/Home.aspx">Trust Oncology Guidelines</a><a href="/sites/css-Pharmacy/AntibioticFormulary/pages/neutropenia.aspx">Neutropenic sepsis antibiotics</a><a href="/sites/altc-oncology/Shared%20Documents/Acute%20Oncology%20Initial%20Management%20Guidelines%20V5.ppt">Acute oncology initial management guidelines</a><a href="/sites/altc-oncology/ChemotherapyImmunotherapy%20Toxicity%20Management/Acute%20management%20of%20the%20endocrine%20complications%20of%20immunotherapy.pdf">Acute oncology complication guidelines</a><a href="/sites/altc-oncology/Metastatic%20Spinal%20Cord%20Compression/MSCC%20pathway%20(updated%2022nd%20September%202016).pdf">Metastatic cord compression pathway</a><a href="/sites/altc-oncology/Metastatic%20Spinal%20Cord%20Compression/Forms/AllItems.aspx">Metastatic cord compression documents</a><a href="/sites/altc-oncology/ChemotherapyImmunotherapy%20Toxicity%20Management/Management%20of%20diarrhoea%20related%20to%20radiotherapy%20and%20anti%20systemic%20cancer%20therapy.docx">Chemotherapy diarrhoea management</a><a href="http://intranet/sites/altc-oncology/Urgent%20suspected%20cancer%20referral%20form%20from%20ED/AOS%20Referral%20from%20ED%20Final2019.docx">Referral for suspected cancer diagnosis</a><a href="#2ww">2 Week Wait (2ww) cancer referral guidance</a><div id="2ww" class="EDmodalDialog" style="opacity: 0;"><div>
+            <a href="/sites/altc-oncology/SitePages/Home.aspx">Trust Oncology Guidelines</a><a href="/sites/css-Pharmacy/AntibioticFormulary/pages/neutropenia.aspx">Neutropenic sepsis antibiotics</a><a href="http://intranet/sites/altc-oncology/ChemotherapyImmunotherapy%20Toxicity%20Management/AO%20TOXICITY%20GUIDELINES%20UKONS%202023.pdf">Acute oncology initial management guidelines</a><a href="/sites/altc-oncology/ChemotherapyImmunotherapy%20Toxicity%20Management/Acute%20management%20of%20the%20endocrine%20complications%20of%20immunotherapy.pdf">Acute oncology complication guidelines</a><a href="http://intranet/sites/altc-oncology/Metastatic%20Spinal%20Cord%20Compression/NUTH%20MSCC%20pathway%20plus%20guidelines%202021.docx">Metastatic cord compression pathway</a><a href="/sites/altc-oncology/Metastatic%20Spinal%20Cord%20Compression/Forms/AllItems.aspx">Metastatic cord compression documents</a><a href="/sites/altc-oncology/ChemotherapyImmunotherapy%20Toxicity%20Management/Management%20of%20diarrhoea%20related%20to%20radiotherapy%20and%20anti%20systemic%20cancer%20therapy.docx">Chemotherapy diarrhoea management</a><a href="#2ww">Suspected cancer referral guidance (1WW/2WW)</a><div id="2ww" class="EDmodalDialog" style="opacity: 0;"><div>
     <a href="#EDclose" title="EDClose" class="EDclose">X</a>
-    <h2>Suspected cancer 2 week wait referrals</h2>
-    <p><ol><li> Suspected diagnosis of malignancy: fill in the 2 week wait referral form</li> <li>Inform the patient and the leaflet in the same form/ link to be handed out.</li><li>Request CT TAP as outpatient under 2 WW if not already done and inform the same to patient. </li><li>Also record this in the symphony notes and copy of which can be posted to GP so that the primary care team are aware.</li><li>The completed form and symphony notes should be sent to <ul><li><a href="mailto:cdda-tr.cancer2WWBookingteam@nhs.net">cdda-tr.cancer2WWBookingteam@nhs.net</a> <strong>AND</strong></li><li><a href="mailto:cddft.aos@nhs.net">cddft.aos@nhs.net</a> <strong>AND</strong></li> <li>also CC to UHND ED secretaries <a href="mailto:cddft.eduhndsecretaries@nhs.net">cddft.eduhndsecretaries@nhs.net</a></li></ul>This can be uploaded onto symphony as a proof.</li></ol></p>
+    <h2>Suspected cancer referrals</h2><p>There are two options of referral for suspected cancer: <ul><li>2 Week Week (2ww) - for those with symptoms suggestive of malignancy</li><li>1 Week Wait (1ww) specifically for ED for those with <strong>imaging suggestive of malignancy</strong></li></ul></p>
+    <p><strong>Guidance</strong><ol><li> Suspected diagnosis of malignancy: fill in one of the referral forms</li> <li>Inform the patient and the leaflet in the same form/ link to be handed out.</li><li>Request CT TAP as outpatient under 2 WW if not already done and inform the same to patient. </li><li>Also record this in the ED EPR notes, a copy of which can be posted to GP so that the primary care team are aware.</li><li>The completed form and EPR notes should be sent to <ul><li><a href="mailto:cdda-tr.cancer2WWBookingteam@nhs.net">cdda-tr.cancer2WWBookingteam@nhs.net</a> <strong>AND</strong></li><li><a href="mailto:cddft.aos@nhs.net">cddft.aos@nhs.net</a> <strong>AND</strong></li> <li>also CC to UHND ED secretaries <a href="mailto:cddft.eduhndsecretaries@nhs.net">cddft.eduhndsecretaries@nhs.net</a></li></ul>This can be uploaded onto EPR as a proof.</li></ol><div class="EDrow"><div class="EDcolumn"><div class="EDcard.stay"><h4 class="EDstay">Documents</h4><a href="http://intranet/sites/altc-oncology/2%20week%20wait%20cancer%20referral%20form/2%20week%20wait%20cancer%20referral%20form.docx">Referral for suspected cancer diagnosis (2ww)</a><a href="http://intranet/sites/altc-oncology/1week%20wait%20cancer%20referral%20form%20from%20ED/Urgent%20suspected%20cancer%20from%20ED.docx">ED referral for suspected cancer based on imaging (1ww)</a></div></div></div><i>Note: with the transition to EPR, the forms may make reference to Symphony</i></p>
 </div>
-</div></div>
+</div><a href="http://intranet/sites/altc-oncology/MDT%20Referral%20forms%20and%20information/Forms/AllItems.aspx?viewid=35b95d5f-7c5f-4ee9-8074-7a2ec722e47f">Cancer MDT referral forms</a></div>
       </div>
       <div class="EDcolumn">
          <div class="EDcard">
-            <h4>Palliative Care</h4> 
-            <a href="/sites/cch-palcare/End%20of%20life%20Information/end%20of%20life%20care;%20a%20guide.pdf">Care for the Dying Patient</a><a href="/sites/cch-palcare/Guidelines/NECN%20PALLIATIVE%20CARE%20GUIDELINES%202016.pdf">NECN Palliative Care Guidelines</a><a href="/sites/cch-palcare/End%20of%20life%20Information/OOH%20EOLC%20oxygen%20and%20respiratory%20information">Prescribing palliative home oxygen</a><a class="EDsystem EDsystemD" href="/sites/cch-palcare/Rapid%20EOL%20discharge%20flowchart%20DMH/Rapid%20Discharge%20Flow%20Chart%20DMH%20ED_final.ppt?csf=1&amp;e=IFWB4M">Palliative discharge from ED (DMH)</a><a class="EDsystem EDsystemU" href="/sites/cch-palcare/Rapid%20EOL%20Discharge%20flowchart%20UHND/Rapid%20Discharge%20Flow%20Chart%20UHND%20ED_final.ppt?csf=1&amp;e=TZDss1">Palliative discharge from ED (UHND)</a></div>
-      </div>
-      <div class="EDcolumn">
+            <h4>Palliative Care</h4>
+<a href="http://intranet/sites/cch-palcare/SitePages/Specialist%20Palliative%20Care%20Team.aspx">Trust palliative care documents / guidelines</a><a href="https://northerncanceralliance.nhs.uk/wp-content/uploads/2022/06/20220615-Palliative-and-End-of-Life-Care-Guidelines-2021-DOWNLOAD.pdf">NECN Palliative and End of Life Care guidelines</a> 
+            <a href="/sites/cch-palcare/End%20of%20life%20Information/end%20of%20life%20care;%20a%20guide.pdf">Care for the Dying Patient</a><a href="/sites/cch-palcare/End%20of%20life%20Information/OOH%20EOLC%20oxygen%20and%20respiratory%20information">Prescribing palliative home oxygen</a><a class="EDsystem EDsystemD EDdead" href="/sites/cch-palcare/Rapid%20EOL%20discharge%20flowchart%20DMH/Rapid%20Discharge%20Flow%20Chart%20DMH%20ED_final.ppt?csf=1&amp;e=IFWB4M">Palliative discharge from ED (DMH)</a><a class="EDsystem EDsystemU EDdead" href="http://intranet/sites/cch-palcare/Rapid%20EOL%20Discharge%20flowchart%20UHND/Forms/AllItems.aspx?InitialTabId=Ribbon.Library&VisibilityContext=WSSTabPersistence">Palliative discharge from ED (UHND)</a></div>
          <div class="EDcard">
             <h4>Haematology</h4> 
-            <a href="http://intranet/sites/hub-pp/Published%20Documents/Orgal%20Anticoagulation%20with%20Warfarin%20-%20Adult.pdf#Page=21">Warfarin reversal</a></div>
+            <a href="https://nationalbloodtransfusion.co.uk/sites/default/files/documents/2023-03/Warfarin%20reversal%20protocol.pdf">Warfarin reversal</a><a href="http://intranet/sites/hub-pp/Published%20Documents/DOAC%20Reversal%20-%20Management%20of%20Bleeding%20in%20Major%20Surgery%20Guidance.pdf">DOAC reversal</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/Suspeted%20TTP%20referral.docx">Suspected TTP referral</a></div>
          <div class="EDcard">
             <h4>Covid-19</h4> 
             <a href="/sites/altc-EmergCare/Emergency%20Department/COVID/Haematology_Oncology%20Covid%20flow%20chart.pptx">Covid Flow Chart</a></div>
       </div>
+      <div class="EDcolumn">
+<div class="EDcard" id="transfusion">
+<h4>Transfusion</h4>
+<a href="http://svr-spapp/sites/hub-pp/Published Documents/Major Haemorrhage Policy.pdf">Major Haemorrhage Policy</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/MHP%20Trust%20Bulletin%20Poster.doc">MHP Trust Bulletin Poster</a>
+<a href="#PCC">Prothrombin Complex Concentrate (PCC / Beriplex) Guide</a>
+<div id="PCC" class="EDmodalDialog"  style="opacity: 0;"><div>
+    <a href="#EDclose" title="EDClose" class="EDclose" onClick="pauseVid();">X</a>
+    <h2>Prothrombin Complex Concentrate (PCC / Beriplex) Guide</h2>
+    <p style="margin: auto; width: 80%; padding: 10px;"><video id="PCCvid" width="100%" preload="none" poster="http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/mix2vial.png" controls>
+  <source src="http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/2020%20-%20Mix2Vial.mp4" type="video/mp4">
+  Your browser does not support HTML video.
+</video><br><div class="EDrow"><div class="EDcolumn"><div class="EDcard.stay"><h4 class="EDstay">Links</h4><a href="http://svr-spapp/sites/hub-pp/Published Documents/Prothrombin Complex Concentrate (PCC trade name Beriplex) Guide.pdf">Prothrombin Complex Concentrate (PCC trade name Beriplex) Guide</a></div></div></div></p>
+</div>
+</div>
+<a href="http://svr-spapp/sites/hub-pp/Published Documents/Guidelines for the use of Recombinant Activated Factor VIIa (rFVIIa %E2%80%93 NovoSeven) in Major Haemorrhage.pdf">Recombinant activated factor V11a in major haemorrhage</a>
+<a href="http://svr-spapp/sites/hub-pp/Published Documents/Administration of blood components (including care and monitoring of the transfused patient).pdf">Administration of Blood Components</a><a href="http://svr-spapp/sites/hub-pp/Published Documents/Collection and Issue of Compatible Blood Components (Includes returning unused components).pdf">Collection and issue / returning of Blood Components</a><a href="http://svr-spapp/sites/hub-pp/Published Documents/Management of Patients Refusing Blood Transfusion.pdf">Management of patients refusing blood</a><a href="http://svr-spapp/sites/hub-pp/Published Documents/Maximum Blood ordering Schedule.pdf">Maximum blood ordering schedule</a><a href="http://svr-spapp/sites/hub-pp/Published Documents/Paediatrics Transfusion.pdf">Paediatric transfusion</a><a href="http://svr-spapp/sites/hub-pp/Published Documents/Release of Specialist Blood Products.pdf">Release of specialist blood products</a><a href="http://svr-spapp/sites/hub-pp/Published Documents/Requesting of Blood Components and Blood Products.pdf">Requesting blood components and blood products</a><a href="http://svr-spapp/sites/hub-pp/Published Documents/Transfusion reactions and Adverse Events.pdf">Transfusion reactions and adverse events</a><a href="http://svr-spapp/sites/hub-pp/Published Documents/Use of CMV and or Irradiated blood components.pdf">Use of CMV / irradiated blood components</a><a href="http://svr-spapp/sites/hub-pp/Published Documents/Use of Fresh Frozen Plasma (FFP) and Cryoprecipitate.pdf">Use of fresh frozen plasma (FFP) and cryoprecipitate</a><a href="http://svr-spapp/sites/hub-pp/Published Documents/Use of Platelets.pdf">Use of platelets</a><a href="https://hospital.blood.co.uk/transfusionleaflets/">Transfusion leaflets</a><a href="https://www.jw.org/en/medical-library/">Jehova's Witness medical library</a></div>
+      </div>
    </div>
-   <h3 class="EDh3">Paediatrics</h3>
+<script>ehova
+let PCCvid = document.getElementById("PCCvid");
+function pauseVid() {
+    PCCvid.pause();
+}
+</script>
+   <h3 class="EDh3">Paediatrics</h3><div class="EDpaed" id="EDpaeds">
    <div class="EDbuttons">
       <center>
          <p>
@@ -925,21 +535,21 @@ EDbanner[0].style.display = "none";
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Feverish Child</h4> 
-            <a href="https://www.nice.org.uk/guidance/ng143/resources/support-for-education-and-learning-educational-resource-traffic-light-table-pdf-6960664333">Feverish child traffic light</a><a href="/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Feverish%20Child.docx">Feverish child advice leaflet</a><a href="http://intranet/sites/nd-nursing/CAPT/Shared%20Documents/Sepsis/LP145905%20Sepsis%206%20-%20Paediatric%20Sepsis%20Screening%20and%20Action%20Tool%20Sheet%20(3).pdf">Paeds sepsis tool</a></div>
+            <a href="https://www.nice.org.uk/guidance/ng143/resources/support-for-education-and-learning-educational-resource-traffic-light-table-pdf-6960664333">Feverish child traffic light</a><a href="https://www.what0-18.nhs.uk/application/files/3116/0562/9539/NHS_Fever_Under_5yrs_Advice_Sheet_update.pdf">Feverish child advice leaflet</a><a href="http://intranet/sites/nd-nursing/CAPT/Shared%20Documents/Sepsis/LP234525%20Inpatient%20Paediatric%20Sepsis%20tool.pdf">Paeds sepsis tool</a></div>
          <div class="EDcard">
             <h4>Gastrointestinal</h4> 
-            <a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Gastroenterolgy/Abdominal%20pain.pdf">Abdominal pain in children</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Gastroenterolgy/Diarrhoea%20and%20vomiting.pdf">Diarrhoea and Vomiting</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Gastroenterolgy/PAEDIATRIC%20Ondansetron%20in%20Gastroenteritis.pdf">Ondansetron use in gastroenteritis</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Gastroenterolgy/Constipation%20Basic.pdf">Constipation</a> </div>
+            <a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Gastroenterolgy/Abdominal%20pain%202022-24.pdf">Abdominal pain in children</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Gastroenterolgy/Diarrhoea%20and%20vomiting%202022%E2%80%9324.pdf">Diarrhoea and Vomiting</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Gastroenterolgy/Constipation%202022%E2%80%9324.pdf">Constipation</a> </div>
       </div>
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Respiratory</h4> 
-            <a href="https://www.nice.org.uk/guidance/ng84/resources/visual-summary-pdf-4723226606">NICE Sore Throat / tonsillitis</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Respiratory/ASTHMA%20CARE%20PATHWAY2020.docx">Asthma care pathway</a><a href="https://www.sign.ac.uk/media/1383/qrg158.pdf#Page=19">BTS Asthma Quick Reference Guide</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Paediatric%20Asthma%20Discharge%20Pack%20V2.pdf">Asthma discharge pack (paediatrics)</a><a href="http://beatasthma.co.uk/wp-content/uploads/2017/10/5-How-to-wean-Salbutamol-after-an-asthma-attack-2.pdf">How to wean Salbutamol leaflet</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Respiratory/Bronchiolitis%202020.pdf">Bronchiolitis Pathway</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Respiratory/Bronchiolitis%20Guideline%202020.pdf">Bronchiolitis Guideline</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Respiratory/Patient%20leaflet%20for%20Bronchiolitis.pdf">Bronchiolitis patient leaflet</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Respiratory/Pneumothorax.pdf">Pneumothorax</a></div>
+            <a href="https://www.nice.org.uk/guidance/ng84/resources/sore-throat-acute-in-adults-antimicrobial-prescribing-visual-summary-pdf-11315864557">NICE Sore Throat / tonsillitis</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Respiratory/Asthma/ASTHMA%20CARE%20PATHWAY%202022%20Final.docx">Asthma care pathway</a><a href="https://www.sign.ac.uk/media/1383/qrg158.pdf#Page=19">BTS Asthma Quick Reference Guide</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Advice%20Leaflets/Paediatric%20Asthma%20Discharge%20Pack%20V2.pdf">Asthma discharge pack (paediatrics)</a><a href="https://www.beatasthma.co.uk/wp-content/uploads/2023/01/Reducing-Nov-22-1.pdf">Symptom management after an asthma attack (leaflet)</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Paediatric%20Guidelines/Bronchiolitis.pdf">Bronchiolitis</a><a href="https://www.what0-18.nhs.uk/application/files/5116/0562/8734/NHS_Bronchiolitis_Advice_Sheet_update.pdf">Bronchiolitis patient leaflet</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Respiratory/Croup%202022–24.pdf">Croup</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Respiratory/Pneumothorax.pdf">Pneumothorax</a></div>
       </div>
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Pain / MSK</h4> 
-            <a href=https://www.rcem.ac.uk/docs/RCEM%20Guidance/RCEM%20Pain%20in%20Children%20-%20Best%20Practice%20Guidance%20(REV%20Jul%202017).pdf#Page=8">Assessment of acute pain in children</a><a href=https://www.rcem.ac.uk/docs/RCEM%20Guidance/RCEM%20Pain%20in%20Children%20-%20Best%20Practice%20Guidance%20(REV%20Jul%202017).pdf#Page=9">Pain in children treatment algorithm</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/PAEDIATRIC%20&%20NEONATAL/Inpatient%20Analgesia%20Protocol.pdf">Paediatric analgesia protocol</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/PAEDIATRIC%20&%20NEONATAL/Inpatient%20Analgesia%20Protocol.pdf#Page=8">Intranasal Diamorphine Dosing (5mg vials)</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/PAEDIATRIC%20&%20NEONATAL/DIAMORPHINE%20(Intranasal).pdf">Intranasal Diamorphine Dosing (10mg vials)</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/MSK/Limping.pdf">Limping Child Pathway</a></div>
-<div class="EDcard"><h4>Neurology</h4><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Emergency%20folder/Status%20epilepticus%20.pdf">Status epilepticus management (paediatric)</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/PAEDIATRIC%20&%20NEONATAL/PHENYTOIN%20IV%20Loading%20and%20Maintenance.pdf">Phenytoin loading (paediatrics)</a></div>
+            <a class="EDdead" href="https://www.rcem.ac.uk/docs/RCEM%20Guidance/RCEM%20Pain%20in%20Children%20-%20Best%20Practice%20Guidance%20(REV%20Jul%202017).pdf#Page=8">Assessment of acute pain in children</a><a class="EDdead" href="https://www.rcem.ac.uk/docs/RCEM%20Guidance/RCEM%20Pain%20in%20Children%20-%20Best%20Practice%20Guidance%20(REV%20Jul%202017).pdf#Page=9">Pain in children treatment algorithm</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/PAEDIATRIC%20&%20NEONATAL/Inpatient%20Analgesia%20Protocol.pdf">Paediatric analgesia protocol</a><a href="http://intranet/sites/css-Pharmacy/Drug Protocols %26 Guidelines/PAEDIATRIC %26 NEONATAL/FENTANYL (Intranasal).pdf">Intranasal <strong>Fentanyl</strong> dosing</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/PAEDIATRIC%20&%20NEONATAL/Inpatient%20Analgesia%20Protocol.pdf#Page=8">Intranasal Diamorphine Dosing (5mg vials)</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/PAEDIATRIC%20&%20NEONATAL/DIAMORPHINE%20(Intranasal).pdf">Intranasal Diamorphine Dosing (10mg vials)</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/MSK/Limping.pdf">Limping Child Pathway</a></div>
+<div class="EDcard"><h4>Neurology</h4><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Emergency%20folder/APLS%20Status%20Epilepticus%202022.pdf">Status epilepticus management (paediatric)</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Emergency%20folder/Levetiracetam%20Loading%20Dose%20for%20Status%20Epilepticus%20-PAEDIATRIC.pdf">Levetiracetam (status epilepticus, paediatrics)</a><a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/PAEDIATRIC%20%26%20NEONATAL/PHENYTOIN%20loading%20and%20maintenence%20dosing%20PAEDS.pdf">Phenytoin loading (paediatrics)</a><a href="https://www.rcpch.ac.uk/sites/default/files/2020-07/following_a_first_seizure_without_fever_in_cyp_parent_a4_2019_v1.2.pdf">Afebrile seizure advice leaflet</a></div>
       </div>
    </div>
    <div class="EDrow">
@@ -947,27 +557,29 @@ EDbanner[0].style.display = "none";
          <div class="EDcard">
             <h4>Cardiac Arrest</h4> 
             <a href="https://www.resus.org.uk/sites/default/files/2021-04/Paediatric%20ALS%20Algorithm%202021.pdf">Paediatric ALS</a><a href="https://www.resus.org.uk/sites/default/files/2021-05/Newborn%20Life%20Support%20Algorithm%202021.pdf">Neonatal / Newborn LS</a><a href="https://www.resus.org.uk/sites/default/files/2020-03/PETchart-18-05-16.pdf">Emergency drug chart</a><a href="https://www.resus.org.uk/sites/default/files/2021-05/Paediatric%20Cardiac%20Arrhythmias%20Algorithm%202021.pdf">Cardiac arrhythmias algorithm (paeds)</a></div>
+<div class="EDcard" id="csafe"><h4>Children's safeguarding</h4><a href="http://svr-spapp/sites/fh-CCHSCNP/">Children's safeguarding homepage</a><a href="https://durham-scp.org.uk/download/form-childrens-services-safeguarding-referral-form/">Children's safeguarding form (Durham)</a><a href="https://www.darlington-safeguarding-partnership.co.uk/about-us/concerned-about-a-child/">Children's safeguarding (Darlington)</a></div>
       </div>
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Skin / rash</h4> 
-            <a href="http://intranet/sites/fh-CCHSCNP/NHS%20Safeguarding%20Children%20Procedures/Bruising%20in%20non-mobile%20children%20pathways/Revised%20Bruising%20Pathway%20Nov%202020.pdf">Bruising pathway</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Dermatology/Petechial%20rashes.pdf">Petechial / Purpuric rashes in children</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Renal%20and%20Urology/HSP%20guideline.pdf">Henoch-Schönlein purpura (HSP)</a> </div>
+            <a href="http://intranet/sites/fh-CCHSCNP/NHS%20Safeguarding%20Children%20Procedures/Bruising%20in%20non-mobile%20children%20pathways/Bruising%20in%20Non-Mobile%20Children%20Protocol%20v5.1%20Aug2020%20revised%20-%20final%20(003).pdf">Bruising pathway</a><a href="http://intranet/sites/fh-CCHSCNP/NHS%20Safeguarding%20Children%20Procedures/Bruising%20in%20non-mobile%20children%20pathways/Bruising-information-for-parents-and-carers.pdf">Bruising information for parents and carers</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Dermatology/Petechial%20rash%202022%E2%80%9324.pdf">Petechial / Purpuric rashes in children</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Renal%20and%20Urology/HSP%20guideline.pdf">Henoch-Schönlein purpura (HSP)</a> </div>
       </div>
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>Endocrine</h4> 
-            <a href="http://intranet/sites/css-Pharmacy/Drug%20Protocols%20%26%20Guidelines/PAEDIATRIC%20&%20NEONATAL/DIABETIC%20KETOACIDOSIS%20Algorithm.pdf">Paediatric DKA algorithm</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Endocrine%20and%20Diabetes/DKA%20ICP%202020.pdf">DKA integrated care pathway</a><a href="https://www.dka-calculator.co.uk/">BSPED DKA fluid calculator</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Endocrine%20and%20Diabetes/Feb%202019_ACDC%20Sick%20Day%20Guidelines.pdf">Sick day rules</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Endocrine%20and%20Diabetes/Management-of-Hypoglycaemia-In-Children-and-Young-People-With-Type1-Diabetes.pdf">Hypoglycaemia algorithm</a></div>
+            <a href="https://www.dka-calculator.co.uk/">BSPED DKA fluid calculator</a><a href="http://intranet/sites/fh-childhealth/Paediatric%20Guidance/Shared%20Documents/Endocrine%20and%20Diabetes/Endocrinolgy%20Guidelines/Hypoglycaemia%20in%20Non-Diabetic%20Children%202022-24.pdf">Hypoglycaemia in non-diabetics</a></div>
+<div class="EDcard"><h4>Martha's Rule</h4><a href="http://svr-spapp/sites/hub-pp/Published%20Documents/Marthas%20Rule%20Policy.pdf">Martha's Rule</a></div>
       </div>
    </div>
    <div class="EDrow">
       <div class="EDcolumn">
-<div class="EDcard"><h4>Anaphylaxis</h4><a href="http://www.beatanaphylaxis.co.uk/">Beat anaphylaxis (regional resource)</a><a href="https://www.beatanaphylaxis.co.uk/wp-content/uploads/2020/12/Secondary-Health-Professionals-Managing-Allergic-Reactions-Algorithm-27-11-2020.pdf">Allergic reactions management algorithm</a><a href="https://www.beatanaphylaxis.co.uk/wp-content/uploads/2020/11/Secondary-Health-Professionals-MCT-Guidance.pdf">Mast Cell Tryptase (when to test)</a>
+<div class="EDcard"><h4>Anaphylaxis</h4><a href="http://www.beatanaphylaxis.co.uk/">Beat anaphylaxis (regional resource)</a><a href="https://www.beatanaphylaxis.co.uk/wp-content/uploads/2020/12/Secondary-Health-Professionals-Managing-Allergic-Reactions-Algorithm-27-11-2020.pdf">Allergic reactions management algorithm</a><a href="https://www.beatanaphylaxis.co.uk/wp-content/uploads/2020/11/Secondary-Health-Professionals-MCT-Guidance.pdf">Mast Cell Tryptase (when to test)</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/BSACI+AllergyActionPlan+2018+No+AAI[2981].pdf">Allergy Action Plan</a>
 </div>
       </div>
       <div class="EDcolumn">
          <div class="EDcard">
             <h4>NECTAR Resources</h4> 
-            <a href="https://www.noeccn.org.uk/NECTAR">NECTAR Website</a><a href="https://www.noeccn.org.uk/resources/Documents/Paediatric%20Critical%20Care/NECTAR%20Acute%20Referral.pdf">Acute referral algorithm</a></div>
+            <a href="https://www.noeccn.org.uk/NECTAR">NECTAR Website</a><a href="https://www.noeccn.org.uk/resources/Documents/Paediatric%20Critical%20Care/NECTAR%20Acute%20Referral.pdf">Acute referral algorithm</a><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/Shared%20Documents/NECTAR%20Critical%20Care%20Drug%20Infusions%202.7.pdf">NECTAR critical care drug infusions</a></div>
       </div>
       <div class="EDcolumn">
          <div class="EDcard">
@@ -976,8 +588,57 @@ EDbanner[0].style.display = "none";
       </div>
    </div>
 </div>
-   <div class="tbc">Above are some &quot;quick picks&quot; of local and national paediatric guidelines. It is recommended to seek other guidelines from the above paediatric / neonatal links.</div></div>
-   <div class="EDfixed">Missing / Broken links? E-mail: 
-      <a href="mailto:david.mccaffer1@nhs.net">david.mccaffer1@nhs.net</a></div>
+   <div class="tbc">Above are some &quot;quick picks&quot; of local and national paediatric guidelines. It is recommended to seek other guidelines from the above paediatric / neonatal links.</div></div></div>
+   <div class="EDfixed"> 
+      <a href="mailto:david.mccaffer1@nhs.net">Created and maintained by Dave McCaffer</a></div>
+<div class="pattern0 fireworks fire0"> 
+  <div class="ring_1"></div>
+  <div class="ring_2"></div>
+</div>
+<div class="pattern1 fireworks fire1"> 
+  <div class="ring_1"></div>
+  <div class="ring_2"></div>
+</div>
+<div class="pattern2 fireworks fire2"> 
+  <div class="ring_1"></div>
+  <div class="ring_2"></div>
+</div>
+<div class="pattern3 fireworks fire3"> 
+  <div class="ring_1"></div>
+  <div class="ring_2"></div>
+</div>
+<div class="pattern4 fireworks fire4"> 
+  <div class="ring_1"></div>
+  <div class="ring_2"></div>
+</div>
+<div class="pattern5 fireworks fire5"> 
+  <div class="ring_1"></div>
+  <div class="ring_2"></div>
+</div>
+<div class="snowfall">
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+</div>
+
+<div class="EDfixed2"><a href="http://intranet/sites/altc-EmergCare/Emergency%20Department/WorkflowTasks/AllItems.aspx"><strong>Missing / broken links?</strong><br>Report any ideas for updates to this page here.</a></div>
 </body>
 </html>

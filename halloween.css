@@ -1,0 +1,537 @@
+BODY {
+	FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, sans-serif;
+	background-color: #000000!important;
+}
+body::after {
+	background-color: #000000;
+}
+.EDh1 h1 {
+	MARGIN: 0PX 0 1px;
+	PADDING: 40px 0;
+	FONT-SIZE: 40px;
+	WIDTH: 100%;
+	COLOR: #7E3517;
+	TEXT-ALIGN: center;
+	opacity: 1;
+	text-shadow: 1px 1px white;
+}
+div.EDh1 {
+	background: black url("http://intranet/sites/altc-EmergCare/Emergency%20Department/SiteAssets/jack.jpg") no-repeat center;
+  background-size: cover;
+  opacity: 0.5;
+}
+div.EDcontent {
+
+}
+div.ControlZone-control {
+		background-color: black;
+}
+div.ms-CommandBar {
+		background-color: black !important;
+}
+.ms-Nav {
+		background-color: black !important;
+color: white !important;
+}
+.ms-Nav-linkText {
+color: #7E3517 !important;
+}
+
+H2 {
+	MARGIN: 10px 0 10px 5px;
+	PADDING: 0px 0px 0 20px;
+	FONT-SIZE: 20px;
+	BORDER-BOTTOM: #eb0202 1px solid;
+	COLOR: #7E3517;
+	BORDER-LEFT: #7E3517 12px solid;
+}
+H3.EDh3 {
+	BOX-SIZING: border-box;
+	FONT-SIZE: 16px;
+	WIDTH: 100%;
+	COLOR: #ffffff;
+	PADDING: 0px 0px 0px 20px;
+	BACKGROUND-image: linear-gradient(to right, rgba(126,53,23,1), rgba(126,53,23,0));
+}
+H4 {
+	FONT-SIZE: 18px;
+	WIDTH: 100%;
+	COLOR: white;
+	TEXT-ALIGN: center;
+	MARGIN: 0px;
+	BACKGROUND-COLOR: #690000;
+	PADDING: 0px;
+}
+H4.Hcovid {
+background-color: #93cd78;
+color: black;
+}
+H5 {
+	FONT-SIZE: 16px;
+	WIDTH: 100%;
+	COLOR: white;
+	TEXT-ALIGN: left;
+	MARGIN: 0px;
+	BACKGROUND-COLOR: #3e0000;
+	PADDING: 0px;
+}
+UL.nav {
+	LIST-STYLE-TYPE: none;
+	OVERFLOW: hidden;
+	PADDING: 0px;
+	MARGIN: 0px 0px 1px;
+	TOP: 0px;
+	BACKGROUND-COLOR: #7E3517;
+}
+LI.nav {
+	BORDER-RIGHT: black 1px solid;
+	FLOAT: left
+}
+.nav A, .EDdropbtn {
+	TEXT-DECORATION: none;
+	COLOR: #ffffff;
+	PADDING: 8px 12px;
+	TEXT-ALIGN: center;
+	DISPLAY: inline-block;
+}
+.nav A:hover, EDdropdown:hover .EDdropbtn {
+	BACKGROUND-COLOR: #690000;
+}
+li.EDdropdown {
+  display: inline-block;
+}
+.EDdropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #7E3517;
+  min-width: 160px;
+  z-index: 1;
+}
+.EDdropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: #bbb 1px solid;
+}
+.EDdropdown-content a:hover {
+  background-color: #690000;
+}
+.EDdropdown:hover .EDdropdown-content {
+  display: block;
+}
+A.alertlink:link {
+	TEXT-DECORATION: none;
+	COLOR: black;
+	PADDING: 8px;
+	DISPLAY: block;
+	font-size: 12px;
+}
+A.alertlink:visited {
+	COLOR: black;
+}
+A.alertlink:hover {
+	TEXT-DECORATION: none;
+	COLOR: white;
+	BACKGROUND-COLOR: darkgrey;
+}
+A.general:link {
+	TEXT-DECORATION: underline;
+	COLOR: #970808;
+}
+A.general:visited {
+	COLOR: #970808;
+}
+A.EDbutton:link, A.EDbuttonH:link {
+	FONT-SIZE: 16px;
+	TEXT-DECORATION: none;
+	BORDER: #aa3939 1px solid;
+	WIDTH: 20%; COLOR: black;
+	PADDING: 16px 5px;
+	TEXT-ALIGN: center;
+	MARGIN: 5px;
+	DISPLAY: inline-block;
+	BACKGROUND-COLOR: orange;
+	transition-duration: 0.4S;
+}
+A.EDbutton:visited, A.EDbuttonH:visited {
+	BORDER: #aa3939 1px solid;
+	COLOR: black;
+	BACKGROUND-COLOR: orange;
+}
+A.EDbutton:hover {
+	COLOR: white;
+	BACKGROUND-COLOR: darkred;
+}
+A.EDbuttonH:hover {
+	COLOR: white;
+	BACKGROUND-COLOR: darkgrey;
+}
+A.EDbuttonU:hover {
+	COLOR: white;
+	BACKGROUND-COLOR: #970808;
+}
+
+.EDsystemLinks a:link {
+	FONT-SIZE: 12px;
+	TEXT-DECORATION: none;
+	COLOR: black;
+	PADDING: 3px 3px 3px 5px;
+	TEXT-ALIGN: left;
+	MARGIN-TOP: 0px;
+	DISPLAY: block;
+	BACKGROUND-COLOR: orange;
+}
+.EDsystemLinks a:visited {
+	COLOR: black;
+	BACKGROUND-COLOR: orange;
+}
+.EDsystemLinks a:hover {
+	COLOR: white;
+	BACKGROUND-COLOR: darkred;
+}
+
+
+A.EDsystem:link, A.EDsystemH:link {
+	FONT-SIZE: 12px;
+	TEXT-DECORATION: none;
+	COLOR: black;
+	PADDING: 3px 3px 3px 5px;
+	TEXT-ALIGN: left;
+	MARGIN-TOP: 0px;
+	DISPLAY: block;
+	BACKGROUND-COLOR: orange;
+}
+
+A.EDsystem:visited, A.EDsystemH:visited {
+	COLOR: black;
+	BACKGROUND-COLOR: lightgrey;
+}
+A.EDsystem:hover {
+	COLOR: white;
+	BACKGROUND-COLOR: darkgrey;
+}
+A.EDsystemU:hover {
+	COLOR: white;
+	BACKGROUND-COLOR: #970808;
+}
+A.EDsystemD:hover {
+	COLOR: white;
+	BACKGROUND-COLOR: green;
+}
+A.EDdead:link {
+	TEXT-DECORATION: line-through;
+}
+A.EDdead:hover {
+	COLOR: red;
+	cursor: not-allowed;
+}
+A.EDsystemH:hover {
+	COLOR: white;
+	BACKGROUND-COLOR: darkgrey;
+}
+.EDinfo {
+  display: none;
+  position: absolute;
+  background-color: darkgrey;
+  width: 300px;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-align: left;
+  border: #eb0202 2px solid;
+  z-index: 1;
+}
+A.EDsystemH:hover + .EDinfo {
+  display: block;
+}
+.EDinfo2 {
+  display: none;
+  position: absolute;
+  right: 32%;
+  background-color: lightgrey;
+  width: 150px;
+}
+.EDinfo2 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: #aa3939 1px solid;
+}
+.EDbuttonH a:hover {
+  background-color: darkgrey;
+  color: white;
+}
+.EDbuttonH:hover + .EDinfo2 {
+  display: block;
+}
+.TESTEST {
+  display: inline;
+}
+.TESTEST:hover EDinfo2 {
+ display: block;
+}
+.EDcolumn {
+	WIDTH: 30%;
+	VERTICAL-ALIGN: top;
+	PADDING: 0px 10px;
+	DISPLAY: inline-block;
+}
+.EDrow {
+	MARGIN: 0px -5px;
+}
+.EDcard {
+	PADDING: 5px 0px 5px 0px;
+	TEXT-ALIGN: center;
+}
+.EDcard:target {
+	border: 3px dashed #eb0202;
+}
+.tbc {
+	WIDTH: auto;
+	COLOR: black;
+	PADDING: 10px 5px;
+	TEXT-ALIGN: center;
+	MARGIN: 10px;
+	BACKGROUND-COLOR: lightgrey;
+}
+.tbc2 {
+	WIDTH: auto;
+	COLOR: black;
+	PADDING: 0px 0px 10px 0px;
+	TEXT-ALIGN: left;
+	MARGIN: 10px;
+	BACKGROUND-COLOR: lightgrey;
+}
+.EDcontent {
+	WIDTH: 809px;
+	MARGIN: auto;
+	BACKGROUND-COLOR: white;
+}
+.newsitem {
+	PADDING: 10px;
+}
+.newsd {
+	FLOAT: right;
+	BACKGROUND-COLOR: #3e0000;
+}
+.content {
+	BORDER: 0px solid #ff0000;
+	WIDTH: 809px;
+	MARGIN: auto;
+}
+div.EDfixed {
+  position: fixed;
+  padding: 3px;
+  background-color: white;
+  color: black;
+  bottom: 0;
+  right: 18px;
+  min-width: 300px;
+  border: 3px solid #eb0202;
+}
+
+UL.EDbut {
+	LIST-STYLE-TYPE: none;
+	OVERFLOW: hidden;
+	PADDING: 0px;
+	MARGIN: 0px 0px 1px;
+	TOP: 0px;
+	BACKGROUND-COLOR: #970808;
+}
+LI.EDbut {
+	BORDER-RIGHT: #bbb 1px solid;
+	FLOAT: left
+}
+.EDbut A, .EDbutH {
+	TEXT-DECORATION: none;
+	COLOR: #ffffff;
+	PADDING: 8px 12px;
+	TEXT-ALIGN: center;
+	DISPLAY: inline-block;
+}
+.EDbut A:hover, EDbutH:hover .EDbutH {
+	BACKGROUND-COLOR: #690000;
+}
+li.EDbutH {
+  display: inline-block;
+}
+.EDbutH-content {
+  display: none;
+  position: absolute;
+  background-color: #970808;
+  min-width: 160px;
+  z-index: 1;
+}
+.EDbutH-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: #bbb 1px solid;
+}
+.EDbutH-content a:hover {
+  background-color: #690000;
+}
+.EDbutH:hover .EDbutH-content {
+  display: block;
+}
+
+div.covid {
+border: 5px solid #93cd78;
+background-color: black;
+color: white;
+margin: 10px 0px;
+padding: 2px 0px 3px 00px;
+text-align: center;
+}
+.covidt {
+color: #93cd78;
+font-family: arial;
+font-size: 40px;
+font-weight: 900;
+width: 100%;
+border-bottom: 1px solid #93cd78;
+}
+
+A.EDsystemC:link {
+	FONT-SIZE: 12px;
+	TEXT-DECORATION: none;
+	COLOR: white;
+	PADDING: 3px 3px 3px 5px;
+	TEXT-ALIGN: left;
+	MARGIN-TOP: 0px;
+	DISPLAY: block;
+	BACKGROUND-COLOR: black;
+	BORDER-WIDTH: 0px 1px 1px 1px;
+	BORDER-STYLE: solid;
+	BORDER-COLOR: #93cd78;
+}
+A.EDsystemC:visited {
+	COLOR: white;
+	BACKGROUND-COLOR: black;
+	BORDER-COLOR: #93cd78;
+}
+A.EDsystemC:hover {
+	COLOR: black;
+	BACKGROUND-COLOR: #93cd78;
+}
+#mySearch12 {
+  width: 250px;
+  border: 0;
+  outline: 0;
+	background-color: #000000;
+	color: darkred;
+border-bottom: 1px solid red;
+}
+div.EDbanner {
+	text-align: center;
+	height: 120px;
+	overflow: auto;
+	padding: 20px 40px 0px 40px;
+	border: 3px dashed #0073E6;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	width: 80%;
+	line-height: 120px;
+	display: none;
+	position: sticky;
+	top: 10px;
+	background-color: white;
+}
+.EDbannerlogo {
+	float: left;
+	max-height: 100px;
+}
+.EDbanner a {
+	text-decoration: none;
+	color: black;
+}
+.EDbanner p {
+  line-height: 1.5;
+  vertical-align: middle;
+  font-size: 15px;
+}
+div.SNAPd {
+	display: none;
+}
+.EDmodalDialog {
+				opacity: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding-top: 200px;
+        background: rgba(0,0,0,0.6);
+        z-index: 100;
+        -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+	      transition: opacity 400ms ease-in;
+        pointer-events: none;
+				text-align: left !important;
+    }
+
+    .EDmodalDialog:target {
+        opacity: 1 !important;
+        pointer-events: auto;
+    }
+
+    .EDmodalDialog > div {
+  position: relative;
+  background-color: #ffffff;
+  margin: auto;
+  padding: 0px 20px 20px 20px;
+  border: 1px solid #888;
+  width: 75%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8),0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+    .EDclose {
+        background: #606061;
+        color: #FFFFFF;
+        line-height: 25px;
+        position: absolute;
+        right: -12px;
+        text-align: center;
+        top: -10px;
+        width: 24px;
+        text-decoration: none;
+        font-weight: bold;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        border-radius: 12px;
+        -moz-box-shadow: 1px 1px 3px #000;
+        -webkit-box-shadow: 1px 1px 3px #000;
+        box-shadow: 1px 1px 3px #000;
+    }
+
+    .EDclose:hover { background: #eb0202; }
+
+		.spNav_e14ce814 .ms-Nav {
+			background-color: #000000;
+			border: 0px!important;
+		}
+.ms-Nav .compositeLink-93 a:link {
+	background-color: #000000;
+	color: #ffffff;
+}
+.ms-Nav .compositeLink-93 a:visited {
+	color: #ffffff;
+}
+.ms-Nav .compositeLink-93 a:hover {
+	background-color: darkgrey;
+}
+.compositeLink-93 {
+	background-color: #000000;
+	color: #ffffff;
+}
+.root_c66f1a69 {
+	background-color: #000000!important;
+}

@@ -1,57 +1,27 @@
 BODY {
-	FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, sans-serif;
- width: 1064px;
-margin:0 auto;
+	FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, sans-serif
 }
-.EDh1 H1 {
+.EDpage {
+	cursor: crosshair;
+}
+H1.EDh1 {
 	MARGIN: 0PX 0 1px;
 	PADDING: 40px 0;
 	FONT-SIZE: 40px;
 	WIDTH: 100%;
 	COLOR: white;
 	TEXT-ALIGN: center;
-	BACKGROUND-COLOR: #1A1B41;
-}
-.eid-moon {
-  width: 22px; /* Adjust as needed */
-  height: 22px;
-  margin: 0 8px;
-  vertical-align: middle;
-}
-h1::before {
-  content: ''; /* Unicode for crescent moon and star */
-  position: inline-block;
-  right: 100px; /* Adjust as needed */
-  font-size: 1.5em;
-  color: #D4AF37; /* Soft Gold */
-}
-h1::after {
-  content: "Eid Mubarak ✨";
-  display: block;
-  font-size: 0.8em; /* Slightly smaller than main text */
-  font-weight: bold;
-  color: #D4AF37; /* Soft Gold */
-  margin-left: 10px; /* Space from the main title */
-  text-shadow: 0 0 5px rgba(212, 175, 55, 0.6), 0 0 10px rgba(212, 175, 55, 0.4); /* Soft glow effect */
-  animation: fadeIn 2s ease-in-out;
-  right: 100px;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-div.EDsticky {
-		  position: sticky;
-  top: 0;
+	BACKGROUND-COLOR: orange;
+	transform: scale(1,-1)
 }
 H2 {
 	MARGIN: 10px 0 10px 5px;
 	PADDING: 0px 0px 0 20px;
 	FONT-SIZE: 20px;
-	BORDER-BOTTOM: #1a1b41 1px solid;
+	BORDER-BOTTOM: orange 1px solid;
 	COLOR: black;
-	BORDER-LEFT: #1a1b41 12px solid;
+	BORDER-RIGHT: orange 12px solid;
+	text-align: right;
 }
 H3.EDh3 {
 	BOX-SIZING: border-box;
@@ -59,7 +29,8 @@ H3.EDh3 {
 	WIDTH: 100%;
 	COLOR: #ffffff;
 	PADDING: 0px 0px 0px 20px;
-	BACKGROUND-image: linear-gradient(to right, rgba(26,27,65,1), rgba(26,27,65,0));
+	BACKGROUND-image: linear-gradient(to right, rgba(255,165,0,0), rgba(255,165,0,1));
+	text-align: right;
 }
 H4 {
 	FONT-SIZE: 18px;
@@ -67,16 +38,7 @@ H4 {
 	COLOR: white;
 	TEXT-ALIGN: center;
 	MARGIN: 0px;
-	BACKGROUND-COLOR: #1A1B41;
-	PADDING: 0px;
-}
-H4.EDstay {
-	FONT-SIZE: 18px;
-	WIDTH: 100%;
-	COLOR: white;
-	TEXT-ALIGN: center;
-	MARGIN: 0px;
-	BACKGROUND-COLOR: #1A1B41;
+	BACKGROUND-COLOR: pink;
 	PADDING: 0px;
 }
 H4.Hcovid {
@@ -98,7 +60,7 @@ UL.nav {
 	PADDING: 0px;
 	MARGIN: 0px 0px 1px;
 	TOP: 0px;
-	BACKGROUND-COLOR: #1A1B41;
+	BACKGROUND-COLOR: darkorange;
 }
 LI.nav {
 	BORDER-RIGHT: #bbb 1px solid;
@@ -112,7 +74,7 @@ LI.nav {
 	DISPLAY: inline-block;
 }
 .nav A:hover, EDdropdown:hover .EDdropbtn {
-	BACKGROUND-COLOR: #D4AF37;
+	BACKGROUND-COLOR: orangered;
 }
 li.EDdropdown {
   display: inline-block;
@@ -120,7 +82,7 @@ li.EDdropdown {
 .EDdropdown-content {
   display: none;
   position: absolute;
-  background-color: #1A1B41;
+  background-color: darkorange;
   min-width: 160px;
   z-index: 1;
 }
@@ -133,7 +95,7 @@ li.EDdropdown {
   border-bottom: #bbb 1px solid;
 }
 .EDdropdown-content a:hover {
-  background-color: #D4AF37;
+  background-color: orangered;
 }
 .EDdropdown:hover .EDdropdown-content {
   display: block;
@@ -189,27 +151,6 @@ A.EDbuttonU:hover {
 	COLOR: white;
 	BACKGROUND-COLOR: #970808;
 }
-
-.EDsystemLinks a:link {
-	FONT-SIZE: 12px;
-	TEXT-DECORATION: none;
-	COLOR: black;
-	PADDING: 3px 3px 3px 5px;
-	TEXT-ALIGN: left;
-	MARGIN-TOP: 0px;
-	DISPLAY: block;
-	BACKGROUND-COLOR: lightgrey;
-}
-.EDsystemLinks a:visited {
-	COLOR: black;
-	BACKGROUND-COLOR: lightgrey;
-}
-.EDsystemLinks a:hover {
-	COLOR: white;
-	BACKGROUND-COLOR: darkgrey;
-}
-
-
 A.EDsystem:link, A.EDsystemH:link {
 	FONT-SIZE: 12px;
 	TEXT-DECORATION: none;
@@ -220,7 +161,6 @@ A.EDsystem:link, A.EDsystemH:link {
 	DISPLAY: block;
 	BACKGROUND-COLOR: lightgrey;
 }
-
 A.EDsystem:visited, A.EDsystemH:visited {
 	COLOR: black;
 	BACKGROUND-COLOR: lightgrey;
@@ -228,6 +168,7 @@ A.EDsystem:visited, A.EDsystemH:visited {
 A.EDsystem:hover {
 	COLOR: white;
 	BACKGROUND-COLOR: darkgrey;
+	cursor: zoom-in;
 }
 A.EDsystemU:hover {
 	COLOR: white;
@@ -304,12 +245,6 @@ A.EDsystemH:hover + .EDinfo {
 	PADDING: 5px 0px 5px 0px;
 	TEXT-ALIGN: center;
 }
-.EDcard:target {
-	border: 3px dashed #eb0202;
-}
-.EDpaed:target {
-	border: 3px dashed #eb0202;
-}
 .tbc {
 	WIDTH: auto;
 	COLOR: black;
@@ -338,32 +273,20 @@ A.EDsystemH:hover + .EDinfo {
 	FLOAT: right;
 	BACKGROUND-COLOR: #3e0000;
 }
-
+.content {
+	BORDER: 0px solid #ff0000;
+	WIDTH: 809px;
+	MARGIN: auto;
+}
 div.EDfixed {
   position: fixed;
-  padding: 0px;
-  color: red;
+  padding: 3px;
   background-color: white;
-  bottom: 2px;
-  right: 18px;
-  min-width: 150px;
-  border: 3px solid #1a1b41;
-  z-index: 50;
-}
-div.EDfixed2 {
-  position: fixed;
-  padding: 0px;
-  text-align: center;
   color: black;
-  background-color: white;
-  top: 300px;
-  right: 100px;
+  bottom: 0;
+  right: 18px;
   min-width: 300px;
-  border: 3px solid #1a1b41;
-  z-index: 50;
-}
-.EDfixed img {
-	width: 170px;
+  border: 3px solid #eb0202;
 }
 
 UL.EDbut {
@@ -460,19 +383,17 @@ border-bottom: 1px solid red;
 }
 div.EDbanner {
 	text-align: center;
-	font-size: 20px;
 	height: 120px;
 	overflow: auto;
 	padding: 20px 40px 0px 40px;
-	border: 3px dashed #0073E6;
+	border: 3px dashed #eb0202;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 10px;
 	margin-bottom: 0px;
 	width: 80%;
-/*	line-height: 120px; */
+	line-height: 120px;
 	display: none;
-	top: 10px;
 }
 .EDbannerlogo {
 	float: left;
@@ -486,76 +407,4 @@ div.EDbanner {
   line-height: 1.5;
   vertical-align: middle;
   font-size: 15px;
-}
-div.SNAPd {
-	display: none;
-}
-.EDmodalDialog {
-				opacity: 0;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        padding-top: 30px;
-        background: rgba(0,0,0,0.6);
-        z-index: 100;
-        -webkit-transition: opacity 400ms ease-in;
-        -moz-transition: opacity 400ms ease-in;
-	      transition: opacity 400ms ease-in;
-        pointer-events: none;
-				text-align: left !important;
-    }
-
-    .EDmodalDialog:target {
-        opacity: 1 !important;
-        pointer-events: auto;
-    }
-
-    .EDmodalDialog > div {
-  position: relative;
-  background-color: #ffffff;
-  margin: auto;
-  padding: 0px 20px 20px 20px;
-  border: 1px solid #888;
-  width: 75%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8),0 6px 20px 0 rgba(0,0,0,0.19);
-    }
-
-    .EDclose {
-        background: #606061!important;
-        color: #FFFFFF!important;
-        line-height: 25px!important;
-        position: absolute!important;
-        right: -12px!important;
-        text-align: center!important;
-        top: -10px!important;
-        width: 24px!important;
-        text-decoration: none!important;
-        font-weight: bold!important;
-        -webkit-border-radius: 12px!important;
-        -moz-border-radius: 12px!important;
-        border-radius: 12px!important;
-        -moz-box-shadow: 1px 1px 3px #000!important;
-        -webkit-box-shadow: 1px 1px 3px #000!important;
-        box-shadow: 1px 1px 3px #000!important;
-    }
-
-    .EDclose:hover { background: #eb0202; }
-.EDcontainer {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  width: 100%;
-}
-.odcalc {
-display:none;
-border-style:dashed;
-margin-top:5px;
-padding: 5px;
-width: 50%;
-margin: auto;
-}
-.EDactions {
-border-left: 2px solid red; 
-padding: 5px;
 }

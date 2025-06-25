@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My CESR Logbook Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --bg-light: #f5f5f5;
+            --bg-dark: #121212;
+            --text-light: #222;
+            --text-dark: #f5f5f5;
+            --primary: #4CAF50;
+            --primary-hover: #45a049;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--bg-dark);
+                color: var(--text-dark);
+            }
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 20px 40px;
+            margin: 20px;
+            font-size: 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: var(--primary-hover);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CESR Logbook Hub</h1>
+
+        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSdY00isVyB66a6avajsFIRLtfARsI-vvRVemhB31MD6kioc4A/viewform?usp=header" target="_blank">
+            Patient / Procedure Log
+        </a>
+
+        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSfK7lk69hIqWTGS_oQF9FENEXKxLa4bqjVb_EwRx8BH9OQi3A/viewform?usp=header" target="_blank">
+            CPD Diary
+        </a>
+    </div>
+</body>
+</html>
